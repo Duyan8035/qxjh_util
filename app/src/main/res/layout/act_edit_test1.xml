@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingStart="12dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="8dp"
+    tools:layout_height="match_parent">
+
+    <!--<Spinner-->
+        <!--android:id="@+id/item_test1_spinner1"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:spinnerMode="dropdown"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<Spinner-->
+        <!--android:id="@+id/item_test1_spinner2"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:spinnerMode="dropdown"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<android.support.v7.widget.AppCompatSeekBar-->
+        <!--android:id="@+id/item_test1_seekbar1"-->
+        <!--style="@style/Widget.AppCompat.SeekBar.Discrete"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:max="20"-->
+        <!--android:progress="10"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_spinner1"-->
+        <!--tools:visibility="visible" />-->
+
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/item_test1_radiogroup11"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_seekbar1">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_111"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_edit_1" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_112"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_edit_2" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_113"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_edit_3" />-->
+
+    <!--</RadioGroup>-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/item_test1_radiogroup12"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup11"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_seekbar1">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_121"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_1" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_122"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_2" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_123"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_3" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_124"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_4" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_125"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_5" />-->
+
+    <!--</RadioGroup>-->
+
+
+    <!--<android.support.v7.widget.AppCompatSeekBar-->
+        <!--android:id="@+id/item_test1_seekbar2"-->
+        <!--style="@style/Widget.AppCompat.SeekBar.Discrete"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:max="20"-->
+        <!--android:progress="10"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_radiogroup11"-->
+        <!--tools:visibility="visible" />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/item_test1_radiogroup21"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_seekbar2">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_211"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_edit_1" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_212"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_edit_2" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_213"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_edit_3" />-->
+
+    <!--</RadioGroup>-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/item_test1_radiogroup22"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup21"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_seekbar2">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_221"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_1" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_222"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_2" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_223"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_3" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_224"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_4" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_225"-->
+            <!--style="@style/item_test1_radio_btn"-->
+            <!--android:text="@string/item_test1_num_5" />-->
+
+    <!--</RadioGroup>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/item_test1_tv_event1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:text="1级分类"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_radiogroup22" />-->
+
+    <!--<Switch-->
+        <!--android:id="@+id/switch1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:checked="false"-->
+        <!--android:text="分支"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_tv_event1"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_tv_event1"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_tv_event1" />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/item_test1_radiogroup3"-->
+        <!--android:layout_width="90dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="start"-->
+        <!--android:orientation="vertical"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_tv_event1">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_31"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/item_test1_event_1" />-->
+        <!--&lt;!&ndash;style="@style/item_test1_radio_btn"&ndash;&gt;-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_32"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/item_test1_event_2" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_33"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/item_test1_event_3" />-->
+
+    <!--</RadioGroup>-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_1"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="描述"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/item_test1_edit_2"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/item_test1_edit_1_value"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup3"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_radiogroup3" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_1_value"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_edit_1"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_edit_1"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_edit_1" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_2"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="描述以及结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/item_test1_edit_3"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/item_test1_edit_2_value"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup3"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_edit_1" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_2_value"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_edit_2"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_edit_2"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_edit_2" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_3"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="描述以及结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_radiogroup3"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/item_test1_edit_3_value"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup3"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_edit_2" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_3_value"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_edit_3"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_edit_3"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_edit_3" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/item_test1_tv_event2"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="2级分类"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_radiogroup3" />-->
+
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/item_test1_radiogroup4"-->
+        <!--android:layout_width="90dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="start"-->
+        <!--android:orientation="vertical"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_tv_event2">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_41"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/item_test1_event_11" />-->
+        <!--&lt;!&ndash;style="@style/item_test1_radio_btn"&ndash;&gt;-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_42"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/item_test1_event_12" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/item_test1_radio_btn_43"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/item_test1_event_13" />-->
+    <!--</RadioGroup>-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_21"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="描述"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/item_test1_edit_22"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/item_test1_edit_21_value"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup4"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_radiogroup4" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_21_value"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_edit_21"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_edit_21"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_edit_21" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_22"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="描述以及结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/item_test1_edit_3"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/item_test1_edit_22_value"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup4"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_edit_21" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_22_value"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_edit_22"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_edit_22"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_edit_22" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_23"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="描述以及结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_radiogroup4"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/item_test1_edit_23_value"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_radiogroup4"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_test1_edit_22" />-->
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/item_test1_edit_23_value"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="结果"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/item_test1_edit_23"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintHorizontal_weight="1"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/item_test1_edit_23"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/item_test1_edit_23" />-->
+
+    <!--<android.support.constraint.Group-->
+        <!--android:id="@+id/group"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--app:constraint_referenced_ids="item_test1_edit_22,item_test1_radiogroup4,item_test1_edit_22_value,item_test1_tv_event2,item_test1_edit_23_value,item_test1_edit_23,item_test1_edit_21,item_test1_edit_21_value"-->
+        <!--tools:layout_editor_absoluteX="12dp"-->
+        <!--tools:layout_editor_absoluteY="8dp" />-->
+
+
+</android.support.constraint.ConstraintLayout>

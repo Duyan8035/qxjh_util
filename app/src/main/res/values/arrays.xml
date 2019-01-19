@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string-array name="array_test1_type">
+        <item>@string/test1_type_1</item>
+        <item>@string/test1_type_2</item>
+        <item>@string/test1_type_3</item>
+        <item>@string/test1_type_4</item>
+    </string-array>
+
+    <string-array name="array_test1_name">
+        <item>@string/test1_name_1</item>
+        <item>@string/test1_name_2</item>
+        <item>@string/test1_name_3</item>
+        <item>@string/test1_name_4</item>
+    </string-array>
+
+    <string-array name="array_test1_edit">
+        <item>@string/edit1_edit_1</item>
+        <item>@string/edit1_edit_2</item>
+        <item>@string/edit1_edit_3</item>
+    </string-array>
+
+    <string-array name="array_test1_num">
+        <item>@string/edit1_num_1</item>
+        <item>@string/edit1_num_2</item>
+        <item>@string/edit1_num_3</item>
+        <item>@string/edit1_num_4</item>
+        <item>@string/edit1_num_5</item>
+    </string-array>
+</resources>

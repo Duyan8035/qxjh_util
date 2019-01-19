@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingStart="12dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="8dp"
+    tools:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/act_edit1_spinner1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/act_edit1_spinner2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/act_edit1_seekbar1"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="10"
+        android:progress="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_spinner1"
+        tools:visibility="visible" />
+
+
+    <RadioGroup
+        android:id="@+id/act_edit1_radiogroup11"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_seekbar1">
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_111"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_edit_1" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_112"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_edit_2" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_113"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_edit_3" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/act_edit1_radiogroup12"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup11"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_seekbar1">
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_121"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_1" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_122"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_2" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_123"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_3" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_124"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_4" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_125"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_5" />
+
+    </RadioGroup>
+
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/act_edit1_seekbar2"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="10"
+        android:progress="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_radiogroup11"
+        tools:visibility="visible" />
+
+    <RadioGroup
+        android:id="@+id/act_edit1_radiogroup21"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_seekbar2">
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_211"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_edit_1" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_212"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_edit_2" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_213"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_edit_3" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/act_edit1_radiogroup22"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup21"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_seekbar2">
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_221"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_1" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_222"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_2" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_223"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_3" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_224"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_4" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_225"
+            style="@style/act_edit1_radio_btn"
+            android:text="@string/edit1_num_5" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/act_edit1_tv_event1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="1级分类"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_radiogroup22" />
+
+    <Switch
+        android:id="@+id/act_edit1_switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:checked="true"
+        android:text="分支"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_tv_event1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_tv_event1"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_tv_event1" />
+
+    <RadioGroup
+        android:id="@+id/act_edit1_radiogroup3"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="start|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_1">
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_31"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/edit1_event_1" />
+        <!--style="@style/act_edit1_radio_btn"-->
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_32"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/edit1_event_2" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_33"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/edit1_event_3" />
+
+    </RadioGroup>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="描述"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/act_edit1_edit_2"
+        app:layout_constraintEnd_toStartOf="@+id/act_edit1_edit_1_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup3"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_tv_event1" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_1_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_edit_1"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_1" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="描述以及结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/act_edit1_edit_3"
+        app:layout_constraintEnd_toStartOf="@+id/act_edit1_edit_2_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup3"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_edit_1" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_2_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_edit_2"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_2" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="描述以及结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_tv_event2"
+        app:layout_constraintEnd_toStartOf="@+id/act_edit1_edit_3_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup3"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_edit_2" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_3_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_edit_3"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_3" />
+
+    <TextView
+        android:id="@+id/act_edit1_tv_event2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2级分类"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_radiogroup3" />
+
+
+    <RadioGroup
+        android:id="@+id/act_edit1_radiogroup4"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="start|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_21">
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_41"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/edit1_event_11" />
+        <!--style="@style/act_edit1_radio_btn"-->
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_42"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/edit1_event_12" />
+
+        <RadioButton
+            android:id="@+id/act_edit1_radio_btn_43"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/edit1_event_13" />
+    </RadioGroup>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="描述"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/act_edit1_edit_22"
+        app:layout_constraintEnd_toStartOf="@+id/act_edit1_edit_21_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup4"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_tv_event2" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_21_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_edit_21"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_21" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="描述以及结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/act_edit1_edit_23"
+        app:layout_constraintEnd_toStartOf="@+id/act_edit1_edit_22_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup4"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_edit_21" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_22_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_edit_22"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_22" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_23"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="描述以及结果"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/act_edit1_edit_23_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_radiogroup4"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit1_edit_22"
+        app:layout_constraintVertical_bias="0" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/act_edit1_edit_23_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="结果"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/act_edit1_edit_23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/act_edit1_edit_23"
+        app:layout_constraintTop_toTopOf="@+id/act_edit1_edit_23" />
+
+    <android.support.constraint.Group
+        android:id="@+id/act_edit1_edit_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="act_edit1_edit_22,act_edit1_radiogroup4,act_edit1_edit_22_value,act_edit1_tv_event2,act_edit1_edit_23_value,act_edit1_edit_23,act_edit1_edit_21,act_edit1_edit_21_value" />
+
+
+</android.support.constraint.ConstraintLayout>

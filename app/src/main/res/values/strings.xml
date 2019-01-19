@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">QXJHUtil</string>
+    <string name="activity_1">QXJHUtil</string>
+    <!--类型-->
+    <string name="test1_type_1">地区1</string>
+    <string name="test1_type_2">地区2</string>
+    <string name="test1_type_3">地区3</string>
+    <string name="test1_type_4">地区4</string>
+
+    <!--名称-->
+    <string name="test1_name_1">名称1</string>
+    <string name="test1_name_2">名称2</string>
+    <string name="test1_name_3">名称3</string>
+    <string name="test1_name_4">名称4</string>
+
+    <!--变更情况-->
+    <string name="edit1_edit_1">-</string>
+    <string name="edit1_edit_2">0</string>
+    <string name="edit1_edit_3">+</string>
+
+    <!--增值-->
+    <string name="edit1_num_1">1</string>
+    <string name="edit1_num_2">2</string>
+    <string name="edit1_num_3">3</string>
+    <string name="edit1_num_4">4</string>
+    <string name="edit1_num_5">5</string>
+
+    <!--事件-->
+    <string name="edit1_event_1">event1</string>
+    <string name="edit1_event_2">event2</string>
+    <string name="edit1_event_3">event3</string>
+
+    <!--事件分支-->
+    <string name="edit1_event_11">branch1</string>
+    <string name="edit1_event_12">branch2</string>
+    <string name="edit1_event_13">branch3</string>
+</resources>
