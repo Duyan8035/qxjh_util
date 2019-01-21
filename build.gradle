@@ -13,10 +13,9 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath "io.realm:realm-gradle-plugin:2.2.1"
 
-        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.4'
-        classpath 'org.aspectj:aspectjtools:1.8.13'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -29,11 +28,6 @@ allprojects {
         jcenter()
         maven { url 'https://maven.google.com' }
         maven { url "https://jitpack.io" }
-        flatDir {
-            dirs 'src/main/libs'
-            dirs 'src/main/aarLibs'
-            dirs '../alivc-player-lib'
-        }
     }
 }
 

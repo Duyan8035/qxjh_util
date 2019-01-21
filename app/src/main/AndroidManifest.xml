@@ -16,8 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Test1Activity" />
-        <activity android:name=".activity.Edit1Activity"></activity>
+        <activity
+            android:name=".activity.Test1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Edit1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WxInfoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

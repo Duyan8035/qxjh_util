@@ -10,9 +10,7 @@ import android.widget.Switch;
 
 import com.dy.qxjhutil.R;
 import com.dy.qxjhutil.base.BaseActivity;
-import com.jkb.fragment.rigger.annotation.Puppet;
 
-@Puppet(containerViewId = R.id.fragment)
 public class Edit1Activity extends BaseActivity {
 
     private Spinner spinner1, spinner2;
