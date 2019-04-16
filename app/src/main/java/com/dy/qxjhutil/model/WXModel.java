@@ -1,11 +1,6 @@
 package com.dy.qxjhutil.model;
 
-import android.support.annotation.DrawableRes;
-
-import io.realm.RealmList;
 import io.realm.RealmModel;
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.RealmClass;
 
 /**
@@ -33,12 +28,12 @@ public class WXModel implements RealmModel {
     /**
      * 武侠游戏名称：灵鹫宫主等
      */
-    @PrimaryKey
+//    @PrimaryKey
     public String name_game;
     /**
      * 显示图片，暂时用本地图片
      */
-    @DrawableRes
+//    @DrawableRes
     public int icon;
     /**
      * 武侠本身名称：如虚竹
@@ -53,121 +48,135 @@ public class WXModel implements RealmModel {
      */
     public String default_qx;
 
-    public RealmList<SJModel> sjModels;
+//    public RealmList<SJModel> sjModels;
+    private String value;
+
+    public String getValue() {
+        return value == null ? "" : value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 
     public WXModel() {
     }
 
-    public class SJModel extends RealmObject {
-        /**
-         * 事件所得善恶 恶-善 正为善，负为恶
-         */
-        public int sj_se = 0;
-        /**
-         * 事件所得倾向 混乱-守序 正为守序，负为混乱
-         */
-        public int sj_qx = 0;
-        /**
-         * 事件所得物品：如道具，金币，食物等
-         */
-        public String sj_value;
-
-        /**
-         * 武侠所遇见的事件及分支事件
-         */
-        public String sj_1_str;
-        public String sj_12_str;
-        public String sj_123_str;
-
-        /**
-         * 等级，第一层为0，第二层选项为1，依次类推
-         */
-        public int level = 0;
-
-        public RealmList<SJModel> sj_1_list;
-        public RealmList<SJModel> sj_12_list;
-        public RealmList<SJModel> sj_123_list;
-
-        public int getSj_se() {
-            return sj_se;
-        }
-
-        public void setSj_se(int sj_se) {
-            this.sj_se = sj_se;
-        }
-
-        public int getSj_qx() {
-            return sj_qx;
-        }
-
-        public void setSj_qx(int sj_qx) {
-            this.sj_qx = sj_qx;
-        }
-
-        public String getSj_value() {
-            return sj_value;
-        }
-
-        public void setSj_value(String sj_value) {
-            this.sj_value = sj_value;
-        }
-
-        public String getSj_1_str() {
-            return sj_1_str;
-        }
-
-        public void setSj_1_str(String sj_1_str) {
-            this.sj_1_str = sj_1_str;
-        }
-
-        public String getSj_12_str() {
-            return sj_12_str;
-        }
-
-        public void setSj_12_str(String sj_12_str) {
-            this.sj_12_str = sj_12_str;
-        }
-
-        public String getSj_123_str() {
-            return sj_123_str;
-        }
-
-        public void setSj_123_str(String sj_123_str) {
-            this.sj_123_str = sj_123_str;
-        }
-
-        public int getLevel() {
-            return level;
-        }
-
-        public void setLevel(int level) {
-            this.level = level;
-        }
-
-        public RealmList<SJModel> getSj_1_list() {
-            return sj_1_list;
-        }
-
-        public void setSj_1_list(RealmList<SJModel> sj_1_list) {
-            this.sj_1_list = sj_1_list;
-        }
-
-        public RealmList<SJModel> getSj_12_list() {
-            return sj_12_list;
-        }
-
-        public void setSj_12_list(RealmList<SJModel> sj_12_list) {
-            this.sj_12_list = sj_12_list;
-        }
-
-        public RealmList<SJModel> getSj_123_list() {
-            return sj_123_list;
-        }
-
-        public void setSj_123_list(RealmList<SJModel> sj_123_list) {
-            this.sj_123_list = sj_123_list;
-        }
+    public WXModel(String name_game, String value) {
+        this.name_game = name_game;
+        this.value = value;
     }
+
+//    public class SJModel extends RealmObject {
+//        /**
+//         * 事件所得善恶 恶-善 正为善，负为恶
+//         */
+//        public int sj_se = 0;
+//        /**
+//         * 事件所得倾向 混乱-守序 正为守序，负为混乱
+//         */
+//        public int sj_qx = 0;
+//        /**
+//         * 事件所得物品：如道具，金币，食物等
+//         */
+//        public String sj_value;
+//
+//        /**
+//         * 武侠所遇见的事件及分支事件
+//         */
+//        public String sj_1_str;
+//        public String sj_12_str;
+//        public String sj_123_str;
+//
+//        /**
+//         * 等级，第一层为0，第二层选项为1，依次类推
+//         */
+//        public int level = 0;
+//
+//        public RealmList<SJModel> sj_1_list;
+//        public RealmList<SJModel> sj_12_list;
+//        public RealmList<SJModel> sj_123_list;
+//
+//        public int getSj_se() {
+//            return sj_se;
+//        }
+//
+//        public void setSj_se(int sj_se) {
+//            this.sj_se = sj_se;
+//        }
+//
+//        public int getSj_qx() {
+//            return sj_qx;
+//        }
+//
+//        public void setSj_qx(int sj_qx) {
+//            this.sj_qx = sj_qx;
+//        }
+//
+//        public String getSj_value() {
+//            return sj_value;
+//        }
+//
+//        public void setSj_value(String sj_value) {
+//            this.sj_value = sj_value;
+//        }
+//
+//        public String getSj_1_str() {
+//            return sj_1_str;
+//        }
+//
+//        public void setSj_1_str(String sj_1_str) {
+//            this.sj_1_str = sj_1_str;
+//        }
+//
+//        public String getSj_12_str() {
+//            return sj_12_str;
+//        }
+//
+//        public void setSj_12_str(String sj_12_str) {
+//            this.sj_12_str = sj_12_str;
+//        }
+//
+//        public String getSj_123_str() {
+//            return sj_123_str;
+//        }
+//
+//        public void setSj_123_str(String sj_123_str) {
+//            this.sj_123_str = sj_123_str;
+//        }
+//
+//        public int getLevel() {
+//            return level;
+//        }
+//
+//        public void setLevel(int level) {
+//            this.level = level;
+//        }
+//
+//        public RealmList<SJModel> getSj_1_list() {
+//            return sj_1_list;
+//        }
+//
+//        public void setSj_1_list(RealmList<SJModel> sj_1_list) {
+//            this.sj_1_list = sj_1_list;
+//        }
+//
+//        public RealmList<SJModel> getSj_12_list() {
+//            return sj_12_list;
+//        }
+//
+//        public void setSj_12_list(RealmList<SJModel> sj_12_list) {
+//            this.sj_12_list = sj_12_list;
+//        }
+//
+//        public RealmList<SJModel> getSj_123_list() {
+//            return sj_123_list;
+//        }
+//
+//        public void setSj_123_list(RealmList<SJModel> sj_123_list) {
+//            this.sj_123_list = sj_123_list;
+//        }
+//    }
 
     public String getName_game() {
         return name_game;
@@ -209,11 +218,11 @@ public class WXModel implements RealmModel {
         this.default_qx = default_qx;
     }
 
-    public RealmList<SJModel> getSjModels() {
-        return sjModels;
-    }
-
-    public void setSjModels(RealmList<SJModel> sjModels) {
-        this.sjModels = sjModels;
-    }
+//    public RealmList<SJModel> getSjModels() {
+//        return sjModels;
+//    }
+//
+//    public void setSjModels(RealmList<SJModel> sjModels) {
+//        this.sjModels = sjModels;
+//    }
 }

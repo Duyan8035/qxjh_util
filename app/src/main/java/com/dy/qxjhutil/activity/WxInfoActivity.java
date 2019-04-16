@@ -1,28 +1,9 @@
 package com.dy.qxjhutil.activity;
 
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
-
-import com.blankj.utilcode.util.SpanUtils;
-import com.blankj.utilcode.util.ToastUtils;
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
-import com.dy.qxjhutil.R;
 import com.dy.qxjhutil.base.BaseActivity;
-import com.dy.qxjhutil.model.ColorModel;
-import com.dy.qxjhutil.model.WXModel;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import io.realm.Realm;
-import io.realm.RealmList;
-import io.realm.RealmResults;
 
 public class WxInfoActivity extends BaseActivity {
-
+/*
     Realm mRealm;
 
     private RecyclerView mRecyclerView;
@@ -30,7 +11,7 @@ public class WxInfoActivity extends BaseActivity {
 
     private String mName;
     private WXModel wxModel;
-    private RealmList<WXModel.SJModel> sjModels = new RealmList<>();
+//    private RealmList<WXModel.SJModel> sjModels = new RealmList<>();
 
     private List<Valuemodel> models = new ArrayList<>();
 
@@ -59,9 +40,9 @@ public class WxInfoActivity extends BaseActivity {
         }
 
         models = new ArrayList<>();
-        /**
+        *//**
          * 重新组装数据
-         */
+         *//*
         for (int i = 0; i < sjModels.size(); i++) {
             if (sjModels.get(0).getSj_1_list().size() > 0) {
 
@@ -148,5 +129,5 @@ public class WxInfoActivity extends BaseActivity {
         super.onDestroy();
         // Close the Realm instance.
         mRealm.close();
-    }
+    }*/
 }
