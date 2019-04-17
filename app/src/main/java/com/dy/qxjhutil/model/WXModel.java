@@ -20,10 +20,42 @@ public class WXModel implements RealmModel {
     public String name;
     private int trend;
     private int good;
+    private String parent;
+
+    private String type;
+
+    public String getParent() {
+        return parent == null ? "" : parent;
+    }
+
+    public void setParent(String parent) {
+        this.parent = parent;
+    }
 
     public RealmList<SjModel> sjModels;
 
     public WXModel() {
+    }
+
+    public WXModel(String name_game, int trend, int good) {
+        this.name_game = name_game;
+        this.trend = trend;
+        this.good = good;
+    }
+
+    public WXModel(String name_game, int trend, int good, String parent) {
+        this.name_game = name_game;
+        this.trend = trend;
+        this.good = good;
+        this.parent = parent;
+    }
+
+    public WXModel(String name_game, int icon, String name, int trend, int good) {
+        this.name_game = name_game;
+        this.icon = icon;
+        this.name = name;
+        this.trend = trend;
+        this.good = good;
     }
 
     public String getName_game() {
