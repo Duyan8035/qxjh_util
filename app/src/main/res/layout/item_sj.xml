@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toStartOf="@+id/item_text_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="武侠名字" />
+        tools:text="name" />
 
     <TextView
         android:id="@+id/item_text_2"
@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="善-1" />
+        tools:text="value" />
 
 
 </android.support.constraint.ConstraintLayout>

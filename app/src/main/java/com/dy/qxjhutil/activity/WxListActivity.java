@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.blankj.utilcode.util.Utils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.R;
@@ -34,8 +33,8 @@ public class WxListActivity extends AppCompatActivity {
         mAdapter = new BaseQuickAdapter<WXModel, BaseViewHolder>(R.layout.item_wx_list) {
             @Override
             protected void convert(BaseViewHolder helper, WXModel item) {
-                helper.setText(R.id.item_wx_list_name, item.getName_game())
-                        .setText(R.id.item_wx_list_value, item.getValue());
+//                helper.setText(R.id.item_wx_list_name, item.getName_game())
+//                        .setText(R.id.item_wx_list_value, item.getValue());
             }
         };
         recyclerView.setAdapter(mAdapter);
@@ -45,24 +44,24 @@ public class WxListActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        mList.add(new WXModel(魔教圣女, Utils.getApp().getString(R.string.魔教圣女)));
-        mList.add(new WXModel(狮王, Utils.getApp().getString(R.string.狮王)));
-        mList.add(new WXModel(东方不败, Utils.getApp().getString(R.string.东方不败)));
-        mList.add(new WXModel(九剑传人, Utils.getApp().getString(R.string.九剑传人)));
-        mList.add(new WXModel(蝠王, Utils.getApp().getString(R.string.蝠王)));
-        mList.add(new WXModel(君子剑, Utils.getApp().getString(R.string.君子剑)));
-        mList.add(new WXModel(林家公子, Utils.getApp().getString(R.string.林家公子)));
-        mList.add(new WXModel(波斯圣女, Utils.getApp().getString(R.string.波斯圣女)));
-        mList.add(new WXModel(不可不戒, Utils.getApp().getString(R.string.不可不戒)));
-        mList.add(new WXModel(玄冥二老, Utils.getApp().getString(R.string.玄冥二老)));
-        mList.add(new WXModel(龙王, Utils.getApp().getString(R.string.龙王)));
-        mList.add(new WXModel(余馆主, Utils.getApp().getString(R.string.余馆主)));
-        mList.add(new WXModel(周芷若, Utils.getApp().getString(R.string.周芷若)));
-        mList.add(new WXModel(赵敏, Utils.getApp().getString(R.string.赵敏)));
-        mList.add(new WXModel(任盈盈, Utils.getApp().getString(R.string.任盈盈)));
-        mList.add(new WXModel(魔教教主, Utils.getApp().getString(R.string.魔教教主)));
-
-        mAdapter.setNewData(mList);
+//        mList.add(new WXModel(魔教圣女, Utils.getApp().getString(R.string.魔教圣女)));
+//        mList.add(new WXModel(狮王, Utils.getApp().getString(R.string.狮王)));
+//        mList.add(new WXModel(东方不败, Utils.getApp().getString(R.string.东方不败)));
+//        mList.add(new WXModel(九剑传人, Utils.getApp().getString(R.string.九剑传人)));
+//        mList.add(new WXModel(蝠王, Utils.getApp().getString(R.string.蝠王)));
+//        mList.add(new WXModel(君子剑, Utils.getApp().getString(R.string.君子剑)));
+//        mList.add(new WXModel(林家公子, Utils.getApp().getString(R.string.林家公子)));
+//        mList.add(new WXModel(波斯圣女, Utils.getApp().getString(R.string.波斯圣女)));
+//        mList.add(new WXModel(不可不戒, Utils.getApp().getString(R.string.不可不戒)));
+//        mList.add(new WXModel(玄冥二老, Utils.getApp().getString(R.string.玄冥二老)));
+//        mList.add(new WXModel(龙王, Utils.getApp().getString(R.string.龙王)));
+//        mList.add(new WXModel(余馆主, Utils.getApp().getString(R.string.余馆主)));
+//        mList.add(new WXModel(周芷若, Utils.getApp().getString(R.string.周芷若)));
+//        mList.add(new WXModel(赵敏, Utils.getApp().getString(R.string.赵敏)));
+//        mList.add(new WXModel(任盈盈, Utils.getApp().getString(R.string.任盈盈)));
+//        mList.add(new WXModel(魔教教主, Utils.getApp().getString(R.string.魔教教主)));
+//
+//        mAdapter.setNewData(mList);
     }
 
     private static final String 魔教圣女 = "魔教圣女";

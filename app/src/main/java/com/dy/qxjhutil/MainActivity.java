@@ -44,7 +44,7 @@ public class MainActivity extends BaseActivity {
         mRealm = Realm.getDefaultInstance();
 
         mRecyclerView = findViewById(R.id.act_main_rv);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 3));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 2));
 
         mAdapter = new BaseQuickAdapter<WXModel, BaseViewHolder>(R.layout.item_img) {
             @Override
@@ -75,8 +75,6 @@ public class MainActivity extends BaseActivity {
     private void initData() {
         if (MMKV.defaultMMKV().getBoolean("is_one", true)) {
             MMKV.defaultMMKV().putBoolean("is_one", false);
-
-
         }
     }
 
