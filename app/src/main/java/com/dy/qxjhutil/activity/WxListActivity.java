@@ -54,122 +54,153 @@ public class WxListActivity extends BaseActivity {
                         protected void convert(BaseViewHolder helper, SjModel item) {
                             if (!TextUtils.isEmpty(item.getValue_1()) && item.getValue_1().length() > 0) {
                                 helper.setGone(R.id.item_wx_sj_list_value_1, true);
-                                helper.setText(R.id.include_sj_value_parent_layout1_1, item.getValue_1());
-                                if (!TextUtils.isEmpty(item.getBranch_11()) && item.getBranch_11().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout1_1, item.getBranch_11())
+                                if (TextUtils.isEmpty(item.getBranch_11()) && TextUtils.isEmpty(item.getBranch_12())
+                                        && TextUtils.isEmpty(item.getBranch_13())) {
+                                    helper.setGone(R.id.include_sj_value_parent_layout1_1, false)
+                                            .setText(R.id.include_sj_value_value_layout1_1, item.getValue_1())
                                             .setGone(R.id.include_sj_value_value_layout1_1, true)
-                                            .setText(R.id.include_sj_value_obtain_layout1_1, getObtain(item.getObtain_11(), item.getTrend_11(), item.getGood_11()))
-                                            .setGone(R.id.include_sj_value_obtain_layout1_1, true)
-                                    ;
+                                            .setText(R.id.include_sj_value_obtain_layout1_1, getObtain(item.getObtain_11(),
+                                                    item.getTrend_11(), item.getGood_11()))
+                                            .setGone(R.id.include_sj_value_obtain_layout1_1, true);
                                 } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout1_1, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout1_1, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout1_1, false)
-                                    ;
+                                    helper.setText(R.id.include_sj_value_parent_layout1_1, item.getValue_1());
+                                    if (!TextUtils.isEmpty(item.getBranch_11()) && item.getBranch_11().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout1_1, item.getBranch_11())
+                                                .setGone(R.id.include_sj_value_value_layout1_1, true)
+                                                .setText(R.id.include_sj_value_obtain_layout1_1, getObtain(item.getObtain_11(), item.getTrend_11(), item.getGood_11()))
+                                                .setGone(R.id.include_sj_value_obtain_layout1_1, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout1_1, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout1_1, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout1_1, false)
+                                        ;
+                                    }
+                                    if (!TextUtils.isEmpty(item.getBranch_12()) && item.getBranch_12().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout1_2, item.getBranch_12())
+                                                .setGone(R.id.include_sj_value_value_layout1_2, true)
+                                                .setText(R.id.include_sj_value_obtain_layout1_2, getObtain(item.getObtain_12(), item.getTrend_12(), item.getGood_12()))
+                                                .setGone(R.id.include_sj_value_obtain_layout1_2, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout1_2, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout1_2, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout1_2, false);
+                                    }
+                                    if (!TextUtils.isEmpty(item.getBranch_13()) && item.getBranch_13().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout1_3, item.getBranch_13())
+                                                .setGone(R.id.include_sj_value_value_layout1_3, true)
+                                                .setText(R.id.include_sj_value_obtain_layout1_3, getObtain(item.getObtain_13(), item.getTrend_13(), item.getGood_13()))
+                                                .setGone(R.id.include_sj_value_obtain_layout1_3, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout1_3, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout1_3, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout1_3, false);
+                                    }
                                 }
-                                if (!TextUtils.isEmpty(item.getBranch_12()) && item.getBranch_12().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout1_2, item.getBranch_12())
-                                            .setGone(R.id.include_sj_value_value_layout1_2, true)
-                                            .setText(R.id.include_sj_value_obtain_layout1_2, getObtain(item.getObtain_12(), item.getTrend_12(), item.getGood_12()))
-                                            .setGone(R.id.include_sj_value_obtain_layout1_2, true)
-                                    ;
-                                } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout1_2, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout1_2, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout1_2, false);
-                                }
-                                if (!TextUtils.isEmpty(item.getBranch_13()) && item.getBranch_13().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout1_3, item.getBranch_13())
-                                            .setGone(R.id.include_sj_value_value_layout1_3, true)
-                                            .setText(R.id.include_sj_value_obtain_layout1_3, getObtain(item.getObtain_13(), item.getTrend_13(), item.getGood_13()))
-                                            .setGone(R.id.include_sj_value_obtain_layout1_3, true)
-                                    ;
-                                } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout1_3, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout1_3, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout1_3, false);
-                                }
+
                             } else {
                                 helper.setGone(R.id.item_wx_sj_list_value_1, false);
                             }
 
                             if (!TextUtils.isEmpty(item.getValue_2()) && item.getValue_2().length() > 0) {
-                                helper.setGone(R.id.item_wx_sj_list_value_2, true);
-                                helper.setText(R.id.include_sj_value_parent_layout2_1, item.getValue_2());
-                                if (!TextUtils.isEmpty(item.getBranch_21()) && item.getBranch_21().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout2_1, item.getBranch_21())
+                                if (TextUtils.isEmpty(item.getBranch_21()) && TextUtils.isEmpty(item.getBranch_22())
+                                        && TextUtils.isEmpty(item.getBranch_23())) {
+                                    helper.setGone(R.id.include_sj_value_parent_layout2_1, false)
+                                            .setText(R.id.include_sj_value_value_layout2_1, item.getValue_2())
                                             .setGone(R.id.include_sj_value_value_layout2_1, true)
-                                            .setText(R.id.include_sj_value_obtain_layout2_1, getObtain(item.getObtain_21(), item.getTrend_21(), item.getGood_21()))
-                                            .setGone(R.id.include_sj_value_obtain_layout2_1, true)
-                                    ;
+                                            .setText(R.id.include_sj_value_obtain_layout2_1, getObtain(item.getObtain_21(),
+                                                    item.getTrend_21(), item.getGood_21()))
+                                            .setGone(R.id.include_sj_value_obtain_layout2_1, true);
                                 } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout2_1, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout2_1, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout2_1, false)
-                                    ;
-                                }
-                                if (!TextUtils.isEmpty(item.getBranch_22()) && item.getBranch_22().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout2_2, item.getBranch_22())
-                                            .setGone(R.id.include_sj_value_value_layout2_2, true)
-                                            .setText(R.id.include_sj_value_obtain_layout2_2, getObtain(item.getObtain_22(), item.getTrend_22(), item.getGood_22()))
-                                            .setGone(R.id.include_sj_value_obtain_layout2_2, true)
-                                    ;
-                                } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout2_2, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout2_2, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout2_2, false);
-                                }
-                                if (!TextUtils.isEmpty(item.getBranch_23()) && item.getBranch_23().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout2_3, item.getBranch_23())
-                                            .setGone(R.id.include_sj_value_value_layout2_3, true)
-                                            .setText(R.id.include_sj_value_obtain_layout2_3, getObtain(item.getObtain_23(), item.getTrend_23(), item.getGood_23()))
-                                            .setGone(R.id.include_sj_value_obtain_layout2_3, true)
-                                    ;
-                                } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout2_3, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout2_3, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout2_3, false);
+                                    helper.setGone(R.id.item_wx_sj_list_value_2, true);
+                                    helper.setText(R.id.include_sj_value_parent_layout2_1, item.getValue_2());
+                                    if (!TextUtils.isEmpty(item.getBranch_21()) && item.getBranch_21().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout2_1, item.getBranch_21())
+                                                .setGone(R.id.include_sj_value_value_layout2_1, true)
+                                                .setText(R.id.include_sj_value_obtain_layout2_1, getObtain(item.getObtain_21(), item.getTrend_21(), item.getGood_21()))
+                                                .setGone(R.id.include_sj_value_obtain_layout2_1, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout2_1, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout2_1, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout2_1, false)
+                                        ;
+                                    }
+                                    if (!TextUtils.isEmpty(item.getBranch_22()) && item.getBranch_22().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout2_2, item.getBranch_22())
+                                                .setGone(R.id.include_sj_value_value_layout2_2, true)
+                                                .setText(R.id.include_sj_value_obtain_layout2_2, getObtain(item.getObtain_22(), item.getTrend_22(), item.getGood_22()))
+                                                .setGone(R.id.include_sj_value_obtain_layout2_2, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout2_2, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout2_2, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout2_2, false);
+                                    }
+                                    if (!TextUtils.isEmpty(item.getBranch_23()) && item.getBranch_23().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout2_3, item.getBranch_23())
+                                                .setGone(R.id.include_sj_value_value_layout2_3, true)
+                                                .setText(R.id.include_sj_value_obtain_layout2_3, getObtain(item.getObtain_23(), item.getTrend_23(), item.getGood_23()))
+                                                .setGone(R.id.include_sj_value_obtain_layout2_3, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout2_3, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout2_3, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout2_3, false);
+                                    }
                                 }
                             } else {
                                 helper.setGone(R.id.item_wx_sj_list_value_2, false);
                             }
 
                             if (!TextUtils.isEmpty(item.getValue_3()) && item.getValue_3().length() > 0) {
-                                helper.setGone(R.id.item_wx_sj_list_value_3, true);
-                                helper.setText(R.id.include_sj_value_parent_layout3_1, item.getValue_3());
-                                if (!TextUtils.isEmpty(item.getBranch_31()) && item.getBranch_31().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout3_1, item.getBranch_31())
+                                if (TextUtils.isEmpty(item.getBranch_31()) && TextUtils.isEmpty(item.getBranch_32())
+                                        && TextUtils.isEmpty(item.getBranch_33())) {
+                                    helper.setGone(R.id.include_sj_value_parent_layout3_1, false)
+                                            .setText(R.id.include_sj_value_value_layout3_1, item.getValue_3())
                                             .setGone(R.id.include_sj_value_value_layout3_1, true)
-                                            .setText(R.id.include_sj_value_obtain_layout3_1, getObtain(item.getObtain_31(), item.getTrend_31(), item.getGood_31()))
-                                            .setGone(R.id.include_sj_value_obtain_layout3_1, true)
-                                    ;
+                                            .setText(R.id.include_sj_value_obtain_layout3_1, getObtain(item.getObtain_31(),
+                                                    item.getTrend_31(), item.getGood_31()))
+                                            .setGone(R.id.include_sj_value_obtain_layout3_1, true);
                                 } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout3_1, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout3_1, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout3_1, false)
-                                    ;
-                                }
-                                if (!TextUtils.isEmpty(item.getBranch_32()) && item.getBranch_32().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout3_2, item.getBranch_32())
-                                            .setGone(R.id.include_sj_value_value_layout3_2, true)
-                                            .setText(R.id.include_sj_value_obtain_layout3_2, getObtain(item.getObtain_32(), item.getTrend_32(), item.getGood_32()))
-                                            .setGone(R.id.include_sj_value_obtain_layout3_2, true)
-                                    ;
-                                } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout3_2, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout3_2, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout3_2, false);
-                                }
-                                if (!TextUtils.isEmpty(item.getBranch_33()) && item.getBranch_33().length() > 0) {
-                                    helper.setText(R.id.include_sj_value_value_layout3_3, item.getBranch_33())
-                                            .setGone(R.id.include_sj_value_value_layout3_3, true)
-                                            .setText(R.id.include_sj_value_obtain_layout3_3, getObtain(item.getObtain_33(), item.getTrend_33(), item.getGood_33()))
-                                            .setGone(R.id.include_sj_value_obtain_layout3_3, true)
-                                    ;
-                                } else {
-                                    helper.setGone(R.id.include_sj_value_value_layout3_3, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout3_3, false)
-                                            .setGone(R.id.include_sj_value_obtain_layout3_3, false);
+                                    helper.setGone(R.id.item_wx_sj_list_value_3, true);
+                                    helper.setText(R.id.include_sj_value_parent_layout3_1, item.getValue_3());
+                                    if (!TextUtils.isEmpty(item.getBranch_31()) && item.getBranch_31().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout3_1, item.getBranch_31())
+                                                .setGone(R.id.include_sj_value_value_layout3_1, true)
+                                                .setText(R.id.include_sj_value_obtain_layout3_1, getObtain(item.getObtain_31(), item.getTrend_31(), item.getGood_31()))
+                                                .setGone(R.id.include_sj_value_obtain_layout3_1, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout3_1, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout3_1, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout3_1, false)
+                                        ;
+                                    }
+                                    if (!TextUtils.isEmpty(item.getBranch_32()) && item.getBranch_32().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout3_2, item.getBranch_32())
+                                                .setGone(R.id.include_sj_value_value_layout3_2, true)
+                                                .setText(R.id.include_sj_value_obtain_layout3_2, getObtain(item.getObtain_32(), item.getTrend_32(), item.getGood_32()))
+                                                .setGone(R.id.include_sj_value_obtain_layout3_2, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout3_2, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout3_2, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout3_2, false);
+                                    }
+                                    if (!TextUtils.isEmpty(item.getBranch_33()) && item.getBranch_33().length() > 0) {
+                                        helper.setText(R.id.include_sj_value_value_layout3_3, item.getBranch_33())
+                                                .setGone(R.id.include_sj_value_value_layout3_3, true)
+                                                .setText(R.id.include_sj_value_obtain_layout3_3, getObtain(item.getObtain_33(), item.getTrend_33(), item.getGood_33()))
+                                                .setGone(R.id.include_sj_value_obtain_layout3_3, true)
+                                        ;
+                                    } else {
+                                        helper.setGone(R.id.include_sj_value_value_layout3_3, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout3_3, false)
+                                                .setGone(R.id.include_sj_value_obtain_layout3_3, false);
+                                    }
                                 }
                             } else {
                                 helper.setGone(R.id.item_wx_sj_list_value_3, false);
@@ -178,7 +209,8 @@ public class WxListActivity extends BaseActivity {
                     });
                 }
             }
-        };
+        }
+        ;
         recyclerView.setAdapter(mAdapter);
 
         initData();
@@ -190,19 +222,16 @@ public class WxListActivity extends BaseActivity {
     }
 
     private CharSequence getObtain(@Nullable String obtain, int trend, int good) {
-        CharSequence charSequence = new StringBuffer();
         SpanUtils spanUtils = new SpanUtils();
         if (!TextUtils.isEmpty(obtain) && obtain.length() > 0) {
             spanUtils.append(obtain);
         }
         if (trend != 0) {
-            spanUtils.append("" + trend).setForegroundColor(trend > 0 ? ColorModel.color_守序 : ColorModel.color_恶);
-
+            spanUtils.append("" + trend).setForegroundColor(trend > 0 ? ColorModel.color_守序 : ColorModel.color_混乱);
         }
         if (good != 0) {
-
+            spanUtils.append("" + good).setForegroundColor(good > 0 ? ColorModel.color_善 : ColorModel.color_恶);
         }
-
         return spanUtils.create();
     }
 }

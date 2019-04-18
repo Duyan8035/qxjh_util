@@ -28,11 +28,12 @@ public class SjModel implements RealmModel {
     private int trend_11, trend_12, trend_13, trend_21, trend_22, trend_23, trend_31, trend_32, trend_33;
     private int good_11, good_12, good_13, good_21, good_22, good_23, good_31, good_32, good_33;
 
-    public SjModel(String value_1, String value_2, String branch_11, String branch_21, String obtain_11, String obtain_21, int trend_11, int trend_21, int good_11, int good_21) {
+    public SjModel() {
+    }
+
+    public SjModel(String value_1, String value_2, String obtain_11, String obtain_21, int trend_11, int trend_21, int good_11, int good_21) {
         this.value_1 = value_1;
         this.value_2 = value_2;
-        this.branch_11 = branch_11;
-        this.branch_21 = branch_21;
         this.obtain_11 = obtain_11;
         this.obtain_21 = obtain_21;
         this.trend_11 = trend_11;

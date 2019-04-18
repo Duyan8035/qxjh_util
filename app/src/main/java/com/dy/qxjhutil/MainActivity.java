@@ -11,12 +11,9 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.activity.WxDefaultActivity;
 import com.dy.qxjhutil.activity.WxListActivity;
 import com.dy.qxjhutil.base.BaseActivity;
-import com.dy.qxjhutil.base.WxInfoModel;
-import com.dy.qxjhutil.model.WXModel;
+import com.dy.qxjhutil.data.WxDefaultModel;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import io.realm.Realm;
 
@@ -82,16 +79,17 @@ public class MainActivity extends BaseActivity {
     private void initData() {
 //        if (MMKV.defaultMMKV().getBoolean("is_one", true)) {
 //            MMKV.defaultMMKV().putBoolean("is_one", false);
-        mRealm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-                List<WXModel> wxModels = new ArrayList<>();
-                for (int i = 0; i < WxInfoModel.stringList.length; i++) {
-                    wxModels.add(new WXModel(WxInfoModel.stringList[i], WxInfoModel.trends[i], WxInfoModel.goods[i], WxInfoModel.parents[i]));
-                }
-                mRealm.copyToRealmOrUpdate(wxModels);
-            }
-        });
+        new WxDefaultModel().initData(mContext);
+//        mRealm.executeTransaction(new Realm.Transaction() {
+//            @Override
+//            public void execute(Realm realm) {
+//                List<WXModel> wxModels = new ArrayList<>();
+//                for (int i = 0; i < WxInfoModel.stringList.length; i++) {
+//                    wxModels.add(new WXModel(WxInfoModel.stringList[i], WxInfoModel.trends[i], WxInfoModel.goods[i], WxInfoModel.parents[i]));
+//                }
+//                mRealm.copyToRealmOrUpdate(wxModels);
+//            }
+//        });
 //        }
     }
 

@@ -6,9 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".activity.WxDefaultActivity">
 
+
+    <TextView
+        android:id="@+id/item_wx_list_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="武侠名字" />
+
+    <TextView
+        android:id="@+id/item_wx_list_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="混乱-守序"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_list_name"
+        app:layout_constraintEnd_toStartOf="@+id/item_wx_list_value2"
+        app:layout_constraintStart_toEndOf="@+id/item_wx_list_name"
+        app:layout_constraintTop_toTopOf="@+id/item_wx_list_name" />
+
+    <TextView
+        android:id="@+id/item_wx_list_value2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="邪恶-善良"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_list_name"
+        app:layout_constraintEnd_toStartOf="@+id/item_wx_list_value3"
+        app:layout_constraintStart_toEndOf="@+id/item_wx_list_value"
+        app:layout_constraintTop_toTopOf="@+id/item_wx_list_name" />
+
+    <TextView
+        android:id="@+id/item_wx_list_value3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="阵容"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_list_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_wx_list_value2"
+        app:layout_constraintTop_toTopOf="@+id/item_wx_list_name" />
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_wx_list_name" />
 
 </android.support.constraint.ConstraintLayout>

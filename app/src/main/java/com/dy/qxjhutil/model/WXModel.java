@@ -63,24 +63,27 @@ public class WXModel implements RealmModel {
         return name_game;
     }
 
-    public void setName_game(String name_game) {
+    public WXModel setName_game(String name_game) {
         this.name_game = name_game;
+        return this;
     }
 
     public int getIcon() {
         return icon;
     }
 
-    public void setIcon(int icon) {
+    public WXModel setIcon(int icon) {
         this.icon = icon;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public WXModel setName(String name) {
         this.name = name;
+        return this;
     }
 
     public RealmList<SjModel> getSjModels() {
@@ -90,23 +93,26 @@ public class WXModel implements RealmModel {
         return sjModels;
     }
 
-    public void setSjModels(RealmList<SjModel> sjModels) {
+    public WXModel setSjModels(RealmList<SjModel> sjModels) {
         this.sjModels = sjModels;
+        return this;
     }
 
     public int getTrend() {
         return trend;
     }
 
-    public void setTrend(int trend) {
+    public WXModel setTrend(int trend) {
         this.trend = trend;
+        return this;
     }
 
     public int getGood() {
         return good;
     }
 
-    public void setGood(int good) {
+    public WXModel setGood(int good) {
         this.good = good;
+        return this;
     }
 }
