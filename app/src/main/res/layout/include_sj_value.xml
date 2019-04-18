@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.support.constraint.ConstraintLayout">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/v_guideline_layout3_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/v_guideline_layout3_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="89dp" />
+
+    <TextView
+        android:id="@+id/include_sj_value_parent_layout3_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_guideline_layout3_1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="name" />
+
+    <TextView
+        android:id="@+id/include_sj_value_value_layout3_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout3_2"
+        app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout3_1"
+        app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="value" />
+
+
+    <TextView
+        android:id="@+id/include_sj_value_value_layout3_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout3_3"
+        app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout3_2"
+        app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+        app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout3_1"
+        tools:text="value" />
+
+    <TextView
+        android:id="@+id/include_sj_value_value_layout3_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout3_3"
+        app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+        app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout3_2"
+        tools:text="value" />
+
+    <TextView
+        android:id="@+id/include_sj_value_obtain_layout3_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout3_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_guideline_layout3_2"
+        app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout3_1" />
+
+
+    <TextView
+        android:id="@+id/include_sj_value_obtain_layout3_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout3_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_guideline_layout3_2"
+        app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout3_2" />
+
+    <TextView
+        android:id="@+id/include_sj_value_obtain_layout3_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout3_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_guideline_layout3_2"
+        app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout3_3" />
+
+
+</merge>

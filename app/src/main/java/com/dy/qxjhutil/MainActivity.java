@@ -2,29 +2,28 @@ package com.dy.qxjhutil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.dy.qxjhutil.activity.WxInfoActivity;
+import com.dy.qxjhutil.activity.WxDefaultActivity;
+import com.dy.qxjhutil.activity.WxListActivity;
 import com.dy.qxjhutil.base.BaseActivity;
 import com.dy.qxjhutil.base.WxInfoModel;
 import com.dy.qxjhutil.model.WXModel;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import io.realm.Realm;
 
 public class MainActivity extends BaseActivity {
-    private static final String ACT_TYPE_1 = "善恶事件";
-    private static final String ACT_TYPE_2 = "隐藏武学";
-    private static final String ACT_TYPE_3 = "武侠自带善恶";
 
     private RecyclerView mRecyclerView;
-    private BaseQuickAdapter<WXModel, BaseViewHolder> mAdapter;
+    private BaseQuickAdapter<String, BaseViewHolder> mAdapter;
 
 //    private ViewPager mViewPager;
 //    private TabLayout tabLayout;
@@ -33,6 +32,8 @@ public class MainActivity extends BaseActivity {
 //    QMUITabSegment mTabSegment;
 //    ViewPager mContentViewPager;
     Realm mRealm;
+
+    private String[] strings = {"初始", "列表", "地区", "资料", "其他"};
 
 
     @Override
@@ -47,30 +48,32 @@ public class MainActivity extends BaseActivity {
         initData();
 
         mRecyclerView = findViewById(R.id.act_main_rv);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 2));
 
-        mAdapter = new BaseQuickAdapter<WXModel, BaseViewHolder>(R.layout.item_wx_good) {
+        mAdapter = new BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_text) {
             @Override
-            protected void convert(BaseViewHolder helper, WXModel item) {
-                helper.setText(R.id.item_wx_list_name, item.getName_game())
-                        .setText(R.id.item_wx_list_value, item.getTrend() == 99 ? "" : item.getTrend() + "")
-                        .setText(R.id.item_wx_list_value2, item.getTrend() == 99 ? "" : item.getGood() + "")
-                        .setText(R.id.item_wx_list_value3, item.getParent())
-                ;
+            protected void convert(BaseViewHolder helper, String item) {
+                helper.setText(R.id.item_text, item);
             }
         };
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(mContext, WxInfoActivity.class);
-                intent.putExtra("id", mAdapter.getData().get(position).getName_game());
-                startActivity(intent);
-//                startActivity(new Intent(mContext, mAdapter.getData().get(position)));
+                switch (position) {
+                    case 0:
+                        startActivity(new Intent(mContext, WxDefaultActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(mContext, WxListActivity.class));
+                        break;
+                    default:
+                        break;
+                }
             }
         });
         mRecyclerView.setAdapter(mAdapter);
 
-        mAdapter.setNewData(mRealm.where(WXModel.class).findAll());
+        mAdapter.setNewData(Arrays.asList(strings));
     }
 
     /**
@@ -89,7 +92,6 @@ public class MainActivity extends BaseActivity {
                 mRealm.copyToRealmOrUpdate(wxModels);
             }
         });
-
 //        }
     }
 

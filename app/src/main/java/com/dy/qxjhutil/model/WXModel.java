@@ -17,6 +17,7 @@ public class WXModel implements RealmModel {
     public String name_game;
     @DrawableRes
     public int icon;
+
     public String name;
     private int trend;
     private int good;
