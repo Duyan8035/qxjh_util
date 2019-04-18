@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toTopOf="@+id/div"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="名字" />
+        tools:text="武侠名字" />
 
     <TextView
         android:id="@+id/item_wx_list_value"
