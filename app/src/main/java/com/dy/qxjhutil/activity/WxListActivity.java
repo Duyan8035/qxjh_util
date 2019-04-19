@@ -14,6 +14,7 @@ import com.dy.qxjhutil.base.BaseActivity;
 import com.dy.qxjhutil.model.ColorModel;
 import com.dy.qxjhutil.model.SjModel;
 import com.dy.qxjhutil.model.WXModel;
+import com.gjiazhe.wavesidebar.WaveSideBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class WxListActivity extends BaseActivity {
 
     Realm mRealm;
 
+    private WaveSideBar sideBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,16 +211,29 @@ public class WxListActivity extends BaseActivity {
                     });
                 }
             }
-        }
-        ;
+        };
         recyclerView.setAdapter(mAdapter);
 
-        initData();
 
+        sideBar = findViewById(R.id.side_bar);
+        sideBar.setOnSelectIndexItemListener(new WaveSideBar.OnSelectIndexItemListener() {
+            @Override
+            public void onSelectIndexItem(String index) {
+                for (int i = 0; i < mList.size(); i++) {
+                    if (mList.get(i).getIndex().equals(index)) {
+                        ((LinearLayoutManager) recyclerView.getLayoutManager()).scrollToPositionWithOffset(i, 0);
+                        return;
+                    }
+                }
+            }
+        });
+
+        initData();
     }
 
     private void initData() {
-        mAdapter.setNewData(mRealm.where(WXModel.class).findAll());
+        mList = mRealm.where(WXModel.class).findAll().sort("name_game");
+        mAdapter.setNewData(mList);
     }
 
     private CharSequence getObtain(@Nullable String obtain, int trend, int good) {

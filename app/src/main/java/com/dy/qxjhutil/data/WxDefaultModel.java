@@ -13,11 +13,11 @@ import io.realm.Realm;
  * @author Dy
  */
 public class WxDefaultModel {
-    private static final String Parent_1 = "中立";
-    private static final String Parent_2 = "豪侠";
-    private static final String Parent_3 = "游侠";
-    private static final String Parent_4 = "刺客";
-    private static final String Parent_5 = "气宗";
+    public static final String Parent_1 = "中立";
+    public static final String Parent_2 = "豪侠";
+    public static final String Parent_3 = "游侠";
+    public static final String Parent_4 = "刺客";
+    public static final String Parent_5 = "气宗";
 
     public static String[] stringList = {
             "两小无猜", "青梅竹马",

@@ -14,17 +14,19 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:paddingBottom="5dp"
         android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="武侠名字" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/item_wx_list_value"
-        android:layout_width="0dp"
+        android:layout_width="40dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:gravity="center_vertical|end"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/item_wx_list_value2"
         app:layout_constraintStart_toEndOf="@+id/item_wx_list_name"
@@ -32,9 +34,10 @@
 
     <TextView
         android:id="@+id/item_wx_list_value2"
-        android:layout_width="0dp"
+        android:layout_width="40dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:gravity="center_vertical|end"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/item_wx_list_value3"
         app:layout_constraintStart_toEndOf="@+id/item_wx_list_value"
@@ -42,12 +45,11 @@
 
     <TextView
         android:id="@+id/item_wx_list_value3"
-        android:layout_width="0dp"
+        android:layout_width="60dp"
         android:layout_height="0dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/item_wx_list_value2"
         app:layout_constraintTop_toTopOf="parent" />
 
 

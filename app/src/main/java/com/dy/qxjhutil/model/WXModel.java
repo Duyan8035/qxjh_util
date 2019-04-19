@@ -25,6 +25,8 @@ public class WXModel implements RealmModel {
 
     private String type;
 
+    private String index;
+
     public String getParent() {
         return parent == null ? "" : parent;
     }
@@ -33,7 +35,7 @@ public class WXModel implements RealmModel {
         this.parent = parent;
     }
 
-    public RealmList<SjModel> sjModels;
+    public RealmList<SjModel> sjModels = new RealmList<>();
 
     public WXModel() {
     }
@@ -113,6 +115,15 @@ public class WXModel implements RealmModel {
 
     public WXModel setGood(int good) {
         this.good = good;
+        return this;
+    }
+
+    public String getIndex() {
+        return index == null ? "" : index;
+    }
+
+    public WXModel setIndex(String index) {
+        this.index = index;
         return this;
     }
 }
