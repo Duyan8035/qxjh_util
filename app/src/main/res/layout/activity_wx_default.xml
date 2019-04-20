@@ -66,27 +66,27 @@
 
     <TextView
         android:id="@+id/item_wx_list_value"
-        android:layout_width="40dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="center_vertical|end"
         android:text="混乱-守序"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_list_name"
         app:layout_constraintEnd_toStartOf="@+id/item_wx_list_value2"
         app:layout_constraintStart_toEndOf="@+id/item_wx_list_name"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/item_wx_list_name" />
 
     <TextView
         android:id="@+id/item_wx_list_value2"
-        android:layout_width="40dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="center_vertical|end"
         android:text="邪恶-善良"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_list_name"
         app:layout_constraintEnd_toStartOf="@+id/item_wx_list_value3"
         app:layout_constraintStart_toEndOf="@+id/item_wx_list_value"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/item_wx_list_name" />
 
     <TextView
         android:id="@+id/item_wx_list_value3"
@@ -94,9 +94,9 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="阵容"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_list_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/item_wx_list_name" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

@@ -7,4 +7,30 @@
     <color name="detail_title_bg">#4893F3</color>
 
     <color name="scroll_bg">#99999999</color>
+
+
+    <color name="type_parent_1_bg">#ffffff</color>
+    <color name="type_parent_2_bg">#fc8d96</color>
+    <color name="type_parent_3_bg">#FD9DFA</color>
+    <color name="type_parent_4_bg">#9bd55a</color>
+    <color name="type_parent_5_bg">#59A6EE</color>
+
+    <color name="type_parent_1_color">#ffffff</color>
+    <color name="type_parent_2_color">#fa8f98</color>
+    <color name="type_parent_3_color">#df8fff</color>
+    <color name="type_parent_4_color">#9dd45c</color>
+    <color name="type_parent_5_color">#318eed</color>
+
+    <color name="TYPE_BG_RED">#FC8D95</color>
+    <color name="TYPE_BG_GREEN">#CBF382</color>
+    <color name="TYPE_BG_DEFAULT">#ffffff</color>
+
+    <color name="TYPE_COLOR_RED">#df1c2a</color>
+    <color name="TYPE_COLOR_GREEN">#87cc11</color>
+    <color name="TYPE_COLOR_DEFAULT">#212832</color>
+    <!--分割线-->
+    <color name="lineColor">#dedede</color>
+    <color name="line_color">#dedede</color>
+    <!--弱分割-->
+    <color name="weakLineColor">#f5f5f5</color>
 </resources>

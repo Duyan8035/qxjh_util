@@ -27,15 +27,23 @@ public class WXModel implements RealmModel {
 
     private String index;
 
+    private boolean isMap1 = false;
+    private boolean isMap2 = false;
+    private boolean isMap3 = false;
+    private boolean isMap4 = false;
+    private boolean isMap5 = false;
+    private boolean isMap6 = false;
+
+    public RealmList<SjModel> sjModels = new RealmList<>();
+
     public String getParent() {
         return parent == null ? "" : parent;
     }
 
-    public void setParent(String parent) {
+    public WXModel setParent(String parent) {
         this.parent = parent;
+        return this;
     }
-
-    public RealmList<SjModel> sjModels = new RealmList<>();
 
     public WXModel() {
     }
@@ -124,6 +132,76 @@ public class WXModel implements RealmModel {
 
     public WXModel setIndex(String index) {
         this.index = index;
+        return this;
+    }
+
+    public boolean isMap1() {
+        return isMap1;
+    }
+
+    public WXModel setMap1(boolean map1) {
+        isMap1 = map1;
+        return this;
+    }
+
+
+    public boolean isMap2() {
+        return isMap2;
+    }
+
+    public WXModel setMap2(boolean map2) {
+        isMap2 = map2;
+        return this;
+    }
+
+
+    public boolean isMap3() {
+        return isMap3;
+    }
+
+    public WXModel setMap3(boolean map3) {
+        isMap3 = map3;
+        return this;
+    }
+
+
+    public boolean isMap4() {
+        return isMap4;
+    }
+
+    public WXModel setMap4(boolean map4) {
+        isMap4 = map4;
+        return this;
+    }
+
+
+    public boolean isMap5() {
+        return isMap5;
+    }
+
+    public WXModel setMap5(boolean map5) {
+        isMap5 = map5;
+        return this;
+    }
+
+
+    public boolean isMap6() {
+        return isMap6;
+    }
+
+    public WXModel setMap6(boolean map6) {
+        isMap6 = map6;
+        return this;
+    }
+
+
+    public WXModel setMap(boolean isMap1, boolean isMap2, boolean isMap3, boolean isMap4, boolean isMap5, boolean isMap6) {
+        this.isMap1 = isMap1;
+        this.isMap2 = isMap2;
+        this.isMap3 = isMap3;
+        this.isMap4 = isMap4;
+        this.isMap5 = isMap5;
+        this.isMap6 = isMap6;
         return this;
     }
 }

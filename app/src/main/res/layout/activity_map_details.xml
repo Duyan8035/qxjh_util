@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MapDetailsActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+
+                <ImageView
+                    android:id="@+id/act_map_details_map_img"
+                    android:layout_width="150dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintDimensionRatio="3:2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/act_map_details_map_img"
+                    app:layout_constraintTop_toTopOf="@+id/act_map_details_map_img" />
+
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_value"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/act_map_details_map_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/act_map_details_map_img"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_name" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_title_wx1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="隐藏"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_img"
+                    tools:text="  " />
+
+
+                <ImageView
+                    android:id="@+id/act_map_details_map_img_wx1"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="3dp"
+                    android:src="@color/btn_filled_blue_bg_disabled"
+                    app:layout_constraintDimensionRatio="4:5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx1" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_wx1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/act_map_details_map_img_wx1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_img_wx1"
+                    tools:text="name" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_wx_trend1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toTopOf="@+id/act_map_details_map_wx_good1"
+                    app:layout_constraintEnd_toStartOf="@+id/act_map_details_map_img_kungfu1"
+                    app:layout_constraintStart_toEndOf="@+id/act_map_details_map_img_wx1"
+                    app:layout_constraintTop_toTopOf="@+id/act_map_details_map_img_wx1" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_wx_good1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/act_map_details_map_img_wx1"
+                    app:layout_constraintEnd_toStartOf="@+id/act_map_details_map_img_kungfu1"
+                    app:layout_constraintStart_toEndOf="@+id/act_map_details_map_img_wx1"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_wx_trend1" />
+
+
+                <ImageView
+                    android:id="@+id/act_map_details_map_img_kungfu1"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="3dp"
+                    android:src="@color/btn_filled_blue_bg_disabled"
+                    app:layout_constraintDimensionRatio="4:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx1" />
+
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_kungfu1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/act_map_details_map_img_kungfu1"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_img_kungfu1"
+                    tools:text="name" />
+
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_title_wx2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_wx1" />
+
+
+                <ImageView
+                    android:id="@+id/act_map_details_map_img_wx2"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="3dp"
+                    android:src="@color/btn_filled_blue_bg_disabled"
+                    app:layout_constraintDimensionRatio="4:5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx2" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_wx2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/act_map_details_map_img_wx2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_img_wx2"
+                    tools:text="name" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_wx_trend2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toTopOf="@+id/act_map_details_map_wx_good2"
+                    app:layout_constraintEnd_toStartOf="@+id/act_map_details_map_img_kungfu2"
+                    app:layout_constraintStart_toEndOf="@+id/act_map_details_map_img_wx2"
+                    app:layout_constraintTop_toTopOf="@+id/act_map_details_map_img_wx2" />
+
+                <TextView
+                    android:id="@+id/act_map_details_map_wx_good2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/act_map_details_map_img_wx2"
+                    app:layout_constraintEnd_toStartOf="@+id/act_map_details_map_img_kungfu2"
+                    app:layout_constraintStart_toEndOf="@+id/act_map_details_map_img_wx2"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_wx_trend2" />
+
+
+                <ImageView
+                    android:id="@+id/act_map_details_map_img_kungfu2"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="3dp"
+                    android:src="@color/btn_filled_blue_bg_disabled"
+                    app:layout_constraintDimensionRatio="4:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx2" />
+
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_kungfu2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/act_map_details_map_img_kungfu2"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_img_kungfu2"
+                    tools:text="name" />
+
+
+                <TextView
+                    android:id="@+id/act_map_details_map_tv_title_wx3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="装备"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_wx2"
+                    tools:text="  " />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_map_details_map_rv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx3" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_rv" />
+
+                <android.support.constraint.Group
+                    android:id="@+id/act_map_details_group_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="act_map_details_map_wx_good1,act_map_details_map_tv_kungfu1,act_map_details_map_tv_title_wx2,act_map_details_map_wx_trend1,act_map_details_map_tv_wx1,act_map_details_map_img_wx1,act_map_details_map_img_kungfu1"
+                    tools:layout_editor_absoluteX="12dp" />
+
+                <android.support.constraint.Group
+                    android:id="@+id/act_map_details_group_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="act_map_details_map_img_wx2,act_map_details_map_img_kungfu2,act_map_details_map_wx_trend2,act_map_details_map_wx_good2,act_map_details_map_tv_wx2,act_map_details_map_tv_kungfu2"
+                    tools:layout_editor_absoluteX="12dp" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/act_map_details_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="事件攻略"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

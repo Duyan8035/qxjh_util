@@ -4,32 +4,328 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:padding="10dp"
-    tools:layout_height="match_parent">
+    android:gravity="center">
 
+    <View
+        android:id="@+id/item_wx_sj_list_div_top"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/weakLineColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/item_text_1"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item_wx_sj_list_value_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/item_text_2"
+        app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_value_2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="name" />
+        app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_div_top">
 
-    <TextView
-        android:id="@+id/item_text_2"
-        android:layout_width="50dp"
+
+        <TextView
+            android:id="@+id/include_sj_value_parent_layout1_1"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:gravity="center|start"
+            android:text="name"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout1_3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout1_1"
+            tools:text="name" />
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout1_1"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout1_2"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout1_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout1_1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="value" />
+
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout1_2"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout1_3"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout1_2"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout1_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout1_1"
+            tools:text="value" />
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout1_3"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout1_3"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout1_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout1_2"
+            tools:text="value" />
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout1_1"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout1_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout1_1"
+            tools:text="1" />
+
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout1_2"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout1_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout1_2"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout1_3"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout1_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout1_3"
+            tools:text="1" />
+
+        <View
+            android:id="@+id/include_sj_value_value_layout1_div_1"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:background="@color/lineColor"
+            app:layout_constraintEnd_toEndOf="@+id/include_sj_value_obtain_layout1_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout1_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout1_1" />
+
+        <View
+            android:id="@+id/include_sj_value_value_layout1_div_2"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:background="@color/lineColor"
+            app:layout_constraintEnd_toEndOf="@+id/include_sj_value_obtain_layout1_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout1_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout1_2" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/item_wx_sj_list_div_1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/weakLineColor"
+        app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_value_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item_wx_sj_list_value_2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_value_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_value_1">
+
+
+        <TextView
+            android:id="@+id/include_sj_value_parent_layout2_1"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:gravity="center|start"
+            android:text="name"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout2_3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout2_1"
+            tools:text="name" />
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout2_1"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout2_2"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout2_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout2_1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="value" />
+
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout2_2"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout2_3"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout2_2"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout2_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout2_1"
+            tools:text="value" />
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout2_3"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout2_3"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout2_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout2_2"
+            tools:text="value" />
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout2_1"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout2_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout2_1"
+            tools:text="1" />
+
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout2_2"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout2_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout2_2"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout2_3"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout2_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout2_3"
+            tools:text="1" />
+
+        <View
+            android:id="@+id/include_sj_value_value_layout2_div_1"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:background="@color/lineColor"
+            app:layout_constraintEnd_toEndOf="@+id/include_sj_value_obtain_layout2_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout2_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout2_1" />
+
+        <View
+            android:id="@+id/include_sj_value_value_layout2_div_2"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:background="@color/lineColor"
+            app:layout_constraintEnd_toEndOf="@+id/include_sj_value_obtain_layout2_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout2_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout2_2" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/item_wx_sj_list_div_2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/weakLineColor"
+        app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_value_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item_wx_sj_list_value_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="value" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_value_2">
+
+
+        <TextView
+            android:id="@+id/include_sj_value_parent_layout3_1"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:gravity="center|start"
+            android:text="name"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout3_3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout3_1"
+            tools:text="name" />
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout3_1"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout3_2"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout3_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="value" />
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout3_2"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/include_sj_value_value_layout3_3"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout3_2"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout3_1"
+            tools:text="value" />
+
+
+        <TextView
+            android:id="@+id/include_sj_value_value_layout3_3"
+            style="@style/style_sj_list_title"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/include_sj_value_obtain_layout3_3"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout3_2"
+            tools:text="value" />
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout3_1"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout3_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout3_1"
+            tools:text="1" />
+
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout3_2"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout3_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout3_2"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/include_sj_value_obtain_layout3_3"
+            style="@style/style_sj_list_value"
+            app:layout_constraintBottom_toBottomOf="@+id/include_sj_value_value_layout3_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include_sj_value_value_layout3_3"
+            tools:text="1" />
+
+        <View
+            android:id="@+id/include_sj_value_value_layout3_div_1"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:background="@color/lineColor"
+            app:layout_constraintEnd_toEndOf="@+id/include_sj_value_obtain_layout3_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout3_1" />
+
+        <View
+            android:id="@+id/include_sj_value_value_layout3_div_2"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:background="@color/lineColor"
+            app:layout_constraintEnd_toEndOf="@+id/include_sj_value_obtain_layout3_1"
+            app:layout_constraintStart_toEndOf="@+id/include_sj_value_parent_layout3_1"
+            app:layout_constraintTop_toBottomOf="@+id/include_sj_value_value_layout3_2" />
+
+    </android.support.constraint.ConstraintLayout>
+
 
 
 </android.support.constraint.ConstraintLayout>

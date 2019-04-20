@@ -22,7 +22,7 @@ public class WxInfoActivity extends BaseActivity {
         initView();
 
         Realm.init(this);
-        mRealm = Realm.getDefaultInstance();
+        mRealm = mRealm = RealmHelper.getInstance(mContext);;
 
         RealmResults<WXModel> wxModels = mRealm.where(WXModel.class).equalTo("name_game", mName).findAll();
         for (int i = 0; i < wxModels.size(); i++) {

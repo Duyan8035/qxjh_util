@@ -10,9 +10,10 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.R;
 import com.dy.qxjhutil.base.BaseActivity;
-import com.dy.qxjhutil.data.WxDefaultModel;
-import com.dy.qxjhutil.model.ColorModel;
+import com.dy.qxjhutil.constant.ColorModel;
+import com.dy.qxjhutil.constant.WxDefaultUtil;
 import com.dy.qxjhutil.model.WXModel;
+import com.dy.qxjhutil.util.RealmHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class WxDefaultActivity extends BaseActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wx_default);
-        mRealm = Realm.getDefaultInstance();
+        mRealm = RealmHelper.getInstance(mContext);
         sorts[0] = parentSort ? Sort.ASCENDING : Sort.DESCENDING;
         sorts[1] = goodSort ? Sort.ASCENDING : Sort.DESCENDING;
         sorts[2] = trendSort ? Sort.ASCENDING : Sort.DESCENDING;
@@ -51,19 +52,19 @@ public class WxDefaultActivity extends BaseActivity implements View.OnClickListe
                         .setText(R.id.item_wx_list_value3, item.getParent())
                 ;
                 switch (item.getParent()) {
-                    case WxDefaultModel.Parent_1:
+                    case WxDefaultUtil.Parent_1:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_1);
                         break;
-                    case WxDefaultModel.Parent_2:
+                    case WxDefaultUtil.Parent_2:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_2);
                         break;
-                    case WxDefaultModel.Parent_3:
+                    case WxDefaultUtil.Parent_3:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_3);
                         break;
-                    case WxDefaultModel.Parent_4:
+                    case WxDefaultUtil.Parent_4:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_4);
                         break;
-                    case WxDefaultModel.Parent_5:
+                    case WxDefaultUtil.Parent_5:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_5);
                         break;
                     default:

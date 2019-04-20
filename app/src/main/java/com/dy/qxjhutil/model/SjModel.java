@@ -1,5 +1,8 @@
 package com.dy.qxjhutil.model;
 
+import com.chad.library.adapter.base.entity.MultiItemEntity;
+import com.dy.qxjhutil.adapter.WxSjListAdapter;
+
 import io.realm.RealmModel;
 import io.realm.annotations.RealmClass;
 
@@ -9,7 +12,7 @@ import io.realm.annotations.RealmClass;
  * @author Dy
  */
 @RealmClass
-public class SjModel implements RealmModel {
+public class SjModel implements RealmModel, MultiItemEntity {
     private int type = 0;
 
     private String desc;
@@ -28,55 +31,15 @@ public class SjModel implements RealmModel {
     private int trend_11, trend_12, trend_13, trend_21, trend_22, trend_23, trend_31, trend_32, trend_33;
     private int good_11, good_12, good_13, good_21, good_22, good_23, good_31, good_32, good_33;
 
+
+    /**
+     * 1:单行 2:双行 3:三行
+     **/
+    private int item_type = 1;
+
     public SjModel() {
     }
 
-    public SjModel(String value_1, String value_2, String obtain_11, String obtain_21, int trend_11, int trend_21, int good_11, int good_21) {
-        this.value_1 = value_1;
-        this.value_2 = value_2;
-        this.obtain_11 = obtain_11;
-        this.obtain_21 = obtain_21;
-        this.trend_11 = trend_11;
-        this.trend_21 = trend_21;
-        this.good_11 = good_11;
-        this.good_21 = good_21;
-    }
-
-
-    public SjModel(String value_1, String value_2, String value_3, String branch_11, String branch_21, String branch_31, String obtain_11, String obtain_21, String obtain_31, int trend_11, int trend_21, int trend_31, int good_11, int good_21, int good_31) {
-        this.value_1 = value_1;
-        this.value_2 = value_2;
-        this.value_3 = value_3;
-        this.branch_11 = branch_11;
-        this.branch_21 = branch_21;
-        this.branch_31 = branch_31;
-        this.obtain_11 = obtain_11;
-        this.obtain_21 = obtain_21;
-        this.obtain_31 = obtain_31;
-        this.trend_11 = trend_11;
-        this.trend_21 = trend_21;
-        this.trend_31 = trend_31;
-        this.good_11 = good_11;
-        this.good_21 = good_21;
-        this.good_31 = good_31;
-    }
-
-    public SjModel(String value_1, String value_2, String branch_11, String branch_12, String branch_21, String obtain_11, String obtain_12, String obtain_21, int trend_11, int trend_12, int trend_21, int good_11, int good_12, int good_21) {
-        this.value_1 = value_1;
-        this.value_2 = value_2;
-        this.branch_11 = branch_11;
-        this.branch_12 = branch_12;
-        this.branch_21 = branch_21;
-        this.obtain_11 = obtain_11;
-        this.obtain_12 = obtain_12;
-        this.obtain_21 = obtain_21;
-        this.trend_11 = trend_11;
-        this.trend_12 = trend_12;
-        this.trend_21 = trend_21;
-        this.good_11 = good_11;
-        this.good_12 = good_12;
-        this.good_21 = good_21;
-    }
 
     public int getType() {
         return type;
@@ -445,5 +408,64 @@ public class SjModel implements RealmModel {
     public SjModel setGood_33(int good_33) {
         this.good_33 = good_33;
         return this;
+    }
+
+
+    /**
+     * 1-1 无分支
+     **/
+    public SjModel setType1(String value_1, String obtain_11, int trend_11, int good_11) {
+        this.value_1 = value_1;
+        this.obtain_11 = obtain_11;
+        this.trend_11 = trend_11;
+        this.good_11 = good_11;
+        this.item_type = WxSjListAdapter.TYPE_1;
+        return this;
+    }
+
+
+    public SjModel setType2(String value_1, String branch_11, String obtain_11, int trend_11, int good_11, String branch_21, String obtain_21,
+                            int trend_21, int good_21) {
+        this.value_1 = value_1;
+        this.branch_11 = branch_11;
+        this.branch_21 = branch_21;
+        this.obtain_11 = obtain_11;
+        this.obtain_21 = obtain_21;
+        this.trend_11 = trend_11;
+        this.trend_21 = trend_21;
+        this.good_11 = good_11;
+        this.good_21 = good_21;
+        this.item_type = WxSjListAdapter.TYPE_2;
+        return this;
+    }
+
+    public SjModel setType2(String value_1,
+                            String branch_11, String obtain_11, int trend_11, int good_11,
+                            String branch_21, String obtain_21, int trend_21, int good_21,
+                            String branch_31, String obtain_31, int trend_31, int good_31) {
+        this.value_1 = value_1;
+        this.branch_11 = branch_11;
+        this.branch_21 = branch_21;
+        this.branch_31 = branch_31;
+        this.obtain_11 = obtain_11;
+        this.obtain_21 = obtain_21;
+        this.obtain_31 = obtain_31;
+        this.trend_11 = trend_11;
+        this.trend_21 = trend_21;
+        this.trend_31 = trend_31;
+        this.good_11 = good_11;
+        this.good_21 = good_21;
+        this.good_31 = good_31;
+        this.item_type = WxSjListAdapter.TYPE_3;
+        return this;
+    }
+
+    @Override
+    public int getItemType() {
+        return item_type;
+    }
+
+    public void setItem_type(int item_type) {
+        this.item_type = item_type;
     }
 }

@@ -8,10 +8,12 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.dy.qxjhutil.activity.MapListActivity;
 import com.dy.qxjhutil.activity.WxDefaultActivity;
 import com.dy.qxjhutil.activity.WxListActivity;
 import com.dy.qxjhutil.base.BaseActivity;
-import com.dy.qxjhutil.data.WxDefaultModel;
+import com.dy.qxjhutil.constant.WxDefaultUtil;
+import com.dy.qxjhutil.util.RealmHelper;
 
 import java.util.Arrays;
 
@@ -40,7 +42,7 @@ public class MainActivity extends BaseActivity {
 
 
         Realm.init(this);
-        mRealm = Realm.getDefaultInstance();
+        mRealm = RealmHelper.getInstance(mContext);
 
         initData();
 
@@ -63,6 +65,9 @@ public class MainActivity extends BaseActivity {
                     case 1:
                         startActivity(new Intent(mContext, WxListActivity.class));
                         break;
+                    case 2:
+                        startActivity(new Intent(mContext, MapListActivity.class));
+                        break;
                     default:
                         break;
                 }
@@ -79,7 +84,7 @@ public class MainActivity extends BaseActivity {
     private void initData() {
 //        if (MMKV.defaultMMKV().getBoolean("is_one", true)) {
 //            MMKV.defaultMMKV().putBoolean("is_one", false);
-        new WxDefaultModel().initData(mContext);
+        new WxDefaultUtil().initData(mContext);
 //        mRealm.executeTransaction(new Realm.Transaction() {
 //            @Override
 //            public void execute(Realm realm) {
