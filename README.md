@@ -1,5 +1,7 @@
 #奇想江湖游戏工具
 
+不会封号，只是一个独立的资料查询 APP，相当于一个各种资料汇总的wps
+
 [下载 Apk 文件](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/downloads/app-debug.apk)
 
 [百度云地址](https://pan.baidu.com/s/1E8DA644YcuLeijK2HIz7jA) 提取码:v1dz 
