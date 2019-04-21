@@ -30,11 +30,11 @@ public class Utils {
     public static CharSequence getTrend(int minTrend) {
         SpanUtils spanUtils = new SpanUtils();
         if (minTrend < 0) {
-            spanUtils.append("混乱 " + minTrend).setForegroundColor(ColorModel.color_混乱).append(" 以下");
+            spanUtils.append("混乱 < " + minTrend).setForegroundColor(ColorModel.color_混乱);
         } else if (minTrend == 0) {
             spanUtils.append("中立 -1~1").setForegroundColor(ColorModel.TYPE_COLOR_DEFAULT);
         } else {
-            spanUtils.append("守序 +" + minTrend).setForegroundColor(ColorModel.color_混乱).append(" 以下");
+            spanUtils.append("守序 > +" + minTrend).setForegroundColor(ColorModel.color_混乱);
         }
         return spanUtils.create();
     }
@@ -42,11 +42,11 @@ public class Utils {
     public static CharSequence getGood(int minTrend) {
         SpanUtils spanUtils = new SpanUtils();
         if (minTrend < 0) {
-            spanUtils.append("恶 " + minTrend).setForegroundColor(ColorModel.color_恶).append(" 以下");
+            spanUtils.append("恶 < " + minTrend).setForegroundColor(ColorModel.color_恶);
         } else if (minTrend == 0) {
             spanUtils.append("中立 -1~1").setForegroundColor(ColorModel.TYPE_COLOR_DEFAULT);
         } else {
-            spanUtils.append("善 +" + minTrend).setForegroundColor(ColorModel.color_善).append(" 以下");
+            spanUtils.append("善 > +" + minTrend).setForegroundColor(ColorModel.color_善);
         }
         return spanUtils.create();
     }

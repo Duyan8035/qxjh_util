@@ -2,10 +2,12 @@ package com.dy.qxjhutil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.activity.MapListActivity;
@@ -32,7 +34,7 @@ public class MainActivity extends BaseActivity {
 //    ViewPager mContentViewPager;
     Realm mRealm;
 
-    private String[] strings = {"初始", "列表", "地区", "资料", "其他"};
+    private String[] strings = {"善恶事件列表", "地图资料", "初始善恶值", "武侠图鉴(没做完)", "武学图鉴(没做完)", "装备图鉴(没做完)"};
 
 
     @Override
@@ -47,7 +49,7 @@ public class MainActivity extends BaseActivity {
         initData();
 
         mRecyclerView = findViewById(R.id.act_main_rv);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 2));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
 
         mAdapter = new BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_text) {
             @Override
@@ -60,13 +62,18 @@ public class MainActivity extends BaseActivity {
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 switch (position) {
                     case 0:
-                        startActivity(new Intent(mContext, WxDefaultActivity.class));
-                        break;
-                    case 1:
                         startActivity(new Intent(mContext, WxListActivity.class));
                         break;
-                    case 2:
+                    case 1:
                         startActivity(new Intent(mContext, MapListActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(mContext, WxDefaultActivity.class));
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                        ToastUtils.showLong("还没搞完");
                         break;
                     default:
                         break;
@@ -76,6 +83,9 @@ public class MainActivity extends BaseActivity {
         mRecyclerView.setAdapter(mAdapter);
 
         mAdapter.setNewData(Arrays.asList(strings));
+        TextView view = (TextView) View.inflate(mContext, R.layout.include_text, null);
+        view.setText("数据参考与各个攻略，有不对的地方，2群里面说一下。");
+        mAdapter.setFooterView(view);
     }
 
     /**

@@ -34,8 +34,10 @@ public class MapListActivity extends BaseActivity {
         mAdapter = new BaseQuickAdapter<MapModel, BaseViewHolder>(R.layout.item_map_main) {
             @Override
             protected void convert(BaseViewHolder helper, MapModel item) {
-                helper.setText(R.id.item_map_main_tv, item.getMapName())
-                ;
+                helper.setText(R.id.item_map_main_tv, item.getMapName());
+                if (item.getImg() != -1) {
+                    helper.setImageResource(R.id.item_map_main_img, item.getImg());
+                }
                 if (item.getFuModel1() != null) {
                     SpanUtils spanUtils = new SpanUtils();
                     spanUtils.append(item.getFuModel1().getName() + " : ");

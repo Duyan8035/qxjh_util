@@ -139,7 +139,7 @@ public class WXModel implements RealmModel {
         return isMap1;
     }
 
-    public WXModel setMap1(boolean map1) {
+    public WXModel setMap1sl(boolean map1) {
         isMap1 = map1;
         return this;
     }
@@ -149,7 +149,7 @@ public class WXModel implements RealmModel {
         return isMap2;
     }
 
-    public WXModel setMap2(boolean map2) {
+    public WXModel setMap2hs(boolean map2) {
         isMap2 = map2;
         return this;
     }
@@ -159,7 +159,7 @@ public class WXModel implements RealmModel {
         return isMap3;
     }
 
-    public WXModel setMap3(boolean map3) {
+    public WXModel setMap3dm(boolean map3) {
         isMap3 = map3;
         return this;
     }
@@ -169,7 +169,7 @@ public class WXModel implements RealmModel {
         return isMap4;
     }
 
-    public WXModel setMap4(boolean map4) {
+    public WXModel setMap4gm(boolean map4) {
         isMap4 = map4;
         return this;
     }
@@ -179,7 +179,7 @@ public class WXModel implements RealmModel {
         return isMap5;
     }
 
-    public WXModel setMap5(boolean map5) {
+    public WXModel setMap5bhd(boolean map5) {
         isMap5 = map5;
         return this;
     }
@@ -189,7 +189,7 @@ public class WXModel implements RealmModel {
         return isMap6;
     }
 
-    public WXModel setMap6(boolean map6) {
+    public WXModel setMap6zl(boolean map6) {
         isMap6 = map6;
         return this;
     }

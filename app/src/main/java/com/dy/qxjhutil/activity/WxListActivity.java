@@ -3,6 +3,8 @@ package com.dy.qxjhutil.activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -46,7 +48,11 @@ public class WxListActivity extends BaseActivity {
         mAdapter = new BaseQuickAdapter<WXModel, BaseViewHolder>(R.layout.item_wx_sj_list) {
             @Override
             protected void convert(BaseViewHolder helper, WXModel item) {
-                helper.setText(R.id.item_wx_sj_list_name, item.getName_game());
+                helper.setText(R.id.item_wx_sj_list_name, item.getName_game())
+                        .setText(R.id.item_wx_sj_list_value, item.getName());
+                if (item.getIcon() != -1) {
+                    helper.setImageResource(R.id.item_wx_sj_list_img, item.getIcon());
+                }
                 if (item.getSjModels() != null && item.getSjModels().size() > 0) {
                     helper.setVisible(R.id.item_wx_sj_list_rv, true);
                     RecyclerView recyclerView = helper.getView(R.id.item_wx_sj_list_rv);
@@ -240,7 +246,9 @@ public class WxListActivity extends BaseActivity {
             }
         };
         recyclerView.setAdapter(mAdapter);
-
+        TextView view = (TextView) View.inflate(mContext, R.layout.include_text, null);
+        view.setText("竹林和冰火岛事件攻略 感谢攻略组 东晓  ⃢ ——⃢　(眼镜大佬)非洲人呀 等提供资料");
+        mAdapter.setFooterView(view);
 
         sideBar = findViewById(R.id.side_bar);
         sideBar.setIndexItems(indexs);

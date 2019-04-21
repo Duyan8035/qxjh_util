@@ -19,8 +19,8 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp">
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp">
 
 
                 <ImageView
@@ -66,20 +66,20 @@
 
                 <ImageView
                     android:id="@+id/act_map_details_map_img_wx1"
-                    android:layout_width="60dp"
-                    android:layout_height="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_margin="3dp"
-                    android:src="@color/btn_filled_blue_bg_disabled"
-                    app:layout_constraintDimensionRatio="4:5"
+                    android:adjustViewBounds="true"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx1" />
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx1"
+                    tools:src="@drawable/icon_kf_chunyangwujigong" />
 
                 <TextView
                     android:id="@+id/act_map_details_map_tv_wx1"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_marginStart="3dp"
                     android:gravity="center"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="@+id/act_map_details_map_img_wx1"
@@ -123,8 +123,8 @@
                     android:id="@+id/act_map_details_map_tv_kungfu1"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_marginStart="3dp"
                     android:gravity="center"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -146,20 +146,21 @@
 
                 <ImageView
                     android:id="@+id/act_map_details_map_img_wx2"
-                    android:layout_width="60dp"
-                    android:layout_height="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_margin="3dp"
+                    android:adjustViewBounds="true"
                     android:src="@color/btn_filled_blue_bg_disabled"
-                    app:layout_constraintDimensionRatio="4:5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx2" />
+                    app:layout_constraintTop_toBottomOf="@+id/act_map_details_map_tv_title_wx2"
+                    tools:src="@drawable/icon_kf_chunyangwujigong" />
 
                 <TextView
                     android:id="@+id/act_map_details_map_tv_wx2"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_marginStart="3dp"
                     android:gravity="center"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="@+id/act_map_details_map_img_wx2"
@@ -203,8 +204,8 @@
                     android:id="@+id/act_map_details_map_tv_kungfu2"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_marginStart="3dp"
                     android:gravity="center"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -242,15 +243,13 @@
                     android:id="@+id/act_map_details_group_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:constraint_referenced_ids="act_map_details_map_wx_good1,act_map_details_map_tv_kungfu1,act_map_details_map_tv_title_wx2,act_map_details_map_wx_trend1,act_map_details_map_tv_wx1,act_map_details_map_img_wx1,act_map_details_map_img_kungfu1"
-                    tools:layout_editor_absoluteX="12dp" />
+                    app:constraint_referenced_ids="act_map_details_map_wx_good1,act_map_details_map_tv_kungfu1,act_map_details_map_tv_title_wx2,act_map_details_map_wx_trend1,act_map_details_map_tv_wx1,act_map_details_map_img_wx1,act_map_details_map_img_kungfu1" />
 
                 <android.support.constraint.Group
                     android:id="@+id/act_map_details_group_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:constraint_referenced_ids="act_map_details_map_img_wx2,act_map_details_map_img_kungfu2,act_map_details_map_wx_trend2,act_map_details_map_wx_good2,act_map_details_map_tv_wx2,act_map_details_map_tv_kungfu2"
-                    tools:layout_editor_absoluteX="12dp" />
+                    app:constraint_referenced_ids="act_map_details_map_img_wx2,act_map_details_map_img_kungfu2,act_map_details_map_wx_trend2,act_map_details_map_wx_good2,act_map_details_map_tv_wx2,act_map_details_map_tv_kungfu2" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -263,10 +262,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
+        android:paddingBottom="8dp"
+        android:paddingEnd="16dp"
         android:paddingStart="16dp"
         android:paddingTop="8dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"
         android:text="事件攻略"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

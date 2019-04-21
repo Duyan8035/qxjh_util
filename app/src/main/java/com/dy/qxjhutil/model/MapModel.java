@@ -70,6 +70,9 @@ public class MapModel implements RealmModel {
     }
 
     public KungFuModel getFuModel1() {
+        if (fuModel1 == null) {
+            return new KungFuModel();
+        }
         return fuModel1;
     }
 
@@ -79,6 +82,9 @@ public class MapModel implements RealmModel {
     }
 
     public KungFuModel getFuModel2() {
+        if (fuModel2 == null) {
+            return new KungFuModel();
+        }
         return fuModel2;
     }
 

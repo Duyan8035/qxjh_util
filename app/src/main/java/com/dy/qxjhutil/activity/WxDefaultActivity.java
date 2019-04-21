@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -99,6 +100,9 @@ public class WxDefaultActivity extends BaseActivity implements View.OnClickListe
             }
         });
         recyclerView.setAdapter(mAdapter);
+        TextView view = (TextView) View.inflate(mContext, R.layout.include_text, null);
+        view.setText("豪侠游侠刺客资料取自残夜影大佬攻略，气宗初始由 七月上大佬提供,感谢以上大佬");
+        mAdapter.setFooterView(view);
 
         findViewById(R.id.item_wx_list_value).setOnClickListener(this);
         findViewById(R.id.item_wx_list_value2).setOnClickListener(this);
