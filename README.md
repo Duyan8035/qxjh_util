@@ -1,4 +1,5 @@
-#qxjh_util
+#奇想江湖游戏工具
+[下载 Apk 文件](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/downloads/app-debug.apk)
 
 为了玩游戏写的一个工具，目前具备的功能有：
 ## 善恶事件列表
