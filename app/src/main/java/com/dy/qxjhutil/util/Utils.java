@@ -34,7 +34,7 @@ public class Utils {
         } else if (minTrend == 0) {
             spanUtils.append("中立 -1~1").setForegroundColor(ColorModel.TYPE_COLOR_DEFAULT);
         } else {
-            spanUtils.append("守序 > +" + minTrend).setForegroundColor(ColorModel.color_混乱);
+            spanUtils.append("守序 > " + minTrend).setForegroundColor(ColorModel.color_混乱);
         }
         return spanUtils.create();
     }
@@ -46,7 +46,7 @@ public class Utils {
         } else if (minTrend == 0) {
             spanUtils.append("中立 -1~1").setForegroundColor(ColorModel.TYPE_COLOR_DEFAULT);
         } else {
-            spanUtils.append("善 > +" + minTrend).setForegroundColor(ColorModel.color_善);
+            spanUtils.append("善 > " + minTrend).setForegroundColor(ColorModel.color_善);
         }
         return spanUtils.create();
     }

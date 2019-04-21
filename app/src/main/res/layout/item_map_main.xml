@@ -12,7 +12,7 @@
         android:id="@+id/item_map_main_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="7dp"
         android:gravity="center"
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
@@ -25,9 +25,9 @@
 
     <ImageView
         android:id="@+id/item_map_main_img"
-        android:layout_width="120dp"
+        android:layout_width="130dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="3:2"
@@ -35,23 +35,73 @@
         app:layout_constraintTop_toBottomOf="@+id/item_map_main_tv" />
 
     <TextView
-        android:id="@+id/item_map_main_tv_kf_1"
+        android:id="@+id/item_map_main_tv_kf_11"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="5dp"
         android:gravity="center_vertical|start"
-        app:layout_constraintBottom_toTopOf="@+id/item_map_main_tv_kf_2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_12"
+        app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_12"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/item_map_main_img"
-        app:layout_constraintTop_toTopOf="@+id/item_map_main_img" />
+        app:layout_constraintTop_toTopOf="@+id/item_map_main_tv_kf_12" />
 
     <TextView
-        android:id="@+id/item_map_main_tv_kf_2"
+        android:id="@+id/item_map_main_tv_kf_12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center_vertical|start"
-        app:layout_constraintBottom_toBottomOf="@+id/item_map_main_img"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/item_map_main_tv_kf_22"
+        app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_13"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toEndOf="@+id/item_map_main_tv_kf_11"
+        app:layout_constraintTop_toTopOf="@+id/item_map_main_img" />
+
+
+    <TextView
+        android:id="@+id/item_map_main_tv_kf_13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_12"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/item_map_main_tv_kf_12"
+        app:layout_constraintTop_toTopOf="@+id/item_map_main_tv_kf_12" />
+
+    <TextView
+        android:id="@+id/item_map_main_tv_kf_21"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical|start"
+        app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_22"
+        app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_22"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/item_map_main_img"
-        app:layout_constraintTop_toBottomOf="@+id/item_map_main_tv_kf_1" />
+        app:layout_constraintTop_toTopOf="@+id/item_map_main_tv_kf_22" />
+
+    <TextView
+        android:id="@+id/item_map_main_tv_kf_22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/item_map_main_img"
+        app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_23"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toEndOf="@+id/item_map_main_tv_kf_21"
+        app:layout_constraintTop_toBottomOf="@+id/item_map_main_tv_kf_12" />
+
+
+    <TextView
+        android:id="@+id/item_map_main_tv_kf_23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/item_map_main_tv_kf_22"
+        app:layout_constraintTop_toTopOf="@+id/item_map_main_tv_kf_22" />
 
 </android.support.constraint.ConstraintLayout>

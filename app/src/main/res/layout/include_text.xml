@@ -9,6 +9,6 @@
     android:paddingBottom="8dp"
     android:paddingEnd="12dp"
     android:paddingStart="12dp"
-    android:textColor="@color/scroll_bg"
     android:paddingTop="8dp"
+    android:textColor="@color/color_hint"
     tools:text="第三方服务" />

@@ -1,8 +1,10 @@
 package com.dy.qxjhutil.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,9 +13,11 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.R;
 import com.dy.qxjhutil.adapter.WxSjListAdapter;
 import com.dy.qxjhutil.base.BaseActivity;
+import com.dy.qxjhutil.constant.WxDefaultUtil;
 import com.dy.qxjhutil.model.WXModel;
 import com.dy.qxjhutil.util.RealmHelper;
 import com.gjiazhe.wavesidebar.WaveSideBar;
+import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
 import io.realm.Realm;
 
@@ -32,6 +36,7 @@ public class WxListActivity extends BaseActivity {
     private String mapName = "";
     private String[] indexs = {"A", "B", "C", "D", "E", "F", "G", "J", "L", "M", "N", "Q", "R", "S", "T", "W", "X", "Y", "Z"};
 
+    private QMUIRoundButton btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,19 @@ public class WxListActivity extends BaseActivity {
         mRealm = RealmHelper.getInstance(mContext);
         mapName = getIntent().getStringExtra("map");
 
+        btn = findViewById(R.id.act_wx_list_btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, WxGridActivity.class);
+                if (!TextUtils.isEmpty(mapName) && mapName.length() > 0) {
+                    intent.putExtra("map", mapName);
+                }
+                startActivity(intent);
+                finish();
+            }
+        });
+
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -49,7 +67,8 @@ public class WxListActivity extends BaseActivity {
             @Override
             protected void convert(BaseViewHolder helper, WXModel item) {
                 helper.setText(R.id.item_wx_sj_list_name, item.getName_game())
-                        .setText(R.id.item_wx_sj_list_value, item.getName());
+                        .setText(R.id.item_wx_sj_list_value, item.getName())
+                        .addOnClickListener(R.id.item_wx_sj_list_img);
                 if (item.getIcon() != -1) {
                     helper.setImageResource(R.id.item_wx_sj_list_img, item.getIcon());
                 }
@@ -245,6 +264,21 @@ public class WxListActivity extends BaseActivity {
                 }
             }
         };
+        mAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                switch (view.getId()) {
+                    case R.id.item_wx_sj_list_img:
+                        Intent intent = new Intent(mContext, WxDetailsActivity.class);
+                        intent.putExtra("name", mAdapter.getData().get(position).getName_game());
+                        startActivity(intent);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+
         recyclerView.setAdapter(mAdapter);
         TextView view = (TextView) View.inflate(mContext, R.layout.include_text, null);
         view.setText("竹林和冰火岛事件攻略 感谢攻略组 东晓  ⃢ ——⃢　(眼镜大佬)非洲人呀 等提供资料");
@@ -269,33 +303,33 @@ public class WxListActivity extends BaseActivity {
 
     private void initData() {
         // TODO: 2019/4/20  暂时没做按照地图区分武侠
-//        if (!TextUtils.isEmpty(mapName) && mapName.length() > 0) {
-//            String mapTitle = "";
-//            switch (mapName) {
-//                case WxDefaultUtil.MAP_NAME_1:
-//                    mapTitle = "isMap1";
-//                    break;
-//                case WxDefaultUtil.MAP_NAME_2:
-//                    mapTitle = "isMap2";
-//                    break;
-//                case WxDefaultUtil.MAP_NAME_3:
-//                    mapTitle = "isMap3";
-//                    break;
-//                case WxDefaultUtil.MAP_NAME_4:
-//                    mapTitle = "isMap4";
-//                    break;
-//                case WxDefaultUtil.MAP_NAME_5:
-//                    mapTitle = "isMap5";
-//                    break;
-//                case WxDefaultUtil.MAP_NAME_6:
-//                    mapTitle = "isMap6";
-//                    break;
-//                default:
-//                    break;
-//            }
-//            mAdapter.setNewData(mRealm.where(WXModel.class).equalTo(mapTitle, true).findAll().sort("index"));
-//        } else {
-        mAdapter.setNewData(mRealm.where(WXModel.class).findAll().sort("index"));
-//        }
+        if (!TextUtils.isEmpty(mapName) && mapName.length() > 0) {
+            String mapTitle = "";
+            switch (mapName) {
+                case WxDefaultUtil.MAP_NAME_1:
+                    mapTitle = "isMap1";
+                    break;
+                case WxDefaultUtil.MAP_NAME_2:
+                    mapTitle = "isMap2";
+                    break;
+                case WxDefaultUtil.MAP_NAME_3:
+                    mapTitle = "isMap3";
+                    break;
+                case WxDefaultUtil.MAP_NAME_4:
+                    mapTitle = "isMap4";
+                    break;
+                case WxDefaultUtil.MAP_NAME_5:
+                    mapTitle = "isMap5";
+                    break;
+                case WxDefaultUtil.MAP_NAME_6:
+                    mapTitle = "isMap6";
+                    break;
+                default:
+                    break;
+            }
+            mAdapter.setNewData(mRealm.where(WXModel.class).equalTo(mapTitle, true).findAll().sort("index"));
+        } else {
+            mAdapter.setNewData(mRealm.where(WXModel.class).findAll().sort("index"));
+        }
     }
 }

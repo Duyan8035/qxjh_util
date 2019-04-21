@@ -5,9 +5,13 @@ package com.dy.qxjhutil.constant;
  */
 
 public class ColorModel {
-    public static final int color_善 = 0xff52DFCE;
-    public static final int color_恶 = 0xff9C61AD;
-    public static final int color_守序 = 0xff52DFCE;
+    //    public static final int color_善 = 0xff52DFCE;
+    public static final int color_善 = 0xff46b664;
+    //    public static final int color_恶 = 0xff9C61AD;
+    public static final int color_恶 = 0xffb60d61;
+    //    public static final int color_守序 = 0xff52DFCE;
+    public static final int color_守序 = 0xff3e9aed;
+    //    public static final int color_混乱 = 0xffDE7173;
     public static final int color_混乱 = 0xffDE7173;
 //    public static final int color_所得 = 0xffB23AEE;
 
@@ -25,7 +29,9 @@ public class ColorModel {
 
     public static final int TYPE_COLOR_RED = 0xffdf1c2a;
     public static final int TYPE_COLOR_GREEN = 0xff87cc11;
-    public static final int TYPE_COLOR_DEFAULT = 0xff212832;
+    //    public static final int TYPE_COLOR_DEFAULT = 0xff212832;
+//    public static final int TYPE_COLOR_DEFAULT = 0xff212832;
+    public static final int TYPE_COLOR_DEFAULT = 0xff606b7b;
 
 
 }

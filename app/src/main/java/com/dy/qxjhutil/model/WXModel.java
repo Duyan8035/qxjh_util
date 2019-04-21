@@ -17,6 +17,8 @@ public class WXModel implements RealmModel {
     public String name_game;
     @DrawableRes
     public int icon;
+    @DrawableRes
+    public int icon_mini;
 
     public String name;
     private int trend;
@@ -35,6 +37,27 @@ public class WXModel implements RealmModel {
     private boolean isMap6 = false;
 
     public RealmList<SjModel> sjModels = new RealmList<>();
+
+    private KungFuModel kfParent;
+    private KungFuModel kfDefault;
+
+    public KungFuModel getKfParent() {
+        return kfParent;
+    }
+
+    public WXModel setKfParent(KungFuModel kfParent) {
+        this.kfParent = kfParent;
+        return this;
+    }
+
+    public KungFuModel getKfDefault() {
+        return kfDefault;
+    }
+
+    public WXModel setKfDefault(KungFuModel kfDefault) {
+        this.kfDefault = kfDefault;
+        return this;
+    }
 
     public String getParent() {
         return parent == null ? "" : parent;
@@ -84,6 +107,15 @@ public class WXModel implements RealmModel {
 
     public WXModel setIcon(int icon) {
         this.icon = icon;
+        return this;
+    }
+
+    public int getIcon_mini() {
+        return icon_mini;
+    }
+
+    public WXModel setIcon_mini(int icon_mini) {
+        this.icon_mini = icon_mini;
         return this;
     }
 

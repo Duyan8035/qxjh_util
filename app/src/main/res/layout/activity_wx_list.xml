@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_color"
     tools:context="com.dy.qxjhutil.activity.WxListActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/line_color" />
+        android:layout_height="match_parent" />
 
     <com.gjiazhe.wavesidebar.WaveSideBar
         android:id="@+id/side_bar"
@@ -23,4 +23,20 @@
         app:sidebar_text_alignment="center"
         app:sidebar_text_color="#8D6E63"
         app:sidebar_text_size="14sp" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/act_wx_list_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:paddingBottom="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:text="切换模式"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:qmui_backgroundColor="#66ffffff" />
+
 </android.support.constraint.ConstraintLayout>

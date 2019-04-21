@@ -29,8 +29,19 @@
     <color name="TYPE_COLOR_GREEN">#87cc11</color>
     <color name="TYPE_COLOR_DEFAULT">#212832</color>
     <!--分割线-->
-    <color name="lineColor">#dedede</color>
-    <color name="line_color">#dedede</color>
+    <!--<color name="lineColor">#dedede</color>-->
+    <color name="lineColor">#beb9a7</color>
+    <!--<color name="line_color">#dedede</color>-->
+    <color name="line_color">#beb9a7</color>
     <!--弱分割-->
-    <color name="weakLineColor">#f5f5f5</color>
+    <!--<color name="weakLineColor">#f5f5f5</color>-->
+    <color name="weakLineColor">#beb9a7</color>
+    <color name="main_color">#b6b2a1</color>
+
+    <color name="color_shan">#46b664</color>
+    <color name="color_shouxu">#3e9aed</color>
+    <color name="color_hunluan">#b9560b</color>
+    <color name="color_e">#b60d61</color>
+    <color name="color_default">#606b7b</color>
+    <color name="color_hint">#72777e</color>
 </resources>
