@@ -120,38 +120,38 @@ public class WxDefaultUtil {
     }
 
     private void initMap(Realm realm) {
-        realm.copyToRealmOrUpdate(new MapModel().setMapName(MAP_NAME_1)
+        realm.copyToRealmOrUpdate(new MapModel(WxDefaultUtil.MAP_NAME_1)
                 .setValue(MAP_VALUE_1)
                 .setImg(R.drawable.icon_map_shaolin)
                 .setFuModel1(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_11).findFirst())
                 .setFuModel2(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_12).findFirst())
         );
 
-        realm.copyToRealmOrUpdate(new MapModel().setMapName(MAP_NAME_2)
+        realm.copyToRealmOrUpdate(new MapModel(WxDefaultUtil.MAP_NAME_2)
                 .setValue(MAP_VALUE_2)
                 .setImg(R.drawable.icon_map_huashan)
                 .setFuModel1(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_21).findFirst())
                 .setFuModel2(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_22).findFirst())
         );
-        realm.copyToRealmOrUpdate(new MapModel().setMapName(MAP_NAME_3)
+        realm.copyToRealmOrUpdate(new MapModel(WxDefaultUtil.MAP_NAME_3)
                 .setValue(MAP_VALUE_3)
                 .setImg(R.drawable.icon_map_damo)
                 .setFuModel1(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_31).findFirst())
                 .setFuModel2(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_32).findFirst())
         );
-        realm.copyToRealmOrUpdate(new MapModel().setMapName(MAP_NAME_4)
+        realm.copyToRealmOrUpdate(new MapModel(WxDefaultUtil.MAP_NAME_4)
                 .setValue(MAP_VALUE_4)
                 .setImg(R.drawable.icon_map_gumu)
                 .setFuModel1(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_41).findFirst())
                 .setFuModel2(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_42).findFirst())
         );
-        realm.copyToRealmOrUpdate(new MapModel().setMapName(MAP_NAME_5)
+        realm.copyToRealmOrUpdate(new MapModel(WxDefaultUtil.MAP_NAME_5)
                 .setValue(MAP_VALUE_5)
                 .setImg(R.drawable.icon_map_binghuodao)
                 .setFuModel1(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_51).findFirst())
                 .setFuModel2(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_52).findFirst())
         );
-        realm.copyToRealmOrUpdate(new MapModel().setMapName(MAP_NAME_6)
+        realm.copyToRealmOrUpdate(new MapModel(WxDefaultUtil.MAP_NAME_6)
                 .setValue(MAP_VALUE_6)
                 .setImg(R.drawable.icon_map_zhuling)
                 .setFuModel1(realm.where(KungFuModel.class).equalTo("name", MAP_NAME_61).findFirst())

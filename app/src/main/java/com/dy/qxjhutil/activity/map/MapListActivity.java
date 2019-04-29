@@ -1,4 +1,4 @@
-package com.dy.qxjhutil.activity;
+package com.dy.qxjhutil.activity.map;
 
 import android.content.Intent;
 import android.os.Bundle;

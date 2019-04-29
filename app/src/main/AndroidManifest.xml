@@ -17,15 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Test1Activity" />
-        <activity android:name=".activity.Edit1Activity" />
-        <activity android:name=".activity.WxInfoActivity" />
-        <activity android:name=".activity.WxListActivity" />
-        <activity android:name=".activity.WxGridActivity" />
-        <activity android:name=".activity.MapDetailsActivity" />
-        <activity android:name=".activity.MapListActivity" />
-        <activity android:name=".activity.WxDefaultActivity" />
-        <activity android:name=".activity.WxDetailsActivity"></activity>
+        <activity android:name=".activity.wx.WxListActivity" />
+        <activity android:name=".activity.wx.WxGridActivity" />
+        <activity android:name=".activity.map.MapDetailsActivity" />
+        <activity android:name=".activity.map.MapListActivity" />
+        <activity android:name=".activity.wx.WxDefaultActivity" />
+        <activity android:name=".activity.wx.WxDetailsActivity"/>
     </application>
 
 </manifest>

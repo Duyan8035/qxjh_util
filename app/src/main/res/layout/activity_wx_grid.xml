@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color"
-    tools:context="com.dy.qxjhutil.activity.WxListActivity">
+    tools:context="com.dy.qxjhutil.activity.wx.WxListActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

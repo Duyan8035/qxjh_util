@@ -28,6 +28,13 @@ public class MapModel implements RealmModel {
 
     private KungFuModel fuModel1, fuModel2;
 
+    private RealmList<HerbsModel> herbsList = new RealmList<>();
+    private RealmList<MineralModel> mineralList = new RealmList<>();
+    private RealmList<ArtifactModel> artifactList = new RealmList<>();
+
+    public MapModel(String mapName) {
+        this.mapName = mapName;
+    }
 
     public int getImg() {
         return img;
@@ -91,6 +98,39 @@ public class MapModel implements RealmModel {
     public MapModel setFuModel2(KungFuModel fuModel2) {
         this.fuModel2 = fuModel2;
         return this;
+    }
+
+    public RealmList<HerbsModel> getHerbsList() {
+        if (herbsList == null) {
+            return new RealmList<>();
+        }
+        return herbsList;
+    }
+
+    public void setHerbsList(RealmList<HerbsModel> herbsList) {
+        this.herbsList = herbsList;
+    }
+
+    public RealmList<MineralModel> getMineralList() {
+        if (mineralList == null) {
+            return new RealmList<>();
+        }
+        return mineralList;
+    }
+
+    public void setMineralList(RealmList<MineralModel> mineralList) {
+        this.mineralList = mineralList;
+    }
+
+    public RealmList<ArtifactModel> getArtifactList() {
+        if (artifactList == null) {
+            return new RealmList<>();
+        }
+        return artifactList;
+    }
+
+    public void setArtifactList(RealmList<ArtifactModel> artifactList) {
+        this.artifactList = artifactList;
     }
 }
 

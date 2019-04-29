@@ -1,4 +1,4 @@
-package com.dy.qxjhutil.activity;
+package com.dy.qxjhutil.activity.map;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.dy.qxjhutil.R;
+import com.dy.qxjhutil.activity.wx.WxListActivity;
 import com.dy.qxjhutil.base.BaseActivity;
 import com.dy.qxjhutil.model.MapModel;
 import com.dy.qxjhutil.util.RealmHelper;

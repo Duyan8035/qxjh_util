@@ -1,4 +1,4 @@
-package com.dy.qxjhutil.activity;
+package com.dy.qxjhutil.activity.wx;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;

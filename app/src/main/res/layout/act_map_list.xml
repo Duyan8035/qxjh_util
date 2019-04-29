@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color"
-    tools:context=".activity.MapListActivity">
+    tools:context=".activity.map.MapListActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/act_map_list_rv"
