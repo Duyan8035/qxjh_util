@@ -44,4 +44,9 @@
     <color name="color_e">#b60d61</color>
     <color name="color_default">#606b7b</color>
     <color name="color_hint">#72777e</color>
+
+
+    <color name="item_div_color">#8f7f67</color>
+    <color name="bg_16_black">#16000000</color>
+    <color name="bg_32_black">#32000000</color>
 </resources>

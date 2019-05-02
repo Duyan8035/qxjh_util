@@ -4,9 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_color"
+    android:background="@drawable/icon_main_bg"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/act_main_top_img"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_main_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/act_main_sv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/act_main_btn_about"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_main_top_img">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/act_main_btn_01"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/main_btn_select_bg"
+                android:text="善恶事件列表" />
+
+            <Button
+                android:id="@+id/act_main_btn_02"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/main_btn_select_bg"
+                android:text="地图资料" />
+
+
+            <Button
+                android:id="@+id/act_main_btn_03"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/main_btn_select_bg"
+                android:text="武侠初始善恶" />
+
+            <Button
+                android:id="@+id/act_main_btn_04"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/main_btn_select_bg"
+                android:text="武学图鉴" />
+
+            <Button
+                android:id="@+id/act_main_btn_05"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_main_menu_bg_not"
+                android:text="武侠图鉴(未完成)" />
+
+            <Button
+                android:id="@+id/act_main_btn_06"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_main_menu_bg_not"
+                android:text="神器资料(未完成)" />
+
+            <Button
+                android:id="@+id/act_main_btn_07"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_main_menu_bg_not"
+                android:text="药材矿石(未完成)"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/act_main_btn_08"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_main_menu_bg_not"
+                android:text="药材矿石(未完成)"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/act_main_btn_09"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_main_menu_bg_not"
+                android:text="药材矿石(未完成)"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/act_main_btn_about"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/icon_main_menu_bg_about"
+        app:layout_constraintBottom_toTopOf="@+id/act_main_user_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/act_main_user_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/icon_user"
+        app:layout_constraintBottom_toBottomOf="@+id/act_main_user_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/act_main_user_tv"
+        app:qmui_border_width="0dp"
+        app:qmui_is_circle="true" />
+
+    <TextView
+        android:id="@+id/act_main_user_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="数据参考各个攻略,有问题的话在群(2,4,5,6)里面告知一下"
+        android:textColor="#2a1f1b"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/act_main_user_img" />
 
     <!--<android.support.design.widget.TabLayout-->
     <!--android:id="@+id/tabLayout"-->
@@ -27,13 +171,13 @@
     <!--app:layout_constraintStart_toStartOf="parent"-->
     <!--app:layout_constraintTop_toBottomOf="@+id/tabLayout" />-->
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/act_main_rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/act_main_rv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
 
 </android.support.constraint.ConstraintLayout>

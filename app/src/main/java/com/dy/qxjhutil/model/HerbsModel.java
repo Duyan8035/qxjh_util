@@ -40,6 +40,9 @@ public class HerbsModel implements RealmModel {
         this.name = name;
     }
 
+    public HerbsModel() {
+    }
+
     public HerbsModel(String name, MapModel map1, MapModel map2) {
         this.name = name;
         this.map1 = map1;

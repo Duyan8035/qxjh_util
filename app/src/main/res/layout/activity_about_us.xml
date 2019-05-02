@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AboutUsActivity">
+
+
+    <TextView
+        android:id="@+id/act_about_us_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="适用于游戏版本 8.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/act_about_us_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_user"
+        app:layout_constraintEnd_toStartOf="@+id/act_about_us_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/act_about_us_value"
+        app:qmui_border_width="0dp"
+        app:qmui_is_circle="true" />
+
+    <TextView
+        android:id="@+id/act_about_us_value"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="个人兴趣爱好之作，精力有限，无法做到尽善尽美。买不起服务器，数据全放本地。所以安装包比较大。有问题或者建议的话，可以在官方群(2,4,5,6)或者tap上回复"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_about_us_title" />
+
+    <TextView
+        android:id="@+id/act_about_us_hint"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="此工具不添加广告,也不收费,靠爱发电。\n当然大佬要请我杯快乐水，我也很乐意。\n\n代码数据完全开源\ngithub地址：https://github.com/Duyan8035/qxjh_util"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_about_us_value" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="84dp"
+        android:src="@drawable/icon_weixin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_about_us_hint" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="88dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_zhifubao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_about_us_hint"
+        app:layout_constraintWidth_percent="0.4" />
+
+</android.support.constraint.ConstraintLayout>

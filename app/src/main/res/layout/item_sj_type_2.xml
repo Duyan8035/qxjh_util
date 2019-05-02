@@ -4,53 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="#16000000"
     android:gravity="center">
 
-    <TextView
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_sj_parent_tv_1"
-        android:layout_width="90dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:gravity="center|start"
+        android:minLines="1"
+        android:singleLine="true"
         android:text="name"
-        app:layout_constraintBottom_toBottomOf="@+id/item_sj_value_tv_2"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/item_sj_value_tv_1"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="name" />
 
-    <TextView
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_sj_value_tv_1"
         style="@style/style_sj_list_title"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/item_sj_type_2_barrier"
         app:layout_constraintEnd_toStartOf="@+id/item_sj_obtain_1"
-        app:layout_constraintStart_toEndOf="@+id/item_sj_parent_tv_1"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_sj_parent_tv_1"
         tools:text="value" />
 
-    <TextView
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_sj_value_tv_2"
         style="@style/style_sj_list_title"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/item_sj_obtain_2"
-        app:layout_constraintStart_toEndOf="@+id/item_sj_parent_tv_1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_sj_type_2_barrier"
         tools:text="value" />
 
 
-    <TextView
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_sj_obtain_1"
         style="@style/style_sj_list_value"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/item_sj_value_tv_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_sj_type_2_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/item_sj_parent_tv_1"
         tools:text="1" />
 
 
-    <TextView
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_sj_obtain_2"
         style="@style/style_sj_list_value"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_sj_type_2_barrier"
@@ -63,50 +77,35 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="item_sj_obtain_1,item_sj_value_tv_1" />
 
-
     <View
-        android:id="@+id/item_wx_sj_list_div_1"
-        android:layout_width="0dp"
-        android:layout_height="1px"
-        android:background="@color/lineColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <View
-        android:id="@+id/item_sj_value_tv_div_1"
-        android:layout_width="0dp"
-        android:layout_height="1px"
-        android:background="@color/lineColor"
-        app:layout_constraintEnd_toEndOf="@+id/item_sj_obtain_1"
-        app:layout_constraintStart_toEndOf="@+id/item_sj_parent_tv_1"
-        app:layout_constraintTop_toBottomOf="@+id/item_sj_value_tv_1" />
-
-    <View
-        android:id="@+id/item_sj_h_1_div"
-        android:layout_width="1px"
+        android:id="@+id/item_sj_div_1"
+        android:layout_width="1dp"
         android:layout_height="0dp"
-        android:background="@color/line_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/item_sj_parent_tv_1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/item_sj_h_2_div"
-        android:layout_width="1px"
-        android:layout_height="0dp"
-        android:background="@color/line_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/item_sj_value_tv_1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/item_wx_sj_list_div_top"
-        android:layout_width="0dp"
-        android:layout_height="1px"
-        android:background="@color/lineColor"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/item_div_color"
+        app:layout_constraintBottom_toTopOf="@+id/item_sj_div_3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/item_sj_parent_tv_1" />
+
+    <View
+        android:id="@+id/item_sj_div_2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/item_div_color"
+        app:layout_constraintBottom_toBottomOf="@+id/item_sj_value_tv_1"
+        app:layout_constraintEnd_toStartOf="@+id/item_sj_value_tv_1"
+        app:layout_constraintStart_toEndOf="@+id/item_sj_div_1"
+        app:layout_constraintTop_toTopOf="@+id/item_sj_value_tv_1" />
+
+    <View
+        android:id="@+id/item_sj_div_3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/item_div_color"
+        app:layout_constraintBottom_toBottomOf="@+id/item_sj_value_tv_2"
+        app:layout_constraintEnd_toStartOf="@+id/item_sj_value_tv_2"
+        app:layout_constraintStart_toEndOf="@+id/item_sj_div_1"
+        app:layout_constraintTop_toTopOf="@+id/item_sj_value_tv_2" />
 
 </android.support.constraint.ConstraintLayout>

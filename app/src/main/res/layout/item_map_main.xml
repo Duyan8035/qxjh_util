@@ -8,19 +8,34 @@
     android:gravity="center"
     tools:layout_height="wrap_content">
 
-    <TextView
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_map_main_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
+        android:background="@color/bg_32_black"
         android:gravity="center"
-        android:paddingBottom="5dp"
         android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/item_map_main_img"
         app:layout_constraintEnd_toEndOf="@+id/item_map_main_img"
         app:layout_constraintStart_toStartOf="@+id/item_map_main_img"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="name" />
+
+    <TextView
+        android:id="@+id/item_map_main_tv_artifact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/bg_16_black"
+        android:text="掉落神器："
+        app:layout_constraintBottom_toTopOf="@+id/item_map_main_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_map_main_img"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
@@ -29,7 +44,6 @@
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="3:2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_map_main_tv" />
@@ -39,7 +53,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
-        android:gravity="center_vertical|start"
+        android:background="@color/bg_16_black"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_12"
         app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_12"
         app:layout_constraintHorizontal_weight="1"
@@ -50,6 +65,9 @@
         android:id="@+id/item_map_main_tv_kf_12"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg_16_black"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/item_map_main_tv_kf_22"
         app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_13"
@@ -63,6 +81,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
@@ -74,7 +93,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
-        android:gravity="center_vertical|start"
+        android:background="@color/bg_16_black"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_22"
         app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_22"
         app:layout_constraintHorizontal_weight="1"
@@ -85,6 +105,9 @@
         android:id="@+id/item_map_main_tv_kf_22"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg_16_black"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/item_map_main_img"
         app:layout_constraintEnd_toStartOf="@+id/item_map_main_tv_kf_23"
@@ -98,10 +121,40 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/item_map_main_tv_kf_22"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/item_map_main_tv_kf_22"
         app:layout_constraintTop_toTopOf="@+id/item_map_main_tv_kf_22" />
+
+    <TextView
+        android:id="@+id/item_map_main_tv_herbs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_16_black"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="2dp"
+        android:text="掉落药材："
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_map_main_img" />
+
+    <TextView
+        android:id="@+id/item_map_main_tv_mineral"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_16_black"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="2dp"
+        android:text="掉落矿石："
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_map_main_tv_herbs" />
 
 </android.support.constraint.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.blankj.utilcode.util.SpanUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.R;
@@ -37,16 +38,47 @@ public class MapListActivity extends BaseActivity {
                 if (item.getImg() != -1) {
                     helper.setImageResource(R.id.item_map_main_img, item.getImg());
                 }
+
+                if (item.getArtifactList() != null && item.getArtifactList().size() > 0) {
+                    String artifact = "";
+                    for (int i = 0; i < item.getArtifactList().size(); i++) {
+                        artifact += item.getArtifactList().get(i).getName() + "   ";
+                    }
+                    helper.setText(R.id.item_map_main_tv_artifact, new SpanUtils().append(artifact).setBold()
+                            .setForegroundColor(0xff212121).create());
+                }
+                if (item.getHerbsList() != null && item.getHerbsList().size() > 0) {
+                    String herbs = "";
+                    for (int i = 0; i < item.getHerbsList().size(); i++) {
+                        herbs += item.getHerbsList().get(i).getName() + "   ";
+                    }
+                    helper.setText(R.id.item_map_main_tv_herbs, new SpanUtils().append("掉落药材：")
+                            .append(herbs).setBold()
+                            .setForegroundColor(0xff212121).create());
+                }
+
+                if (item.getMineralList() != null && item.getMineralList().size() > 0) {
+                    String mineral = "";
+                    for (int i = 0; i < item.getMineralList().size(); i++) {
+                        mineral += item.getMineralList().get(i).getName() + "   ";
+                    }
+                    helper.setText(R.id.item_map_main_tv_mineral, new SpanUtils().append("掉落矿石：")
+                            .append(mineral).setBold()
+                            .setForegroundColor(0xff212121).create());
+//                    helper.setText(R.id.item_map_main_tv_mineral, "掉落矿石：" + mineral);
+                }
+
                 if (item.getFuModel1() != null) {
 //                    SpanUtils spanUtils = new SpanUtils();
 //                    spanUtils.append(item.getFuModel1().getName() + " : ");
 //                    spanUtils.append(Utils.getGood(item.getFuModel1().getGoodMin()) + "  ");
 //                    spanUtils.append(Utils.getTrend(item.getFuModel1().getTrendMin()));
 //                    spanUtils.append(item.getFuModel1().getWx_parent().getName_game());
-                    helper.setText(R.id.item_map_main_tv_kf_11, item.getFuModel1().getName())
+                    helper.setText(R.id.item_map_main_tv_kf_11, item.getFuModel1().getName() + "\n" + item.getFuModel1().getWx_parent().getName_game())
 //                            .setText(R.id.item_map_main_tv_kf_12, spanUtils.create())
                             .setText(R.id.item_map_main_tv_kf_12, Utils.getGood(item.getFuModel1().getGoodMin()) + "\n" + Utils.getTrend(item.getFuModel1().getTrendMin()))
-                            .setText(R.id.item_map_main_tv_kf_13, item.getFuModel1().getWx_parent().getName_game());
+//                            .setText(R.id.item_map_main_tv_kf_13, )
+                    ;
                 }
 
                 if (item.getFuModel2() != null) {
@@ -56,10 +88,11 @@ public class MapListActivity extends BaseActivity {
 
 //                    spanUtils.append(item.getFuModel2().getName() + " : ");
 //                    spanUtils.append(item.getFuModel2().getWx_parent().getName_game());
-                    helper.setText(R.id.item_map_main_tv_kf_21, item.getFuModel2().getName())
+                    helper.setText(R.id.item_map_main_tv_kf_21, item.getFuModel2().getName() + "\n" + item.getFuModel2().getWx_parent().getName_game())
                             .setText(R.id.item_map_main_tv_kf_22, Utils.getGood(item.getFuModel2().getGoodMin()) + "\n" + Utils.getTrend(item.getFuModel2().getTrendMin()))
 //                            .setText(R.id.item_map_main_tv_kf_22, spanUtils.create())
-                            .setText(R.id.item_map_main_tv_kf_23, item.getFuModel2().getWx_parent().getName_game());
+//                            .setText(R.id.item_map_main_tv_kf_23, item.getFuModel2().getWx_parent().getName_game())
+                    ;
                 }
             }
         };

@@ -21,6 +21,9 @@ public class MineralModel implements RealmModel {
 
     private MapModel map1, map2;
 
+    public MineralModel() {
+    }
+
     public MapModel getMap1() {
         return map1;
     }

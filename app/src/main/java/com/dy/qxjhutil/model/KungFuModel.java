@@ -17,23 +17,23 @@ public class KungFuModel implements RealmModel {
     @PrimaryKey
     public String name;
 
+    private String index;
     @DrawableRes
     private int img;
     /**
      * 描述
      **/
-    private String desc_1, desc_2, desc_3;
-
-    private String cost_1, cost_2, cost_3;
+    private String desc;
+    private String cost;
     /**
      * 所属
      **/
     private String parent;
 
     /**
-     * 获取途径
+     * 获取途径 0:基础 1：拓印 2：成就 3：武侠自带 4：隐藏
      **/
-    private String type;
+    private int type;
     /**
      * 获取
      **/
@@ -45,6 +45,15 @@ public class KungFuModel implements RealmModel {
 
     private int trendMin, trendMax;
     private int goodMin, goodMax;
+
+    public String getIndex() {
+        return index == null ? "" : index;
+    }
+
+    public KungFuModel setIndex(String index) {
+        this.index = index;
+        return this;
+    }
 
     public KungFuModel() {
     }
@@ -114,57 +123,21 @@ public class KungFuModel implements RealmModel {
         return this;
     }
 
-    public String getDesc_1() {
-        return desc_1 == null ? "" : desc_1;
+    public String getDesc() {
+        return desc == null ? "" : desc;
     }
 
-    public KungFuModel setDesc_1(String desc_1) {
-        this.desc_1 = desc_1;
+    public KungFuModel setDesc(String desc) {
+        this.desc = desc;
         return this;
     }
 
-    public String getDesc_2() {
-        return desc_2 == null ? "" : desc_2;
+    public String getCost() {
+        return cost == null ? "" : cost;
     }
 
-    public KungFuModel setDesc_2(String desc_2) {
-        this.desc_2 = desc_2;
-        return this;
-    }
-
-    public String getDesc_3() {
-        return desc_3 == null ? "" : desc_3;
-    }
-
-    public KungFuModel setDesc_3(String desc_3) {
-        this.desc_3 = desc_3;
-        return this;
-    }
-
-    public String getCost_1() {
-        return cost_1 == null ? "" : cost_1;
-    }
-
-    public KungFuModel setCost_1(String cost_1) {
-        this.cost_1 = cost_1;
-        return this;
-    }
-
-    public String getCost_2() {
-        return cost_2 == null ? "" : cost_2;
-    }
-
-    public KungFuModel setCost_2(String cost_2) {
-        this.cost_2 = cost_2;
-        return this;
-    }
-
-    public String getCost_3() {
-        return cost_3 == null ? "" : cost_3;
-    }
-
-    public KungFuModel setCost_3(String cost_3) {
-        this.cost_3 = cost_3;
+    public KungFuModel setCost(String cost) {
+        this.cost = cost;
         return this;
     }
 
@@ -177,11 +150,11 @@ public class KungFuModel implements RealmModel {
         return this;
     }
 
-    public String getType() {
-        return type == null ? "" : type;
+    public int getType() {
+        return type;
     }
 
-    public KungFuModel setType(String type) {
+    public KungFuModel setType(int type) {
         this.type = type;
         return this;
     }
@@ -199,9 +172,6 @@ public class KungFuModel implements RealmModel {
     }
 
     public WXModel getWx_default() {
-        if (wx_default == null) {
-            wx_default = new WXModel();
-        }
         return wx_default;
     }
 

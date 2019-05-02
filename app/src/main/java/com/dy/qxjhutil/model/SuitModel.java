@@ -1,6 +1,6 @@
 package com.dy.qxjhutil.model;
 
-import com.dy.qxjhutil.constant.WxDefaultUtil;
+import com.dy.qxjhutil.constant.NameModel;
 
 import io.realm.RealmModel;
 import io.realm.annotations.RealmClass;
@@ -13,18 +13,18 @@ import io.realm.annotations.RealmClass;
 @RealmClass
 public class SuitModel implements RealmModel {
     public static final String TYPE_DEFAULT = "通用";
-    public static final String TYPE_PARENT_1 = WxDefaultUtil.Parent_1;
-    public static final String TYPE_PARENT_2 = WxDefaultUtil.Parent_2;
-    public static final String TYPE_PARENT_3 = WxDefaultUtil.Parent_3;
-    public static final String TYPE_PARENT_4 = WxDefaultUtil.Parent_4;
-    public static final String TYPE_PARENT_5 = WxDefaultUtil.Parent_5;
+    public static final String TYPE_PARENT_1 = NameModel.Parent_1;
+    public static final String TYPE_PARENT_2 = NameModel.Parent_2;
+    public static final String TYPE_PARENT_3 = NameModel.Parent_3;
+    public static final String TYPE_PARENT_4 = NameModel.Parent_4;
+    public static final String TYPE_PARENT_5 = NameModel.Parent_5;
 
-    public static final String TYPE_MAP_1 = WxDefaultUtil.MAP_NAME_1;
-    public static final String TYPE_MAP_2 = WxDefaultUtil.MAP_NAME_2;
-    public static final String TYPE_MAP_3 = WxDefaultUtil.MAP_NAME_3;
-    public static final String TYPE_MAP_4 = WxDefaultUtil.MAP_NAME_4;
-    public static final String TYPE_MAP_5 = WxDefaultUtil.MAP_NAME_5;
-    public static final String TYPE_MAP_6 = WxDefaultUtil.MAP_NAME_6;
+    public static final String TYPE_MAP_1 = NameModel.MAP_NAME_1;
+    public static final String TYPE_MAP_2 = NameModel.MAP_NAME_2;
+    public static final String TYPE_MAP_3 = NameModel.MAP_NAME_3;
+    public static final String TYPE_MAP_4 = NameModel.MAP_NAME_4;
+    public static final String TYPE_MAP_5 = NameModel.MAP_NAME_5;
+    public static final String TYPE_MAP_6 = NameModel.MAP_NAME_6;
 
     private String name;
     private String value;

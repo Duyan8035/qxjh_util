@@ -4,43 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/icon_sj_item_bg1"
     android:gravity="center"
     tools:layout_height="wrap_content">
 
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/item_wx_sj_list_img_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_sj_item_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:qmui_border_width="0dp"
+        app:qmui_corner_radius="3dp" />
 
-    <TextView
+    <ImageView
+        android:id="@+id/item_wx_sj_list_img_bg_left"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_sj_item_bg_left"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_sj_list_img_bg"
+        app:layout_constraintStart_toStartOf="@+id/item_wx_sj_list_img_bg"
+        app:layout_constraintTop_toTopOf="@+id/item_wx_sj_list_img_bg" />
+
+    <ImageView
+        android:id="@+id/item_wx_sj_list_img_bg_right"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_sj_item_bg_right"
+        app:layout_constraintBottom_toBottomOf="@+id/item_wx_sj_list_img_bg"
+        app:layout_constraintEnd_toEndOf="@+id/item_wx_sj_list_img_bg"
+        app:layout_constraintTop_toTopOf="@+id/item_wx_sj_list_img_bg" />
+
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_wx_sj_list_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
         android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
         android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_img"
         app:layout_constraintEnd_toEndOf="@+id/item_wx_sj_list_img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="name" />
 
     <ImageView
         android:id="@+id/item_wx_sj_list_img"
         android:layout_width="60dp"
         android:layout_height="0dp"
-        android:layout_margin="3dp"
+        android:layout_marginLeft="8dp"
         android:scaleType="centerCrop"
-        android:src="@color/btn_filled_blue_bg_disabled"
         app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_value"
         app:layout_constraintDimensionRatio="4:5"
         app:layout_constraintEnd_toStartOf="@+id/item_wx_sj_list_rv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_name" />
+        app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_name"
+        tools:src="@drawable/icon_yumianmengchang" />
 
-    <TextView
+    <com.dy.qxjhutil.view.MyTextView
         android:id="@+id/item_wx_sj_list_value"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="3dp"
         android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
         android:gravity="center"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_img"
         app:layout_constraintVertical_bias="0"
-        tools:text="name" />
+        tools:text="namenamenamename" />
 
 
     <android.support.v7.widget.RecyclerView
@@ -74,6 +110,7 @@
         android:layout_width="0dp"
         android:layout_height="3dp"
         android:background="@color/line_color"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -83,6 +120,7 @@
         android:layout_width="0dp"
         android:layout_height="3dp"
         android:background="@color/line_color"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -92,6 +130,7 @@
         android:layout_width="3dp"
         android:layout_height="0dp"
         android:background="@color/weakLineColor"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_div_buttom"
         app:layout_constraintStart_toEndOf="@+id/item_wx_sj_list_barrier"
         app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_div_top" />

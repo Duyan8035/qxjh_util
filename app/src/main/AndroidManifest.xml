@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyAppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.AboutUsActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,9 @@
         <activity android:name=".activity.map.MapDetailsActivity" />
         <activity android:name=".activity.map.MapListActivity" />
         <activity android:name=".activity.wx.WxDefaultActivity" />
-        <activity android:name=".activity.wx.WxDetailsActivity"/>
+        <activity android:name=".activity.wx.WxDetailsActivity" />
+        <activity android:name=".activity.kf.KfListActivity" />
+        <activity android:name=".activity.kf.KfDetailsActivity" />
     </application>
 
 </manifest>

@@ -29,6 +29,8 @@ public class ArtifactModel implements RealmModel {
     private MapModel mapModel;
     private String parent;
 
+    public ArtifactModel() {
+    }
 
     public MapModel getMapModel() {
         return mapModel;

@@ -12,7 +12,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.R;
 import com.dy.qxjhutil.base.BaseActivity;
 import com.dy.qxjhutil.constant.ColorModel;
-import com.dy.qxjhutil.constant.WxDefaultUtil;
+import com.dy.qxjhutil.constant.NameModel;
 import com.dy.qxjhutil.model.WXModel;
 import com.dy.qxjhutil.util.RealmHelper;
 
@@ -53,19 +53,19 @@ public class WxDefaultActivity extends BaseActivity implements View.OnClickListe
                         .setText(R.id.item_wx_list_value3, item.getParent())
                 ;
                 switch (item.getParent()) {
-                    case WxDefaultUtil.Parent_1:
+                    case NameModel.Parent_1:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_1);
                         break;
-                    case WxDefaultUtil.Parent_2:
+                    case NameModel.Parent_2:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_2);
                         break;
-                    case WxDefaultUtil.Parent_3:
+                    case NameModel.Parent_3:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_3);
                         break;
-                    case WxDefaultUtil.Parent_4:
+                    case NameModel.Parent_4:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_4);
                         break;
-                    case WxDefaultUtil.Parent_5:
+                    case NameModel.Parent_5:
                         helper.setBackgroundColor(R.id.item_wx_list_value3, ColorModel.TYPE_PARENT_5);
                         break;
                     default:

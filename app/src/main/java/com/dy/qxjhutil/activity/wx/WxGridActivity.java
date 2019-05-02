@@ -13,7 +13,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.R;
 import com.dy.qxjhutil.base.BaseActivity;
-import com.dy.qxjhutil.constant.WxDefaultUtil;
+import com.dy.qxjhutil.constant.NameModel;
 import com.dy.qxjhutil.model.WXModel;
 import com.dy.qxjhutil.util.RealmHelper;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
@@ -91,22 +91,22 @@ public class WxGridActivity extends BaseActivity {
         if (!TextUtils.isEmpty(mapName) && mapName.length() > 0) {
             String mapTitle = "";
             switch (mapName) {
-                case WxDefaultUtil.MAP_NAME_1:
+                case NameModel.MAP_NAME_1:
                     mapTitle = "isMap1";
                     break;
-                case WxDefaultUtil.MAP_NAME_2:
+                case NameModel.MAP_NAME_2:
                     mapTitle = "isMap2";
                     break;
-                case WxDefaultUtil.MAP_NAME_3:
+                case NameModel.MAP_NAME_3:
                     mapTitle = "isMap3";
                     break;
-                case WxDefaultUtil.MAP_NAME_4:
+                case NameModel.MAP_NAME_4:
                     mapTitle = "isMap4";
                     break;
-                case WxDefaultUtil.MAP_NAME_5:
+                case NameModel.MAP_NAME_5:
                     mapTitle = "isMap5";
                     break;
-                case WxDefaultUtil.MAP_NAME_6:
+                case NameModel.MAP_NAME_6:
                     mapTitle = "isMap6";
                     break;
                 default:

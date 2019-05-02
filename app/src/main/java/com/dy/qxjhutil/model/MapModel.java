@@ -32,6 +32,9 @@ public class MapModel implements RealmModel {
     private RealmList<MineralModel> mineralList = new RealmList<>();
     private RealmList<ArtifactModel> artifactList = new RealmList<>();
 
+    public MapModel() {
+    }
+
     public MapModel(String mapName) {
         this.mapName = mapName;
     }
@@ -131,6 +134,63 @@ public class MapModel implements RealmModel {
 
     public void setArtifactList(RealmList<ArtifactModel> artifactList) {
         this.artifactList = artifactList;
+    }
+
+    public MapModel setMineral(MineralModel mineral1, MineralModel mineral2, MineralModel mineral3, MineralModel mineral4, MineralModel mineral5) {
+        RealmList<MineralModel> models = new RealmList<>();
+        models.add(mineral1);
+        models.add(mineral2);
+        models.add(mineral3);
+        models.add(mineral4);
+        models.add(mineral5);
+        setMineralList(models);
+        return this;
+    }
+
+    public MapModel setMineral(MineralModel mineral1, MineralModel mineral2, MineralModel mineral3, MineralModel mineral4) {
+        RealmList<MineralModel> models = new RealmList<>();
+        models.add(mineral1);
+        models.add(mineral2);
+        models.add(mineral3);
+        models.add(mineral4);
+        setMineralList(models);
+        return this;
+    }
+
+    public MapModel setMineral(MineralModel mineral1, MineralModel mineral2, MineralModel mineral3) {
+        RealmList<MineralModel> models = new RealmList<>();
+        models.add(mineral1);
+        models.add(mineral2);
+        models.add(mineral3);
+        setMineralList(models);
+        return this;
+    }
+
+    public MapModel setHerbs(HerbsModel mineral1, HerbsModel mineral2, HerbsModel mineral3, HerbsModel mineral4) {
+        RealmList<HerbsModel> models = new RealmList<>();
+        models.add(mineral1);
+        models.add(mineral2);
+        models.add(mineral3);
+        models.add(mineral4);
+        setHerbsList(models);
+        return this;
+    }
+
+    public MapModel setHerbs(HerbsModel mineral1, HerbsModel mineral2, HerbsModel mineral3) {
+        RealmList<HerbsModel> models = new RealmList<>();
+        models.add(mineral1);
+        models.add(mineral2);
+        models.add(mineral3);
+        setHerbsList(models);
+        return this;
+    }
+
+    public MapModel setArtifact(ArtifactModel mineral1, ArtifactModel mineral2) {
+        RealmList<ArtifactModel> models = new RealmList<>();
+        models.add(mineral1);
+        models.add(mineral2);
+        setArtifactList(models);
+        return this;
     }
 }
 

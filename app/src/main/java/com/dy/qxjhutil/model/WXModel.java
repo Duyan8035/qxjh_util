@@ -41,6 +41,7 @@ public class WXModel implements RealmModel {
     private KungFuModel kfParent;
     private KungFuModel kfDefault;
 
+
     public KungFuModel getKfParent() {
         return kfParent;
     }
@@ -93,7 +94,7 @@ public class WXModel implements RealmModel {
     }
 
     public String getName_game() {
-        return name_game;
+        return name_game == null ? "" : name_game;
     }
 
     public WXModel setName_game(String name_game) {

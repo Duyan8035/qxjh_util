@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/item_wx_sj_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="3dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_img"
+        app:layout_constraintEnd_toEndOf="@+id/item_wx_sj_list_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="name" />
+
+    <ImageView
+        android:id="@+id/item_wx_sj_list_img"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_margin="3dp"
+        android:scaleType="centerCrop"
+        android:src="@color/btn_filled_blue_bg_disabled"
+        app:layout_constraintBottom_toTopOf="@+id/item_wx_sj_list_value"
+        app:layout_constraintDimensionRatio="4:5"
+        app:layout_constraintEnd_toStartOf="@+id/item_wx_sj_list_rv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_name" />
+
+    <TextView
+        android:id="@+id/item_wx_sj_list_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="3dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/item_wx_sj_list_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_wx_sj_list_img"
+        app:layout_constraintVertical_bias="0"
+        tools:text="name" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_wx_sj_list_rv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_wx_sj_list_barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_sj_type_2" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/item_wx_sj_list_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="item_wx_sj_list_value,item_wx_sj_list_name,item_wx_sj_list_img" />
+
+
+</android.support.constraint.ConstraintLayout>
