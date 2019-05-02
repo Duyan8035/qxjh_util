@@ -11,7 +11,7 @@
 4.地图图鉴增加掉落信息。
 5.无法覆盖安装的话，卸载之前的版本。
 
-![](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/img/img_main.png)
+![](https://github.com/Duyan8035/qxjh_util/blob/4faf31ea6b6060b2261923608ec4ba364c01a8d9/img/img_main.png)
 
 ![](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/img/img_sj.png)
 
@@ -25,6 +25,7 @@
 
 ## 地图包含的隐藏武学
 后续可能会添加地图独有套装（如果有时间的话）。
+
 
 ## 隐藏武学的需求
 ![](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/img/Screenshot_2019-04-21-22-18-51-959_com.dy.qxjhuti.png)
