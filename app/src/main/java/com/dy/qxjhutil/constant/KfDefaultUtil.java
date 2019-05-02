@@ -588,6 +588,9 @@ public class KfDefaultUtil {
         realm.copyToRealmOrUpdate(new KungFuModel(NameModel.MAP_NAME_22)
                 .setTrendGood(0, 5)
                 .setIndex("k")
+                .setCost(KfValueStr.kf_kongmingquan_cost)
+                .setDesc(KfValueStr.kf_kongmingquan_desc)
+                .setType(4)
                 .setImg(R.drawable.icon_kf_kongmingquan)
                 .setWx_parent(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_dalihuangdi).findFirst())
         );

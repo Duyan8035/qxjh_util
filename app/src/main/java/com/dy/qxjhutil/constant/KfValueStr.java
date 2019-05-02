@@ -143,18 +143,18 @@ public class KfValueStr {
             "手牌中所有的刀剑牌消耗的怒气减1";
 
     public static String kf_wulunlianhuan_cost = "";
-    public static String kf_wulunlianhuan_desc =  "废牌堆中每有5张牌，抽1张牌并免怒气打出【当前：0\n" +
+    public static String kf_wulunlianhuan_desc = "废牌堆中每有5张牌，抽1张牌并免怒气打出【当前：0\n" +
             "移除此牌";
 
     public static String kf_kuihuadafa_cost = "";
-    public static String kf_kuihuadafa_desc ="本回合每打出过1张绣花针，抽1张牌【当前：0】{循环}";
+    public static String kf_kuihuadafa_desc = "本回合每打出过1张绣花针，抽1张牌【当前：0】{循环}";
 
     public static String kf_kanglongyouhui_cost = "";
     public static String kf_kanglongyouhui_desc = "本场战斗每打出过1张拳掌牌，对敌方造成4普通伤害【当前：0】\n" +
             "本场战斗每打出过1张拳掌牌，获得4护甲【当前：0";
 
     public static String kf_yangchunbaixue_cost = "";
-    public static String kf_yangchunbaixue_desc =  "对敌方造成16（攻击相关】火伤害\n" +
+    public static String kf_yangchunbaixue_desc = "对敌方造成16（攻击相关】火伤害\n" +
             "获得冷血1";
 
     public static String kf_taijiquan_cost = "";
@@ -165,7 +165,7 @@ public class KfValueStr {
     public static String kf_hamaxianfa_desc = "记录己方本回合受到的所有伤害，对敌方造成其150%的伤害";
 
     public static String kf_piaoxuechuanyunzhang_cost = "";
-    public static String kf_piaoxuechuanyunzhang_desc ="对敌方造成30 【攻击相关】普通伤害明\n" +
+    public static String kf_piaoxuechuanyunzhang_desc = "对敌方造成30 【攻击相关】普通伤害明\n" +
             "抽1张牌\n" +
             "共鸣";
 
@@ -275,10 +275,10 @@ public class KfValueStr {
             "获得武学：绣花针x3";
 
     public static String kf_tiannüsanhua_cost = "";
-    public static String kf_tiannüsanhua_desc = "丢弃所有手牌【当前：0】";
+    public static String kf_tiannüsanhua_desc = "丢弃所有手牌【当前：0】 获得武学：绣花针x4";
 
     public static String kf_cuixinzhang_cost = "";
-    public static String kf_cuixinzhang_desc = "获得武学：绣花针x4";
+    public static String kf_cuixinzhang_desc = "抽1张牌\n此牌被丢弃时:抽1张牌\n此牌被丢弃时:获得12【防御相关】护甲";
 
     public static String kf_yufengyin_cost = "";
     public static String kf_yufengyin_desc = "对敌方造成16【攻击相 关】普通伤害\n" +

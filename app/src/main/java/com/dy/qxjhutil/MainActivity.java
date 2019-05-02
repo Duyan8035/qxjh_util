@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.SpanUtils;
+import com.dy.qxjhutil.activity.AboutUsActivity;
 import com.dy.qxjhutil.activity.kf.KfListActivity;
 import com.dy.qxjhutil.activity.map.MapListActivity;
 import com.dy.qxjhutil.activity.wx.WxDefaultActivity;
@@ -51,7 +52,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn_09 = findViewById(R.id.act_main_btn_09);
         btn_about = findViewById(R.id.act_main_btn_about);
 
-        btn_01.setText(new SpanUtils().append("善恶事件列表").setShadow(7,1,1,0xffffffff).create());
+        btn_01.setText(new SpanUtils().append("善恶事件列表").setShadow(7, 1, 1, 0xffffffff).create());
 
         initData();
 
@@ -160,6 +161,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.act_main_btn_09:
                 break;
             case R.id.act_main_btn_about:
+                startActivity(new Intent(mContext, AboutUsActivity.class));
                 break;
             default:
                 break;
