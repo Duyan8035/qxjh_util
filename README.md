@@ -13,11 +13,11 @@
 
 ![](https://github.com/Duyan8035/qxjh_util/blob/4faf31ea6b6060b2261923608ec4ba364c01a8d9/img/img_main.png)
 
-![](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/img/img_sj.png)
+![](https://github.com/Duyan8035/qxjh_util/blob/4faf31ea6b6060b2261923608ec4ba364c01a8d9/img/img_sj.png)
 
-![](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/img/img_wuxue.png)
+![](https://github.com/Duyan8035/qxjh_util/blob/4faf31ea6b6060b2261923608ec4ba364c01a8d9/img/img_wuxue.png)
 
-![](https://github.com/Duyan8035/qxjh_util/blob/7a15341c8a39152e20bb05626eac498826041be9/img/img_map.png)
+![](https://github.com/Duyan8035/qxjh_util/blob/4faf31ea6b6060b2261923608ec4ba364c01a8d9/img/img_map.png)
 
 为了玩游戏写的一个工具，目前具备的功能有：
 ## 善恶事件列表
