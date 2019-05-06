@@ -14,6 +14,7 @@ import com.dy.qxjhutil.activity.wx.WxListActivity;
 import com.dy.qxjhutil.base.BaseActivity;
 import com.dy.qxjhutil.constant.WxDefaultUtil;
 import com.dy.qxjhutil.util.RealmHelper;
+import com.tencent.bugly.Bugly;
 
 import io.realm.Realm;
 
@@ -37,8 +38,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Realm.init(this);
         mRealm = RealmHelper.getInstance(mContext);
 
         btn_01 = findViewById(R.id.act_main_btn_01);
