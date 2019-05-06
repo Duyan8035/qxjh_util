@@ -2,8 +2,6 @@ package com.dy.qxjhutil.model;
 
 import android.support.annotation.DrawableRes;
 
-import com.dy.qxjhutil.model.bean.SqNameClass;
-
 import io.realm.RealmModel;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.RealmClass;
@@ -17,7 +15,7 @@ import io.realm.annotations.RealmClass;
 public class ArtifactModel implements RealmModel {
 
     @PrimaryKey
-    private SqNameClass name;
+    private String name;
 
     @DrawableRes
     private int img = -1;
@@ -52,7 +50,7 @@ public class ArtifactModel implements RealmModel {
         return this;
     }
 
-    public ArtifactModel(SqNameClass name) {
+    public ArtifactModel(String name) {
         this.name = name;
     }
 
@@ -65,11 +63,11 @@ public class ArtifactModel implements RealmModel {
         return this;
     }
 
-    public SqNameClass getName() {
+    public String getName() {
         return name;
     }
 
-    public ArtifactModel setName(SqNameClass name) {
+    public ArtifactModel setName(String name) {
         this.name = name;
         return this;
     }
