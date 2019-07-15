@@ -68,15 +68,27 @@ public class MapListActivity extends BaseActivity {
 //                    helper.setText(R.id.item_map_main_tv_mineral, "掉落矿石：" + mineral);
                 }
 
+                if (item.getWxModel1() != null || item.getWxModel2() != null) {
+                    String wx = "";
+                    wx += item.getWxModel1().getName_game() + "   ";
+                    wx += item.getWxModel2().getName_game();
+                    helper.setText(R.id.item_map_main_tv_wx, new SpanUtils().append("掉落武魂：")
+                            .append(wx).setBold()
+                            .setForegroundColor(0xff212121).create());
+                }
+
+
                 if (item.getFuModel1() != null) {
 //                    SpanUtils spanUtils = new SpanUtils();
 //                    spanUtils.append(item.getFuModel1().getName() + " : ");
 //                    spanUtils.append(Utils.getGood(item.getFuModel1().getGoodMin()) + "  ");
 //                    spanUtils.append(Utils.getTrend(item.getFuModel1().getTrendMin()));
 //                    spanUtils.append(item.getFuModel1().getWx_parent().getName_game());
-                    helper.setText(R.id.item_map_main_tv_kf_11, item.getFuModel1().getName() + "\n" + item.getFuModel1().getWx_parent().getName_game())
+                    helper.setText(R.id.item_map_main_tv_kf_11, item.getFuModel1().getName() + "\n" +
+                            item.getFuModel1().getWx_parent().getName_game())
 //                            .setText(R.id.item_map_main_tv_kf_12, spanUtils.create())
-                            .setText(R.id.item_map_main_tv_kf_12, Utils.getGood(item.getFuModel1().getGoodMin()) + "\n" + Utils.getTrend(item.getFuModel1().getTrendMin()))
+                            .setText(R.id.item_map_main_tv_kf_12, Utils.getTrend(item.getFuModel1().getTrendMin()) + "\n"
+                                    + Utils.getGood(item.getFuModel1().getGoodMin()))
 //                            .setText(R.id.item_map_main_tv_kf_13, )
                     ;
                 }
@@ -88,8 +100,10 @@ public class MapListActivity extends BaseActivity {
 
 //                    spanUtils.append(item.getFuModel2().getName() + " : ");
 //                    spanUtils.append(item.getFuModel2().getWx_parent().getName_game());
-                    helper.setText(R.id.item_map_main_tv_kf_21, item.getFuModel2().getName() + "\n" + item.getFuModel2().getWx_parent().getName_game())
-                            .setText(R.id.item_map_main_tv_kf_22, Utils.getGood(item.getFuModel2().getGoodMin()) + "\n" + Utils.getTrend(item.getFuModel2().getTrendMin()))
+                    helper.setText(R.id.item_map_main_tv_kf_21, item.getFuModel2().getName() + "\n" +
+                            item.getFuModel2().getWx_parent().getName_game())
+                            .setText(R.id.item_map_main_tv_kf_22, Utils.getTrend(item.getFuModel2().getTrendMin()) + "\n"
+                                    + Utils.getGood(item.getFuModel2().getGoodMin()))
 //                            .setText(R.id.item_map_main_tv_kf_22, spanUtils.create())
 //                            .setText(R.id.item_map_main_tv_kf_23, item.getFuModel2().getWx_parent().getName_game())
                     ;

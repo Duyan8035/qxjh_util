@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.dy.qxjhutil">
+    package="com.dy.qxjhutil"
+    android:versionCode="3"
+    android:versionName="1.2.0">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,9 +25,13 @@
         android:theme="@style/MyAppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="${applicationId}.fileProvider"
+            android:authorities="com.dy.qxjhutil.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -40,10 +46,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.tencent.bugly.beta.ui.BetaActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale"
-            android:theme="@android:style/Theme.Translucent" />
         <activity android:name=".activity.wx.WxListActivity" />
         <activity android:name=".activity.wx.WxGridActivity" />
         <activity android:name=".activity.map.MapDetailsActivity" />

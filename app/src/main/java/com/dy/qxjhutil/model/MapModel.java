@@ -27,6 +27,7 @@ public class MapModel implements RealmModel {
     public RealmList<SuitModel> suitModel = new RealmList<>();
 
     private KungFuModel fuModel1, fuModel2;
+    private WXModel wxModel1, wxModel2;
 
     private RealmList<HerbsModel> herbsList = new RealmList<>();
     private RealmList<MineralModel> mineralList = new RealmList<>();
@@ -37,6 +38,25 @@ public class MapModel implements RealmModel {
 
     public MapModel(String mapName) {
         this.mapName = mapName;
+    }
+
+
+    public WXModel getWxModel1() {
+        return wxModel1;
+    }
+
+    public MapModel setWxModel1(WXModel wxModel1) {
+        this.wxModel1 = wxModel1;
+        return this;
+    }
+
+    public WXModel getWxModel2() {
+        return wxModel2;
+    }
+
+    public MapModel setWxModel2(WXModel wxModel2) {
+        this.wxModel2 = wxModel2;
+        return this;
     }
 
     public int getImg() {

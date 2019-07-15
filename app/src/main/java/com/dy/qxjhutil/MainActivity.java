@@ -1,20 +1,19 @@
 package com.dy.qxjhutil;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.SpanUtils;
 import com.dy.qxjhutil.activity.AboutUsActivity;
-import com.dy.qxjhutil.activity.kf.KfListActivity;
 import com.dy.qxjhutil.activity.map.MapListActivity;
 import com.dy.qxjhutil.activity.wx.WxDefaultActivity;
 import com.dy.qxjhutil.activity.wx.WxListActivity;
 import com.dy.qxjhutil.base.BaseActivity;
 import com.dy.qxjhutil.constant.WxDefaultUtil;
 import com.dy.qxjhutil.util.RealmHelper;
-import com.tencent.bugly.Bugly;
 
 import io.realm.Realm;
 
@@ -147,11 +146,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(mContext, WxDefaultActivity.class));
                 break;
             case R.id.act_main_btn_04:
-                startActivity(new Intent(mContext, KfListActivity.class));
+//                startActivity(new Intent(mContext, KfListActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.taptap.com/topic/6322077")));
                 break;
             case R.id.act_main_btn_05:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.taptap.com/topic/6169185")));
                 break;
             case R.id.act_main_btn_06:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.taptap.com/topic/6685601")));
                 break;
             case R.id.act_main_btn_07:
                 break;

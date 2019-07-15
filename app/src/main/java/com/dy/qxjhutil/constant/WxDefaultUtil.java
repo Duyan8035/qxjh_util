@@ -31,7 +31,6 @@ public class WxDefaultUtil {
                 }
             }
         });
-
         new KfDefaultUtil().initData(mContext);
         new MapDefaultUtil().initData(mContext);
     }
@@ -368,7 +367,8 @@ public class WxDefaultUtil {
                 wxModel.setMap4gm(true);
                 break;
             case NameModel.Name_jiujianchuanren:
-                wxModel.setName(NameModel.Name_jiujianchuanren_value).setIcon_mini(R.drawable.icon_wx_mini_jiujianchuanren).setIndex("J").setTrend(-1).setGood(1).setParent(Parent_3)
+                wxModel.setName(NameModel.Name_jiujianchuanren_value).setIcon_mini(R.drawable.icon_wx_mini_jiujianchuanren)
+                        .setIndex("J").setTrend(-1).setGood(1).setParent(Parent_3)
                         .setIcon(R.drawable.icon_jiujianchuanren);
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("剑法共九式，施展到第九式敌人必死无疑", "复制一张牌", -1, 0));
@@ -382,7 +382,7 @@ public class WxDefaultUtil {
                 break;
             case NameModel.Name_jiansheng:
                 wxModel.setName(NameModel.Name_jiansheng).setIcon_mini(R.drawable.icon_wx_mini_jiansheng)
-                        .setIndex("J").setTrend(99).setGood(99).setParent(Parent_3);
+                        .setIndex("J").setTrend(0).setGood(0).setParent(Parent_3);
                 break;
 
             //type3
@@ -474,7 +474,8 @@ public class WxDefaultUtil {
                 wxModel.setMap3dm(true);
                 break;
             case NameModel.Name_jinlunguoshi:
-                wxModel.setName(NameModel.Name_jinlunguoshi_value).setIcon_mini(R.drawable.icon_wx_mini_jinlunguoshi).setIndex("J").setTrend(0).setGood(0).setParent(Parent_4)
+                wxModel.setName(NameModel.Name_jinlunguoshi_value).setIcon_mini(R.drawable.icon_wx_mini_jinlunguoshi).setIndex("J")
+                        .setTrend(1).setGood(-1).setParent(Parent_4)
                         .setIcon(R.drawable.icon_jinlunguoshi);
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("受徒儿一拜", "选择卡牌，给予虹吸", 0, -1));

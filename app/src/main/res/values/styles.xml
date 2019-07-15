@@ -10,7 +10,8 @@
         <item name="colorAccent">@color/scroll_bg</item>
     </style>
     <!-- Base application theme. -->
-    <style name="MyAppTheme" parent="QMUI.Compat">
+    <!--<style name="MyAppTheme" parent="QMUI.Compat">-->
+    <style name="MyAppTheme" parent="XUITheme.Phone">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/qmui_config_color_white</item>
         <item name="colorPrimaryDark">@color/qmui_config_color_white</item>

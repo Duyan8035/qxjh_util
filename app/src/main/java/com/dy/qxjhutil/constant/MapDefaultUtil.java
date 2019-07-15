@@ -8,6 +8,7 @@ import com.dy.qxjhutil.model.HerbsModel;
 import com.dy.qxjhutil.model.KungFuModel;
 import com.dy.qxjhutil.model.MapModel;
 import com.dy.qxjhutil.model.MineralModel;
+import com.dy.qxjhutil.model.WXModel;
 import com.dy.qxjhutil.util.RealmHelper;
 
 import io.realm.Realm;
@@ -223,6 +224,8 @@ public class MapDefaultUtil {
                 .setHerbs(new HerbsModel(NameModel.HERBS_jinchan), new HerbsModel(NameModel.HERBS_xuelian),
                         new HerbsModel(NameModel.HERBS_renshen), new HerbsModel(NameModel.HERBS_hamayou))
                 .setArtifact(new ArtifactModel(NameModel.ARTIFACT_yitianjian), new ArtifactModel(NameModel.ARTIFACT_tulongdao))
+                .setWxModel1(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_bukebujie).findFirst())
+                .setWxModel2(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_yanziwuzhu).findFirst())
         );
 
         realm.copyToRealmOrUpdate(new MapModel(NameModel.MAP_NAME_2)
@@ -235,6 +238,8 @@ public class MapDefaultUtil {
                 .setHerbs(new HerbsModel(NameModel.HERBS_wujizhao), new HerbsModel(NameModel.HERBS_lingzhi),
                         new HerbsModel(NameModel.HERBS_longxianxiang))
                 .setArtifact(new ArtifactModel(NameModel.ARTIFACT_yuxiao), new ArtifactModel(NameModel.ARTIFACT_dagoubang))
+                .setWxModel1(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_xiongshenesha).findFirst())
+                .setWxModel2(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_tongshi).findFirst())
         );
         realm.copyToRealmOrUpdate(new MapModel(NameModel.MAP_NAME_3)
                 .setValue(NameModel.MAP_VALUE_3)
@@ -246,6 +251,8 @@ public class MapDefaultUtil {
                 .setHerbs(new HerbsModel(NameModel.HERBS_lurong), new HerbsModel(NameModel.HERBS_fengyu),
                         new HerbsModel(NameModel.HERBS_longgu))
                 .setArtifact(new ArtifactModel(NameModel.ARTIFACT_panguanbi), new ArtifactModel(NameModel.ARTIFACT_bawangqiang))
+                .setWxModel1(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_waner).findFirst())
+                .setWxModel2(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_azi).findFirst())
         );
         realm.copyToRealmOrUpdate(new MapModel(NameModel.MAP_NAME_4)
                 .setValue(NameModel.MAP_VALUE_4)
@@ -257,6 +264,8 @@ public class MapDefaultUtil {
                 .setHerbs(new HerbsModel(NameModel.HERBS_lingzhi), new HerbsModel(NameModel.HERBS_longgu),
                         new HerbsModel(NameModel.HERBS_renshen), new HerbsModel(NameModel.HERBS_hamayou))
                 .setArtifact(new ArtifactModel(NameModel.ARTIFACT_jinlun), new ArtifactModel(NameModel.ARTIFACT_fenghuangqin))
+                .setWxModel1(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_jinguoxiaowangye).findFirst())
+                .setWxModel2(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_longguniang).findFirst())
         );
         realm.copyToRealmOrUpdate(new MapModel(NameModel.MAP_NAME_5)
                 .setValue(NameModel.MAP_VALUE_5)
@@ -268,6 +277,8 @@ public class MapDefaultUtil {
                 .setHerbs(new HerbsModel(NameModel.HERBS_xuelian), new HerbsModel(NameModel.HERBS_jinchan),
                         new HerbsModel(NameModel.HERBS_lurong))
                 .setArtifact(new ArtifactModel(NameModel.ARTIFACT_shenghuoling), new ArtifactModel(NameModel.ARTIFACT_luorigong))
+                .setWxModel1(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_bosishengnü).findFirst())
+                .setWxModel2(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_longwang).findFirst())
         );
         realm.copyToRealmOrUpdate(new MapModel(NameModel.MAP_NAME_6)
                 .setValue(NameModel.MAP_VALUE_6)
@@ -279,6 +290,8 @@ public class MapDefaultUtil {
                 .setHerbs(new HerbsModel(NameModel.HERBS_wujizhao), new HerbsModel(NameModel.HERBS_longxianxiang),
                         new HerbsModel(NameModel.HERBS_fengyu))
                 .setArtifact(new ArtifactModel(NameModel.ARTIFACT_jinlingzheshan), new ArtifactModel(NameModel.ARTIFACT_kaitianfu))
+                .setWxModel1(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_baituoshanshaozhu).findFirst())
+                .setWxModel2(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_mojiaoshengnü).findFirst())
         );
     }
 
