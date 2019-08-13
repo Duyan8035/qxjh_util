@@ -12,7 +12,7 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Bugly.init(getApplicationContext(), "e3d8b35bba", false);
+        Bugly.init(getApplicationContext(), "06d0ae6d94", false);
 
         XUI.init(this); //初始化UI框架
         XUI.debug(true);  //开启UI框架调试日志
