@@ -59,6 +59,25 @@ public class Utils {
         return spanUtils.create();
     }
 
+    public static CharSequence getFloatQx(int qx, int se) {
+        SpanUtils spanUtils = new SpanUtils();
+        if (qx < 0) {
+            spanUtils.append("混" + qx);
+        } else if (qx == 0) {
+            spanUtils.append("中立");
+        } else {
+            spanUtils.append("守" + qx);
+        }
+        if (se < 0) {
+            spanUtils.append("恶" + se);
+        } else if (se == 0) {
+            spanUtils.append("中立");
+        } else {
+            spanUtils.append("善" + se);
+        }
+        return spanUtils.create();
+    }
+
     public static CharSequence getKfValue(String cost, String value) {
         SpanUtils spanUtils = new SpanUtils();
         if (!TextUtils.isEmpty(cost) && cost.length() > 0) {

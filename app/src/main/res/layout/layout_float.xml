@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
     tools:layout_width="match_parent">
 
     <com.qmuiteam.qmui.widget.QMUIRadiusImageView
@@ -15,26 +16,91 @@
         app:layout_constraintTop_toTopOf="parent"
         app:qmui_is_circle="true" />
 
-
     <LinearLayout
         android:id="@+id/float_view_title"
-        android:layout_width="wrap_content"
+        android:layout_width="1dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/float_view_icon">
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/float_view_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/float_view_icon"
+        app:layout_constraintTop_toTopOf="@+id/float_view_icon">
 
         <TextView
+            android:id="@+id/float_layout_title_tv_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="下载管理" />
+            android:layout_marginStart="8dp"
+            android:background="@android:color/white"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="" />
+        <!--android:text="善恶事件" />-->
 
         <TextView
+            android:id="@+id/float_layout_title_tv_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="应用管理" />
+            android:layout_marginStart="8dp"
+            android:background="@android:color/white"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="" />
+        <!--android:text="隐藏推荐阵容" />-->
+
+        <TextView
+            android:id="@+id/float_layout_title_tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/white"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="" />
+        <!--android:text="地图产出" />-->
 
     </LinearLayout>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/float_layout_rv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minWidth="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/float_view_icon" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/float_layout_rv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minWidth="120dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/float_layout_rv_1"
+        app:layout_constraintTop_toBottomOf="@+id/float_view_icon" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/float_layout_rv_3"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/float_layout_rv_2"
+        app:layout_constraintTop_toBottomOf="@+id/float_view_icon"
+        app:layout_constraintVertical_bias="0" />
+
+
+    <android.support.constraint.Group
+        android:id="@+id/float_layout_group_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="float_view_title,float_layout_rv_3,float_layout_rv_2,float_layout_rv_1" />
 
 </android.support.constraint.ConstraintLayout>

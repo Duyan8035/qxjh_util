@@ -12,10 +12,10 @@ public class NameModel {
      **/
     public static String[] stringList = {
             "两小无猜", "青梅竹马",
-            "凶神恶煞", "金国小王爷", "飞天蝙蝠", "狮王", "燕子坞主", "大轮明王", "灭绝道姑", "灵鹫宫主", "明教教主", "南苑大王", "丐帮帮主", "白陀山主", "少林三僧",
-            "不可不戒", "长春首徒", "邵敏郡主", "无恶不作", "小东邪", "君子剑", "龙姑娘", "林家公子", "金刀驸马", "蓉儿", "神雕大侠", "九剑传人", "剑圣",
-            "玉面孟尝", "婉儿", "穷凶极恶", "余观主", "蝠王", "鹰王", "阿紫", "铜尸", "铁尸", "金轮国师", "峨眉掌门", "东方姑娘", "聪辩先生",
-            "白驼山少主", "灵儿", "波斯圣女", "恶贯满盈", "玄冥二老", "神仙姐姐", "魔教圣女", "龙王", "星宿老仙", "扫地僧", "大理世子", "魔教教主", "大理皇帝", "东海岛主", "武当掌门",
+            "凶神恶煞", "金国小王爷", "飞天蝙蝠", "狮王", "坞主", "明王", "灭绝道姑", "宫主", "太极传人", "南苑大王", "丐帮帮主", "白陀山主", "少林三僧",
+            "不可不戒", "长春首徒", "邵敏郡主", "无恶不作", "小东邪", "君子剑客", "龙姑娘", "林家公子", "弯弓神箭", "东海仙子", "神雕大哥", "九剑传人", "剑圣", "左使",
+            "孟尝", "婉儿", "穷凶极恶", "余观主", "蝠王", "鹰王", "紫儿", "铜尸", "铁尸", "金轮大师", "峨眉掌门", "东方姑娘", "聪辩先生", "童姥",
+            "白驼山少主", "灵儿", "波斯圣女", "恶贯满盈", "玄冥长老", "神仙妹妹", "魔教圣女", "龙王", "星宿老仙", "扫地和尚", "大理世子", "魔教教主", "大理皇帝", "东海岛主", "武当掌门",
     };
 
 
@@ -120,11 +120,11 @@ public class NameModel {
     public static final String Name_jinguoxiaowangye = "金国小王爷";
     public static final String Name_feitianbianfu = "飞天蝙蝠";
     public static final String Name_shiwang = "狮王";
-    public static final String Name_yanziwuzhu = "燕子坞主";
-    public static final String Name_dalunmingwang = "大轮明王";
+    public static final String Name_yanziwuzhu = "坞主";
+    public static final String Name_dalunmingwang = "明王";
     public static final String Name_miejuedaogu = "灭绝道姑";
-    public static final String Name_lingjiugongzhu = "灵鹫宫主";
-    public static final String Name_mingjiaojiaozhu = "明教教主";
+    public static final String Name_lingjiugongzhu = "宫主";
+    public static final String Name_mingjiaojiaozhu = "太极传人";
     public static final String Name_nanyuandawang = "南苑大王";
     public static final String Name_gaibangbangzhu = "丐帮帮主";
     public static final String Name_baituoshanzhu = "白陀山主";
@@ -134,37 +134,39 @@ public class NameModel {
     public static final String Name_shaominjunzhu = "邵敏郡主";
     public static final String Name_wuebuzuo = "无恶不作";
     public static final String Name_xiaodongxie = "小东邪";
-    public static final String Name_junzijian = "君子剑";
+    public static final String Name_junzijian = "君子剑客";
     public static final String Name_longguniang = "龙姑娘";
     public static final String Name_linjiagongzi = "林家公子";
-    public static final String Name_jindaofuma = "金刀驸马";
-    public static final String Name_ronger = "蓉儿";
-    public static final String Name_shendiaodaxia = "神雕大侠";
+    public static final String Name_jindaofuma = "弯弓神箭";
+    public static final String Name_ronger = "东海仙子";
+    public static final String Name_shendiaodaxia = "神雕大哥";
     public static final String Name_jiujianchuanren = "九剑传人";
     public static final String Name_jiansheng = "剑圣";
-    public static final String Name_yumianmengchang = "玉面孟尝";
+    public static final String Name_zuoshi = "左使";
+    public static final String Name_yumianmengchang = "孟尝";
     public static final String Name_waner = "婉儿";
     public static final String Name_qiongxiongjie = "穷凶极恶";
     public static final String Name_yuguanzhu = "余观主";
     public static final String Name_fuwang = "蝠王";
     public static final String Name_yingwang = "鹰王";
-    public static final String Name_azi = "阿紫";
+    public static final String Name_azi = "紫儿";
     public static final String Name_tongshi = "铜尸";
     public static final String Name_tieshi = "铁尸";
-    public static final String Name_jinlunguoshi = "金轮国师";
+    public static final String Name_jinlunguoshi = "金轮大师";
     public static final String Name_emeizhangmen = "峨眉掌门";
     public static final String Name_dongfangguniang = "东方姑娘";
     public static final String Name_congbianxiansheng = "聪辩先生";
+    public static final String Name_tonglao = "童姥";
     public static final String Name_baituoshanshaozhu = "白驼山少主";
     public static final String Name_linger = "灵儿";
     public static final String Name_bosishengnü = "波斯圣女";
     public static final String Name_eguanmanying = "恶贯满盈";
-    public static final String Name_xuanmingerlao = "玄冥二老";
-    public static final String Name_shenxianjiejie = "神仙姐姐";
+    public static final String Name_xuanmingerlao = "玄冥长老";
+    public static final String Name_shenxianjiejie = "神仙妹妹";
     public static final String Name_mojiaoshengnü = "魔教圣女";
     public static final String Name_longwang = "龙王";
     public static final String Name_xingxiulaoxian = "星宿老仙";
-    public static final String Name_saodiseng = "扫地僧";
+    public static final String Name_saodiseng = "扫地和尚";
     public static final String Name_dalishizi = "大理世子";
     public static final String Name_mojiaojiaozhu = "魔教教主";
     public static final String Name_dalihuangdi = "大理皇帝";
@@ -200,6 +202,7 @@ public class NameModel {
     public static final String Name_shendiaodaxia_value = "杨过";
     public static final String Name_jiujianchuanren_value = "令狐冲";
     public static final String Name_jiansheng_value = "";
+    public static final String Name_zuoshi_value = "";
     public static final String Name_yumianmengchang_value = "宋青书";
     public static final String Name_waner_value = "木婉清";
     public static final String Name_qiongxiongjie_value = "云中鹤";
@@ -213,6 +216,7 @@ public class NameModel {
     public static final String Name_emeizhangmen_value = "周芷若";
     public static final String Name_dongfangguniang_value = "东方不败";
     public static final String Name_congbianxiansheng_value = "";
+    public static final String Name_tonglao_value = "童姥,鱼佬";
     public static final String Name_baituoshanshaozhu_value = "小蛤蟆,欧阳克";
     public static final String Name_linger_value = "钟灵";
     public static final String Name_bosishengnü_value = "小昭";

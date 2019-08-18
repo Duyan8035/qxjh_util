@@ -58,11 +58,12 @@ public class WxDefaultUtil {
             case NameModel.Name_jinguoxiaowangye:
                 wxModel.setName(NameModel.Name_jinguoxiaowangye_value).setIcon_mini(R.drawable.icon_wx_mini_jinguoxiaowangye).setIndex("J").setTrend(0).setGood(-1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_jinguoxiaowangzi);
-                // TODO: 2019/4/21 zhengyi
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("你只爱你自己", "防+1 食-2", -1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("当日你若放弃", "食+2", 0, 0));
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("能与小王爷结交", "获得装备", 0, -1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -72,8 +73,11 @@ public class WxDefaultUtil {
             case NameModel.Name_feitianbianfu:
                 wxModel.setName(NameModel.Name_feitianbianfu_value).setIcon_mini(R.drawable.icon_wx_mini_feitianbianfu).setIndex("F").setTrend(-1).setGood(1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_feitianbianfu);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("久闻大名", "食物+3", 0, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("千金一诺", "铜钱+30", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -96,10 +100,13 @@ public class WxDefaultUtil {
             case NameModel.Name_yanziwuzhu:
                 wxModel.setName(NameModel.Name_yanziwuzhu_value).setIcon_mini(R.drawable.icon_wx_mini_yanziwuzhu).setIndex("Y").setTrend(1).setGood(-1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_yanziwuzhu);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("邪恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("公子志向之远大，胸怀之宽广，佩服", "升级武学", 0, -1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("表里不一，不择手段，真当旁人不知？", "遗忘武学", 0, 1));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善良倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("真的疯了", "减当前气血  防御+1", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -111,10 +118,13 @@ public class WxDefaultUtil {
             case NameModel.Name_dalunmingwang:
                 wxModel.setName(NameModel.Name_dalunmingwang_value).setIcon_mini(R.drawable.icon_wx_mini_dalunmingwang).setIndex("D").setTrend(1).setGood(-1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_dalunmingwang);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善守倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("竟能模仿武学到如此底部", "减当前气血  复制一张卡", -1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("不必了，这道家武学鱼目混珠，混淆是非，不学也罢", "获得武学：鱼人", 1, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("成王败寇", "罗汉笠", 0, -1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -124,6 +134,7 @@ public class WxDefaultUtil {
             case NameModel.Name_miejuedaogu:
                 wxModel.setName(NameModel.Name_miejuedaogu_value).setIcon_mini(R.drawable.icon_wx_mini_miejuedaogu).setIndex("M").setTrend(-1).setGood(0).setParent(Parent_2)
                         .setIcon(R.drawable.icon_miejuedaogu);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善良倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("请前辈指教", "果然是", "升级装备", 0, -1,
                                 "要是比剑法我早就输了", "食物+3", 0, -1));
@@ -135,10 +146,13 @@ public class WxDefaultUtil {
             case NameModel.Name_lingjiugongzhu:
                 wxModel.setName(NameModel.Name_lingjiugongzhu_value).setIcon_mini(R.drawable.icon_wx_mini_lingjiugongzhu).setIndex("L").setTrend(0).setGood(1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_linjiugognzhu);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善守倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("试试醉酒", "食物+3", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("是西夏的那场梦么？ —— 去找她吧 ", "获得装备", 0, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("邪恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("不知是哪个心术正的和尚以生死符降服的老仙", "减当前气血  加气血上限", 0, -1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -164,12 +178,14 @@ public class WxDefaultUtil {
             case NameModel.Name_nanyuandawang:
                 wxModel.setName(NameModel.Name_nanyuandawang_value).setIcon_mini(R.drawable.icon_wx_mini_nanyuandawang).setIndex("N").setTrend(1).setGood(1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_nanyuandawang);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("侠之大者，必然为国为民", "铜钱-50  选择卡牌，给与固有", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("既已结为兄弟，必当生死与共", "减当前气血  选择卡牌，给与共鸣", -1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("两不想帮，淡然以对", "", 0, 0));
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("赠与酒肉", "食物-5  攻击+2", 0, 2));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -181,13 +197,14 @@ public class WxDefaultUtil {
             case NameModel.Name_gaibangbangzhu:
                 wxModel.setName(NameModel.Name_gaibangbangzhu_value).setIcon_mini(R.drawable.icon_wx_mini_gaibangbangzhu).setIndex("G").setTrend(0).setGood(1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_gaibangbagnzhu);
-                // TODO: 2019/4/21 争议 
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("净衣人士", "气血上限", 0, 1));
-                // TODO: 2019/4/21 youzhegnyi
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("热爱美食", "所以丐帮终将不再是丐帮", "攻击+2", -1, 0,
                                 "污衣派做下一任帮主也只是摆设", "无", 1, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("上前讨要", "食物+2", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -198,12 +215,14 @@ public class WxDefaultUtil {
             case NameModel.Name_baituoshanzhu:
                 wxModel.setName(NameModel.Name_baituoshanzhu_value).setIcon_mini(R.drawable.icon_wx_mini_baituoshanzhu).setIndex("B").setTrend(1).setGood(-1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_baituoshanzhu);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善良倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("顺流而下", "攻击+1", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("听说仙人可以签下契约", "多言了，仙人莫怪", "攻击+2", 0, -1,
                                 "仙山神兽那是敬你！真当你是仙人", "", 0, 1));
-                // TODO: 2019/4/21 zhengyi
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("邪恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("原来近日毒", "防御+1", 0, 1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -214,7 +233,7 @@ public class WxDefaultUtil {
                 break;
             case NameModel.Name_shaolinsanseng:
                 wxModel.setName(NameModel.Name_shaolinsanseng_value).setIcon_mini(R.drawable.icon_wx_mini_shaolinsanseng)
-                        .setIndex("S").setTrend(99).setGood(99).setParent(Parent_2);
+                        .setIndex("S").setTrend(0).setGood(0).setParent(Parent_2);
                 break;
 
             //type2
@@ -230,10 +249,13 @@ public class WxDefaultUtil {
             case NameModel.Name_changchunshoutu:
                 wxModel.setName(NameModel.Name_changchunshoutu_value).setIcon_mini(R.drawable.icon_wx_mini_quanzhenshoutu).setIndex("C").setTrend(-1).setGood(1).setParent(Parent_3)
                         .setIcon(R.drawable.icon_changchunshoutu);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("中立倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("果然惟妙惟肖，栩栩如生", "防御+1", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("到底是将木偶做得像人，还是将人炼做了木偶", "防御+1，负面卡牌（虚弱", -1, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("邪恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("这机关邪术竟然如此丧尽天良", "升级装备", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -258,12 +280,12 @@ public class WxDefaultUtil {
                 wxModel.setName(NameModel.Name_wuebuzuo_value).setIcon_mini(R.drawable.icon_wx_mini_wuebuzuo).setIndex("W").setTrend(0).setGood(-1).setParent(Parent_3)
                         .setIcon(R.drawable.icon_wuebuzuo);
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("好看", "食物+3", -1, 0));
+                        .setType1("守善——好看", "食物+3", -1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("这个娃娃是假的", "请指教", "战斗，获得装备", 0, 0,
                                 "不敢不敢，是我多言了", "食物+2", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType2("娃娃是假的，你也是假的··\t\n", "能做选择的，就一定是真的\n", "遗忘武学\n", -1, 0,
+                        .setType2("守中立——娃娃是假的，你也是假的··\t\n", "能做选择的，就一定是真的\n", "遗忘武学\n", -1, 0,
                                 "在这里的我也是，在这外面···我不知道\n", "获得武学：鹤", -1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("我知道女人在这里并不好过", "下场战斗开始时：抽2张牌", 1, 0));
@@ -273,14 +295,16 @@ public class WxDefaultUtil {
             case NameModel.Name_xiaodongxie:
                 wxModel.setName(NameModel.Name_xiaodongxie_value).setIcon_mini(R.drawable.icon_wx_mini_xiaodongxie).setIndex("X").setTrend(0).setGood(0).setParent(Parent_3)
                         .setIcon(R.drawable.icon_xiaodongxie);
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("入吾室者，但有清风；对吾饮者，唯当明月。", "攻击+1", 0, 1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("我本将心向明月，奈何明月照沟渠。", "防御+1", 0, 0));
-                // TODO: 2019/4/21 zhengyi
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("路过花鸟房，不小心带上的吧", "升级武学", 0, 1));
-                // TODO: 2019/4/21 zhengyi
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("是何人，认得这羽毛？", "抱歉，这是路过花鸟房不小心带上的", "升级武学", 1, 0,
                                 "城北清风楼", "复制一张卡", 1, 0));
@@ -303,11 +327,13 @@ public class WxDefaultUtil {
             case NameModel.Name_longguniang:
                 wxModel.setName(NameModel.Name_longguniang_value).setIcon_mini(R.drawable.icon_wx_mini_longguniang).setIndex("L").setTrend(0).setGood(0).setParent(Parent_3)
                         .setIcon(R.drawable.icon_longguniang);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("邪恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("城南明月楼", "太虚道袍", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("在下不知情", "三生袈裟", 0, 0));
-                // TODO: 2019/4/21 zhengyi
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("抱歉，只是我的一位大哥在寻找一位龙族姑娘", "落英套", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -331,10 +357,13 @@ public class WxDefaultUtil {
             case NameModel.Name_jindaofuma:
                 wxModel.setName(NameModel.Name_jindaofuma_value).setIcon_mini(R.drawable.icon_wx_mini_jindaofuma).setIndex("J").setTrend(1).setGood(1).setParent(Parent_3)
                         .setIcon(R.drawable.icon_jindaofuma);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守善倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("男儿守家卫国", "防御+1", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("你家在哪里 —— 侠之大者", "攻击+1", -1, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("无关正邪", "怒气-2 高级武学", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -344,11 +373,13 @@ public class WxDefaultUtil {
             case NameModel.Name_ronger:
                 wxModel.setName(NameModel.Name_ronger_value).setIcon_mini(R.drawable.icon_wx_mini_ronger).setIndex("R").setTrend(0).setGood(0).setParent(Parent_3)
                         .setIcon(R.drawable.icon_ronger);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("中立倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("赌博", "根据赌局铜钱变化", 0, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善良倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("乌合之众", "选择卡牌伤害翻倍 防御-1", -1, 0));
-                // TODO: 2019/4/21 zhengyi 
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("也许他早已看穿", "给与透支 怒气-1", 0, 1));
                 wxModel.setMap3dm(true);
@@ -356,10 +387,13 @@ public class WxDefaultUtil {
             case NameModel.Name_shendiaodaxia:
                 wxModel.setName(NameModel.Name_shendiaodaxia_value).setIcon_mini(R.drawable.icon_wx_mini_shendiaodaxia).setIndex("S").setTrend(-1).setGood(1).setParent(Parent_3)
                         .setIcon(R.drawable.icon_shendiaodaxia);
-                // TODO: 2019/4/21 zhengyi 
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("中立倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("大侠不该让他们私奔", "也许你是对的", "升级武学", 0, 1,
                                 "我只知道他们父母伤心欲绝", "选择卡", 1, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("久闻大名", "变化", 0, 1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -381,8 +415,13 @@ public class WxDefaultUtil {
                 wxModel.setMap6zl(true);
                 break;
             case NameModel.Name_jiansheng:
-                wxModel.setName(NameModel.Name_jiansheng).setIcon_mini(R.drawable.icon_wx_mini_jiansheng)
+                wxModel.setName(NameModel.Name_jiansheng_value).setIcon_mini(R.drawable.icon_wx_mini_jiansheng)
                         .setIndex("J").setTrend(0).setGood(0).setParent(Parent_3);
+                break;
+
+            case NameModel.Name_zuoshi:
+                wxModel.setName(NameModel.Name_zuoshi_value).setIcon_mini(R.drawable.icon_wx_mini_jiansheng)
+                        .setIndex("Z").setTrend(0).setGood(0).setParent(Parent_3);
                 break;
 
             //type3
@@ -462,10 +501,13 @@ public class WxDefaultUtil {
             case NameModel.Name_tieshi:
                 wxModel.setName(NameModel.Name_tieshi_value).setIcon_mini(R.drawable.icon_wx_mini_tieshi).setIndex("T").setTrend(1).setGood(-1).setParent(Parent_4)
                         .setIcon(R.drawable.icon_tieshi);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善良倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("是我又如何", "冷血", 0, -1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("待我打败你", "闪避", 0, 1));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("交出秘籍", "变化", 0, 1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -511,19 +553,26 @@ public class WxDefaultUtil {
                 break;
             case NameModel.Name_congbianxiansheng:
                 wxModel.setName(NameModel.Name_congbianxiansheng_value)
-                        .setIcon_mini(R.drawable.icon_wx_mini_congbianxiansheng).setIndex("C").setTrend(99).setGood(99).setParent(Parent_4);
+                        .setIcon_mini(R.drawable.icon_wx_mini_congbianxiansheng).setIndex("C").setTrend(0).setGood(0).setParent(Parent_4);
+                break;
+            case NameModel.Name_tonglao:
+                wxModel.setName(NameModel.Name_tonglao_value)
+                        .setIcon_mini(R.drawable.icon_wx_mini_congbianxiansheng).setIndex("T").setTrend(0).setGood(0).setParent(Parent_4);
                 break;
 
             //type4
             case NameModel.Name_baituoshanshaozhu:
                 wxModel.setName(NameModel.Name_baituoshanshaozhu_value).setIcon_mini(R.drawable.icon_wx_mini_baituoshanshaozhu).setIndex("B").setTrend(0).setGood(-1).setParent(Parent_5)
                         .setIcon(R.drawable.icon_baituoshanshaozhu);
-                // TODO: 2019/4/21
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善守倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("多谢，待我试试这药的威力", "铜钱-40 食物+8", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("不必了", "多谢试试威力", "铜钱-20 食物+4", 0, -2,
                                 "多谢", "食物+1", 0, -2));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("不必了，不借助外力", "", -1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -535,12 +584,16 @@ public class WxDefaultUtil {
             case NameModel.Name_linger:
                 wxModel.setName(NameModel.Name_linger_value).setIcon_mini(R.drawable.icon_wx_mini_linger).setIndex("L").setTrend(0).setGood(1).setParent(Parent_5)
                         .setIcon(R.drawable.icon_linger);
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("咬了人还这么凶，在下妄人，专杀妄貂！", "铜钱-30  攻击+1", 0, -1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("姑娘误会了，是我袋里的包子太香", "食物-2  攻击+1", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("仓皇而逃", "", 0, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType2("小貂是什么？", "抱歉，我没有见到", "发现武学", 1, 0,
                                 "（随口胡说）前面右转的第二个岔道上，再左转的第三个岔道", "食物+2", -1, 0));
@@ -568,14 +621,13 @@ public class WxDefaultUtil {
                 wxModel.setName(NameModel.Name_eguanmanying_value).setIcon_mini(R.drawable.icon_wx_mini_eguanmanying).setIndex("E").setTrend(-1).setGood(-1).setParent(Parent_5)
                         .setIcon(R.drawable.icon_eguanmanying);
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("手下败将", "升级装备", 0, 0));
+                        .setType2("守善倾向",
+                                "手下败将", "升级装备", 0, 0,
+                                "随时奉陪", "加当前气血", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("随时奉陪", "加当前气血", 0, 0));
-                wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("他放过一把火，烧了神铸山庄", "减气血上限，怒气+1", 0, -1));
-                // TODO: 2019/4/21 有争议
-                wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("（随口胡说）他给我打的剑轻了半两", "发现武学", -1, 0));
+                        .setType2("中立善倾向",
+                                "他放过一把火，烧了神铸山庄", "减气血上限，怒气+1", 0, -1,
+                                "（随口胡说）他给我打的剑轻了半两", "发现武学", -1, 0));
                 wxModel.setMap1sl(true);
                 break;
             case NameModel.Name_xuanmingerlao:
@@ -633,10 +685,13 @@ public class WxDefaultUtil {
             case NameModel.Name_xingxiulaoxian:
                 wxModel.setName(NameModel.Name_xingxiulaoxian_value).setIcon_mini(R.drawable.icon_wx_mini_xingxiulaoxian).setIndex("X").setTrend(-1).setGood(-1).setParent(Parent_5)
                         .setIcon(R.drawable.icon_xinxiulaoxian);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("受徒儿一拜", "遗忘武学", 0, -1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("正邪不两立，不必多言", "加气血上限", 0, 1));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("善良倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("中毒离开", "减当前气血  铜钱+60", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -645,19 +700,17 @@ public class WxDefaultUtil {
                 wxModel.setMap2hs(true);
                 break;
             case NameModel.Name_saodiseng:
-                wxModel.setName(NameModel.Name_saodiseng_value).setIcon_mini(R.drawable.icon_wx_mini_saodiseng).setIndex("S").setTrend(99).setGood(99).setParent(Parent_5);
+                wxModel.setName(NameModel.Name_saodiseng_value).setIcon_mini(R.drawable.icon_wx_mini_saodiseng).setIndex("S").setTrend(0).setGood(0).setParent(Parent_5);
                 break;
             case NameModel.Name_dalishizi:
                 wxModel.setName(NameModel.Name_dalishizi_value).setIcon_mini(R.drawable.icon_wx_mini_dalishizi).setIndex("D").setTrend(0).setGood(1).setParent(Parent_5)
                         .setIcon(R.drawable.icon_dalishizi);
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("教训猴子，出手当然收不住", "加当前气血", 0, -1));
+                        .setType2("邪恶倾向", "教训猴子，出手当然收不住", "加当前气血", 0, -1,
+                                "你不是那只瘸腿猴的同伙", "减当前气血 升级武学", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("你不是那只瘸腿猴的同伙？", "减当前气血 升级武学", 0, 0));
-                wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("慕容的努力，你无法想象。", "抽2张牌", 0, -1));
-                wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
-                        .setType1("珍惜眼前人罢！", "获得2攻击", 0, 1));
+                        .setType2("善良倾向", "慕容的努力，你无法想象。", "抽2张牌", 0, -1,
+                                "珍惜眼前人罢！", "获得2攻击", 0, 1));
                 wxModel.setMap1sl(true);
                 break;
             case NameModel.Name_mojiaojiaozhu:
@@ -676,10 +729,13 @@ public class WxDefaultUtil {
             case NameModel.Name_dalihuangdi:
                 wxModel.setName(NameModel.Name_dalihuangdi_value).setIcon_mini(R.drawable.icon_wx_mini_dalihuangdi).setIndex("D").setTrend(0).setGood(1).setParent(Parent_5)
                         .setIcon(R.drawable.icon_dalihuangdi);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守善倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("多谢大师成全", "食物-5 加血", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("竟然要损失十年功力！万万不可", "食物+2", 0, 1));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混恶倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("你可知道一朝被蛇咬.十年怕井绳？", "回复当前气血", 0, 1));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -689,10 +745,13 @@ public class WxDefaultUtil {
             case NameModel.Name_donghaidaozhu:
                 wxModel.setName(NameModel.Name_donghaidaozhu_value).setIcon_mini(R.drawable.icon_wx_mini_donghaidaozhu).setIndex("D").setTrend(-1).setGood(0).setParent(Parent_5)
                         .setIcon(R.drawable.icon_donghaidaozhu);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("留下听萧", "遗忘武学", -1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("转身离开", "加气血", 1, 0));
+
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("混乱倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("先生神算，在下佩服", "食物+3", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -702,10 +761,12 @@ public class WxDefaultUtil {
             case NameModel.Name_wudangzhangmen:
                 wxModel.setName(NameModel.Name_wudangzhangmen_value).setIcon_mini(R.drawable.icon_wx_mini_wudangzhangmen).setIndex("W").setTrend(0).setGood(1).setParent(Parent_5)
                         .setIcon(R.drawable.icon_wudangzhangmen);
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("守序倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("见过", "无懈可击2", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("不曾见过", "食物+3", -1, 0));
+                wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("中立倾向", "", 0, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
                         .setType1("弟子拜见", "加气血", 1, 0));
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
