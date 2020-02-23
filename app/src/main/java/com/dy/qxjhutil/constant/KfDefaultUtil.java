@@ -610,14 +610,14 @@ public class KfDefaultUtil {
                 .setKfParent(realm.where(KungFuModel.class).equalTo("name", NameModel.MAP_NAME_31).findFirst()));
         realm.copyToRealmOrUpdate(new KungFuModel(NameModel.MAP_NAME_32)
                 .setTrendGood(0, 0)
-                .setIndex("l")
+                .setIndex("d")
                 .setImg(R.drawable.icon_kf_lanhuazhi)
                 .setCost(KfValueStr.kf_lanhuazhi_cost)
                 .setDesc(KfValueStr.kf_lanhuazhi_desc)
                 .setType(4)
-                .setWx_parent(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_ronger).findFirst())
+                .setWx_parent(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_donghaixianzi).findFirst())
         );
-        realm.copyToRealmOrUpdate(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_ronger).findFirst()
+        realm.copyToRealmOrUpdate(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_donghaixianzi).findFirst()
                 .setKfParent(realm.where(KungFuModel.class).equalTo("name", NameModel.MAP_NAME_32).findFirst()));
         realm.copyToRealmOrUpdate(new KungFuModel(NameModel.MAP_NAME_41)
                 .setTrendGood(4, -4)
@@ -648,9 +648,9 @@ public class KfDefaultUtil {
                 .setCost(KfValueStr.kf_chunyangwujigong_cost)
                 .setDesc(KfValueStr.kf_chunyangwujigong_desc)
                 .setType(4)
-                .setWx_parent(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_mingjiaojiaozhu).findFirst())
+                .setWx_parent(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_taijichanren).findFirst())
         );
-        realm.copyToRealmOrUpdate(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_mingjiaojiaozhu).findFirst()
+        realm.copyToRealmOrUpdate(realm.where(WXModel.class).equalTo("name_game", NameModel.Name_taijichanren).findFirst()
                 .setKfParent(realm.where(KungFuModel.class).equalTo("name", NameModel.MAP_NAME_51).findFirst()));
         realm.copyToRealmOrUpdate(new KungFuModel(NameModel.MAP_NAME_52)
                 .setTrendGood(0, -5)

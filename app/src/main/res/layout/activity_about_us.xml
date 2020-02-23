@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="适用于游戏版本 10.3 更新时间 2019年7月15日"
+        android:text="适用于游戏版本 10.3 更新时间 2020年2月23日"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="个人兴趣爱好之作，精力有限，无法做到尽善尽美。买不起服务器，数据全放本地。所以安装包比较大。有问题或者建议的话，可以在官方群(2,4,5,6)或者tap上回复"
+        android:text="个人兴趣爱好之作，精力有限，无法做到尽善尽美。买不起服务器，数据全放本地。所以安装包比较大。有问题或者建议的话，可以在官方群(2,4,5,6,12)找威廉或者在taptap上回复"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/act_about_us_title" />
@@ -73,4 +73,4 @@
         app:layout_constraintTop_toBottomOf="@+id/act_about_us_hint"
         app:layout_constraintWidth_percent="0.4" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

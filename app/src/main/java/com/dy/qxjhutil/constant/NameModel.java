@@ -12,10 +12,65 @@ public class NameModel {
      **/
     public static String[] stringList = {
             "两小无猜", "青梅竹马",
-            "凶神恶煞", "金国小王爷", "飞天蝙蝠", "狮王", "坞主", "明王", "灭绝道姑", "宫主", "太极传人", "南苑大王", "丐帮帮主", "白陀山主", "少林三僧",
-            "不可不戒", "长春首徒", "邵敏郡主", "无恶不作", "小东邪", "君子剑客", "龙姑娘", "林家公子", "弯弓神箭", "东海仙子", "神雕大哥", "九剑传人", "剑圣", "左使",
-            "孟尝", "婉儿", "穷凶极恶", "余观主", "蝠王", "鹰王", "紫儿", "铜尸", "铁尸", "金轮大师", "峨眉掌门", "东方姑娘", "聪辩先生", "童姥",
-            "白驼山少主", "灵儿", "波斯圣女", "恶贯满盈", "玄冥长老", "神仙妹妹", "魔教圣女", "龙王", "星宿老仙", "扫地和尚", "大理世子", "魔教教主", "大理皇帝", "东海岛主", "武当掌门",
+            "顽童", "南苑大王", "少林三僧", "太极传人", "灭绝道姑",
+            "铁掌帮主", "丐帮帮主", "白陀山主", "宫主", "坞主",
+            "明王", "狮王", "铁掌帮王", "凶神恶煞", "飞天蝙蝠",
+            "金国小王爷",
+
+            "左使",
+            "右使",
+            "云雀",
+            "成吉思汗",
+            "弯弓神箭",
+            "东海仙子",
+            "神雕大哥",
+            "九剑传人",
+            "剑圣",
+            "小东邪",
+            "龙姑娘",
+            "君子剑客",
+            "林家公子",
+            "长春首徒",
+            "不可不戒",
+            "无恶不作",
+            "邵敏郡主",
+
+            "孟尝",
+            "婉儿",
+            "穷凶极恶",
+            "余观主",
+            "蝠王",
+            "鹰王",
+            "紫儿",
+            "铜尸",
+            "铁尸",
+            "金轮大师",
+            "峨眉掌门",
+            "东方姑娘",
+            "聪辩先生",
+            "童姥",
+            "五毒教主",
+            "赤练",
+
+            "三藏",
+            "琴圣",
+            "白驼山少主",
+            "灵儿",
+            "波斯圣女",
+            "恶贯满盈",
+            "玄冥长老",
+            "神仙妹妹",
+            "魔教圣女",
+            "龙王",
+            "星宿老仙",
+            "扫地和尚",
+            "大理世子",
+            "魔教教主",
+            "大理皇帝",
+            "东海岛主",
+            "武当掌门",
+            "康夫人",
+            "重阳真人",
     };
 
 
@@ -27,6 +82,79 @@ public class NameModel {
     public static final String Parent_3 = "游侠";
     public static final String Parent_4 = "刺客";
     public static final String Parent_5 = "气宗";
+
+    /**
+     * 化形分类
+     **/
+    public static final String HX_TYPE_武神 = "武神";
+    public static final String HX_TYPE_飞天 = "飞天";
+    public static final String HX_TYPE_粽子 = "粽子";
+    public static final String HX_TYPE_傀儡 = "傀儡";
+    public static final String HX_TYPE_木鸢 = "木鸢";
+
+    /**
+     * 化形分类
+     **/
+    public static final int HX_Lv_1_优秀 = 1;
+    public static final int HX_Lv_2_稀有 = 2;
+    public static final int HX_Lv_3_史诗 = 3;
+    public static final int HX_Lv_4_传奇 = 4;
+    public static final int HX_Lv_5_神话 = 5;
+
+    public static final int hx_lvcolor_1 = 0xff0d7632;
+    public static final int hx_lvcolor_2 = 0xff2062fc;
+    public static final int hx_lvcolor_3 = 0xffdb3af2;
+    public static final int hx_lvcolor_4 = 0xffbf5e1d;
+    public static final int hx_lvcolor_5 = 0xffba0b08;
+    public static final int hx_lvcolor_default = 0xff6d6f71;
+
+    /**
+     * 武神名称
+     **/
+    public static final String HX_ws_tg_武神_天罡 = "天罡";
+    public static final String HX_ws_tj_武神_天机 = "天机";
+    public static final String HX_ws_tk_武神_天魁 = "天魁";
+    public static final String HX_ws_ty_武神_天勇 = "天勇";
+    public static final String HX_ws_tx_武神_天闲 = "天闲";
+    public static final String HX_ws_tw_武神_天威 = "天威";
+    public static final String HX_ws_tm_武神_天猛 = "天猛";
+    public static final String HX_ws_tx_武神_天雄 = "天雄";
+
+    public static final String HX_ft_bf_飞天_毕方 = "毕方";
+    public static final String HX_ft_bx_飞天_辟邪 = "辟邪";
+    public static final String HX_ft_cm_飞天_重明 = "重明";
+    public static final String HX_ft_jm_飞天_九命 = "九命";
+    public static final String HX_ft_tl_飞天_天禄 = "天禄";
+    public static final String HX_ft_bj_飞天_白将 = "白将";
+    public static final String HX_ft_fj_飞天_飞将 = "飞将";
+    public static final String HX_ft_bh_飞天_不化 = "不化";
+
+    public static final String HX_zz_ds_粽子_地煞 = "地煞";
+    public static final String HX_zz_dy_粽子_地勇 = "地勇";
+    public static final String HX_zz_dk_粽子_地魁 = "地魁";
+    public static final String HX_zz_dx_粽子_地雄 = "地雄";
+    public static final String HX_zz_dj_粽子_地杰 = "地杰";
+    public static final String HX_zz_dq_粽子_地奇 = "地奇";
+    public static final String HX_zz_dy_粽子_地英 = "地英";
+    public static final String HX_zz_dw_粽子_地威 = "地威";
+
+    public static final String HX_kl_bt_傀儡_碧铜 = "碧铜";
+    public static final String HX_kl_zs_傀儡_紫砂 = "紫砂";
+    public static final String HX_kl_gt_傀儡_古铜 = "古铜";
+    public static final String HX_kl_ht_傀儡_黑陶 = "黑陶";
+    public static final String HX_kl_qc_傀儡_青瓷 = "青瓷";
+    public static final String HX_kl_lz_傀儡_绿竹 = "绿竹";
+    public static final String HX_kl_hy_傀儡_红鸢 = "红鸢";
+    public static final String HX_kl_ly_傀儡_蓝玉 = "蓝玉";
+
+    public static final String HX_my_hy_木鸢_皓月 = "皓月";
+    public static final String HX_my_yh_木鸢_业火 = "业火";
+    public static final String HX_my_lr_木鸢_烈日 = "烈日";
+    public static final String HX_my_jl_木鸢_惊雷 = "惊雷";
+    public static final String HX_my_ly_木鸢_流云 = "流云";
+    public static final String HX_my_cd_木鸢_赤电 = "赤电";
+    public static final String HX_my_hy_木鸢_虹雨 = "虹雨";
+    public static final String HX_my_jf_木鸢_疾风 = "疾风";
 
     /**
      * 材料名称
@@ -116,33 +244,50 @@ public class NameModel {
      **/
     public static final String Name_liangxiaowucai = "两小无猜";
     public static final String Name_qingmeizhuma = "青梅竹马";
-    public static final String Name_xiongshenesha = "凶神恶煞";
-    public static final String Name_jinguoxiaowangye = "金国小王爷";
-    public static final String Name_feitianbianfu = "飞天蝙蝠";
-    public static final String Name_shiwang = "狮王";
-    public static final String Name_yanziwuzhu = "坞主";
-    public static final String Name_dalunmingwang = "明王";
-    public static final String Name_miejuedaogu = "灭绝道姑";
-    public static final String Name_lingjiugongzhu = "宫主";
-    public static final String Name_mingjiaojiaozhu = "太极传人";
+    /**
+     * 豪侠
+     **/
+    public static final String Name_wantong = "顽童";
     public static final String Name_nanyuandawang = "南苑大王";
+    public static final String Name_shaolinsanseng = "少林三僧";
+    public static final String Name_taijichanren = "太极传人";
+    public static final String Name_miejuedaogu = "灭绝道姑";
+    public static final String Name_tiezhangbangzhu = "铁掌帮主";
     public static final String Name_gaibangbangzhu = "丐帮帮主";
     public static final String Name_baituoshanzhu = "白陀山主";
-    public static final String Name_shaolinsanseng = "少林三僧";
-    public static final String Name_bukebujie = "不可不戒";
-    public static final String Name_changchunshoutu = "长春首徒";
-    public static final String Name_shaominjunzhu = "邵敏郡主";
-    public static final String Name_wuebuzuo = "无恶不作";
-    public static final String Name_xiaodongxie = "小东邪";
-    public static final String Name_junzijian = "君子剑客";
-    public static final String Name_longguniang = "龙姑娘";
-    public static final String Name_linjiagongzi = "林家公子";
+    public static final String Name_lingjiugongzhu = "宫主";
+    public static final String Name_yanziwuzhu = "坞主";
+    public static final String Name_dalunmingwang = "明王";
+    public static final String Name_shiwang = "狮王";
+    public static final String Name_tiezhangbangwang = "铁掌帮王";
+    public static final String Name_xiongshenesha = "凶神恶煞";
+    public static final String Name_feitianbianfu = "飞天蝙蝠";
+    public static final String Name_jinguoxiaowangye = "金国小王爷";
+
+    /**
+     * 游侠
+     **/
+    public static final String Name_zuoshi = "左使";
+    public static final String Name_youshi = "右使";
+    public static final String Name_yunque = "云雀";
+    public static final String Name_chengjisihan = "成吉思汗";
     public static final String Name_jindaofuma = "弯弓神箭";
-    public static final String Name_ronger = "东海仙子";
+    public static final String Name_donghaixianzi = "东海仙子";
     public static final String Name_shendiaodaxia = "神雕大哥";
     public static final String Name_jiujianchuanren = "九剑传人";
     public static final String Name_jiansheng = "剑圣";
-    public static final String Name_zuoshi = "左使";
+    public static final String Name_xiaodongxie = "小东邪";
+    public static final String Name_longguniang = "龙姑娘";
+    public static final String Name_junzijian = "君子剑客";
+    public static final String Name_linjiagongzi = "林家公子";
+    public static final String Name_changchunshoutu = "长春首徒";
+    public static final String Name_bukebujie = "不可不戒";
+    public static final String Name_wuebuzuo = "无恶不作";
+    public static final String Name_shaominjunzhu = "邵敏郡主";
+
+    /**
+     * 刺客
+     **/
     public static final String Name_yumianmengchang = "孟尝";
     public static final String Name_waner = "婉儿";
     public static final String Name_qiongxiongjie = "穷凶极恶";
@@ -157,6 +302,12 @@ public class NameModel {
     public static final String Name_dongfangguniang = "东方姑娘";
     public static final String Name_congbianxiansheng = "聪辩先生";
     public static final String Name_tonglao = "童姥";
+    public static final String Name_wudujiaozhu = "五毒教主";
+    public static final String Name_chilian = "赤练";
+
+
+    public static final String Name_sanzang = "三藏";
+    public static final String Name_qinsheng = "琴圣";
     public static final String Name_baituoshanshaozhu = "白驼山少主";
     public static final String Name_linger = "灵儿";
     public static final String Name_bosishengnü = "波斯圣女";
@@ -172,6 +323,8 @@ public class NameModel {
     public static final String Name_dalihuangdi = "大理皇帝";
     public static final String Name_donghaidaozhu = "东海岛主";
     public static final String Name_wudangzhangmen = "武当掌门";
+    public static final String Name_kangfuren = "康夫人";
+    public static final String Name_chongyangzhenren = "重阳真人";
 
 
     public static final String Name_liangxiaowucai_value = "";
@@ -202,7 +355,7 @@ public class NameModel {
     public static final String Name_shendiaodaxia_value = "杨过";
     public static final String Name_jiujianchuanren_value = "令狐冲";
     public static final String Name_jiansheng_value = "";
-    public static final String Name_zuoshi_value = "";
+    public static final String Name_zuoshi_value = "杨逍";
     public static final String Name_yumianmengchang_value = "宋青书";
     public static final String Name_waner_value = "木婉清";
     public static final String Name_qiongxiongjie_value = "云中鹤";
@@ -232,7 +385,6 @@ public class NameModel {
     public static final String Name_dalihuangdi_value = "一灯";
     public static final String Name_donghaidaozhu_value = "黄老邪";
     public static final String Name_wudangzhangmen_value = "张三丰";
-
 
     /**
      * 武学名称

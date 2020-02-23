@@ -19,19 +19,17 @@
 
     <application
         android:name=".application.MainApplication"
-        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyAppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <service android:name="com.lzf.easyfloat.service.FloatService" />
         <activity
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@android:style/Theme.Translucent" />
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="com.dy.qxjhutil.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -56,6 +54,8 @@
         <activity android:name=".activity.kf.KfListActivity" />
         <activity android:name=".activity.kf.KfDetailsActivity" />
         <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.hx.HxListActivity" />
+        <activity android:name=".activity.hx.HxList2Activity" />
     </application>
 
 </manifest>

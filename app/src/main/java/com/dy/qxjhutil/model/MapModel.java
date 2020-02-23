@@ -1,6 +1,7 @@
 package com.dy.qxjhutil.model;
 
-import android.support.annotation.DrawableRes;
+
+import androidx.annotation.DrawableRes;
 
 import io.realm.RealmList;
 import io.realm.RealmModel;

@@ -33,6 +33,7 @@ public class WxDefaultUtil {
         });
         new KfDefaultUtil().initData(mContext);
         new MapDefaultUtil().initData(mContext);
+        new HxDefaultUtil().initData(mContext);
     }
 
 
@@ -161,7 +162,7 @@ public class WxDefaultUtil {
                         .setType1("道不同不相为谋", "", 0, 0));
                 wxModel.setMap1sl(true);
                 break;
-            case NameModel.Name_mingjiaojiaozhu:
+            case NameModel.Name_taijichanren:
                 wxModel.setName(NameModel.Name_mingjiaojiaozhu_value).setIcon_mini(R.drawable.icon_wx_mini_mingjiaojiaozhu).setIndex("M").setTrend(1).setGood(1).setParent(Parent_2)
                         .setIcon(R.drawable.icon_mingjiaojiaozhu);
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class)
@@ -370,7 +371,7 @@ public class WxDefaultUtil {
                         .setType1("正邪都是由胜利者制定", "发现武学", 0, -1));
                 wxModel.setMap3dm(true);
                 break;
-            case NameModel.Name_ronger:
+            case NameModel.Name_donghaixianzi:
                 wxModel.setName(NameModel.Name_ronger_value).setIcon_mini(R.drawable.icon_wx_mini_ronger).setIndex("R").setTrend(0).setGood(0).setParent(Parent_3)
                         .setIcon(R.drawable.icon_ronger);
                 wxModel.getSjModels().add(mRealm.createObject(SjModel.class).setType1("中立倾向", "", 0, 0));
@@ -421,7 +422,7 @@ public class WxDefaultUtil {
 
             case NameModel.Name_zuoshi:
                 wxModel.setName(NameModel.Name_zuoshi_value).setIcon_mini(R.drawable.icon_wx_mini_jiansheng)
-                        .setIndex("Z").setTrend(0).setGood(0).setParent(Parent_3);
+                        .setIndex("Z").setTrend(0).setGood(1).setParent(Parent_3);
                 break;
 
             //type3
@@ -773,6 +774,49 @@ public class WxDefaultUtil {
                         .setType1("晚辈独行惯了，多谢前辈美意", "获得装备", -1, 0));
                 wxModel.setMap4gm(true);
                 wxModel.setMap5bhd(true);
+                break;
+            /**
+             * 增加赤练，康夫人
+             **/
+            case NameModel.Name_chilian:
+                wxModel.setName("").setIcon_mini(0).setIndex("C").setTrend(-1).setGood(-1).setParent(Parent_4);
+                break;
+            case NameModel.Name_kangfuren:
+                wxModel.setName("").setIcon_mini(0).setIndex("K").setTrend(0).setGood(-1).setParent(Parent_5);
+                break;
+            case NameModel.Name_chongyangzhenren:
+                wxModel.setName("").setIcon_mini(0).setIndex("C").setTrend(1).setGood(1).setParent(Parent_5);
+                break;
+
+            /**
+             * 2020年2月19日11:53:47 新增铁掌帮主，铁掌帮王，顽童，右使，云雀，成吉思汗，五毒教主，三藏，琴圣
+             **/
+            case NameModel.Name_wantong:
+                wxModel.setName("老顽童").setIcon_mini(0).setIndex("W").setTrend(-1).setGood(1).setParent(Parent_2);
+                break;
+            case NameModel.Name_tiezhangbangzhu:
+                wxModel.setName("裘千仞").setIcon_mini(0).setIndex("T").setTrend(0).setGood(-1).setParent(Parent_2);
+                break;
+            case NameModel.Name_tiezhangbangwang:
+                wxModel.setName("裘千丈").setIcon_mini(0).setIndex("T").setTrend(-1).setGood(0).setParent(Parent_2);
+                break;
+            case NameModel.Name_youshi:
+                wxModel.setName("范瑶").setIcon_mini(0).setIndex("Y").setTrend(0).setGood(0).setParent(Parent_3);
+                break;
+            case NameModel.Name_yunque:
+                wxModel.setName("").setIcon_mini(0).setIndex("Y").setTrend(0).setGood(0).setParent(Parent_3);
+                break;
+            case NameModel.Name_chengjisihan:
+                wxModel.setName("").setIcon_mini(0).setIndex("C").setTrend(1).setGood(0).setParent(Parent_3);
+                break;
+            case NameModel.Name_wudujiaozhu:
+                wxModel.setName("").setIcon_mini(0).setIndex("W").setTrend(-1).setGood(1).setParent(Parent_4);
+                break;
+            case NameModel.Name_sanzang:
+                wxModel.setName("").setIcon_mini(0).setIndex("S").setTrend(0).setGood(0).setParent(Parent_5);
+                break;
+            case NameModel.Name_qinsheng:
+                wxModel.setName("").setIcon_mini(0).setIndex("Q").setTrend(0).setGood(0).setParent(Parent_5);
                 break;
             default:
                 break;

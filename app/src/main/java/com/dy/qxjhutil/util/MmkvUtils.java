@@ -1,15 +1,19 @@
 package com.dy.qxjhutil.util;
 
+import com.tencent.mmkv.MMKV;
+
 /**
  * Created by hbysd on 2019/1/20.
  */
 
 public class MmkvUtils {
 
-    /**
-     * 获取所有武侠的数据
-     */
-    public static void getWXDataAll() {
+    public static MMKV getMmkv() {
+        return MMKV.defaultMMKV();
+    }
+
+    public static boolean isHideStar() {
+        return getMmkv().getBoolean("isHideStar", false);
     }
 
     /**

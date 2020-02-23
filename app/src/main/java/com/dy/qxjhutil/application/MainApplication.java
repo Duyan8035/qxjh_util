@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.lzf.easyfloat.EasyFloat;
 import com.tencent.bugly.Bugly;
+import com.tencent.mmkv.MMKV;
 import com.xuexiang.xui.XUI;
 
 import io.realm.Realm;
@@ -19,8 +20,9 @@ public class MainApplication extends Application {
         XUI.init(this); //初始化UI框架
         XUI.debug(true);  //开启UI框架调试日志
 
+        MMKV.initialize(this);
         Realm.init(this);
-        EasyFloat.init(this);
+        EasyFloat.init(this, false);
     }
 
 }

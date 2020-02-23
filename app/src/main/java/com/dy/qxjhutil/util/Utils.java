@@ -1,7 +1,8 @@
 package com.dy.qxjhutil.util;
 
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
 
 import com.blankj.utilcode.util.SpanUtils;
 import com.dy.qxjhutil.constant.ColorModel;

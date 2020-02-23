@@ -13,7 +13,7 @@ public class RealmHelper {
 //            realm = Realm.getDefaultInstance();
 //        } catch (RealmMigrationNeededException e) {
         RealmConfiguration config = new RealmConfiguration.Builder()
-                .schemaVersion(7)
+                .schemaVersion(8)
                 .deleteRealmIfMigrationNeeded()
                 .build();
         realm = Realm.getInstance(config);

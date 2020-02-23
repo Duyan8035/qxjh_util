@@ -4,12 +4,14 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
+import androidx.appcompat.widget.AppCompatTextView;
+
 /**
  * Created by Dy on 2019/5/1 22
  *
  * @author Dy
  */
-public class MyTextView extends android.support.v7.widget.AppCompatTextView {
+public class MyTextView extends AppCompatTextView {
 
     public MyTextView(Context context) {
         super(context);

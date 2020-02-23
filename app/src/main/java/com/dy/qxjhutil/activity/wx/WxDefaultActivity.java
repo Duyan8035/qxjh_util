@@ -2,10 +2,11 @@ package com.dy.qxjhutil.activity.wx;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.dy.qxjhutil.R;
 import com.dy.qxjhutil.adapter.WxDefaultQxAdapter;
@@ -44,13 +45,13 @@ public class WxDefaultActivity extends BaseActivity implements View.OnClickListe
 
         mAdapter = new WxDefaultQxAdapter();
         mAdapter.setOnItemClickListener((adapter, view, position) -> {
-            Intent intent = new Intent(mContext, WxDefaultActivity.class);
+            Intent intent = new Intent(mContext, WxDetailsActivity.class);
             intent.putExtra("name", mAdapter.getData().get(position).getName_game());
             startActivity(intent);
         });
         recyclerView.setAdapter(mAdapter);
         TextView view = (TextView) View.inflate(mContext, R.layout.include_text, null);
-        view.setText("豪侠游侠刺客资料取自残夜影大佬攻略，气宗初始由 七月上大佬提供,感谢以上大佬");
+        view.setText("感谢 三枕黄粱 大佬还没弃坑，还能测试一下善恶");
         mAdapter.setFooterView(view);
 
         findViewById(R.id.item_wx_list_value).setOnClickListener(this);

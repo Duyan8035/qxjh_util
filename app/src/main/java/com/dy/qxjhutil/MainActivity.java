@@ -3,16 +3,18 @@ package com.dy.qxjhutil;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.SpanUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.activity.AboutUsActivity;
+import com.dy.qxjhutil.activity.hx.HxList2Activity;
 import com.dy.qxjhutil.activity.map.MapListActivity;
 import com.dy.qxjhutil.activity.wx.WxDefaultActivity;
 import com.dy.qxjhutil.activity.wx.WxListActivity;
@@ -108,6 +110,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.act_main_btn_07).setOnClickListener(this);
         findViewById(R.id.act_main_btn_08).setOnClickListener(this);
         findViewById(R.id.act_main_btn_09).setOnClickListener(this);
+        findViewById(R.id.act_main_btn_11).setOnClickListener(this);
         findViewById(R.id.act_main_btn_about).setOnClickListener(this);
 
         findViewById(R.id.act_main_float).setOnClickListener(this);
@@ -200,6 +203,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.act_main_btn_09:
                 break;
+            case R.id.act_main_btn_11:
+                startActivity(new Intent(mContext, HxList2Activity.class));
+                break;
             case R.id.act_main_btn_about:
                 startActivity(new Intent(mContext, AboutUsActivity.class));
                 break;
@@ -208,7 +214,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 /**
                  * 打开悬浮窗
                  **/
-                EasyFloat.with(this).setLayout(R.layout.layout_float).invokeView(new OnInvokeView() {
+                EasyFloat.with(MainActivity.this).setLayout(R.layout.layout_float, new OnInvokeView() {
 
                     RecyclerView mRv1, mRv2, mRv3;
                     /**
@@ -501,7 +507,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 }).setShowPattern(ShowPattern.ALL_TIME)
                         .setDragEnable(true)
                         .setSidePattern(SidePattern.DEFAULT)
-                        .setMatchParent(false, false)
+                        .setMatchParent(false, true)
                         .setLocation(100, 100)
                         .show();
                 break;
