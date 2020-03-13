@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,9 +24,11 @@ import com.dy.qxjhutil.util.MmkvUtils;
 import com.dy.qxjhutil.util.RealmHelper;
 import com.evrencoskun.tableview.TableView;
 import com.evrencoskun.tableview.listener.SimpleTableViewListener;
+import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.MissingResourceException;
 
 import io.realm.RealmQuery;
 import io.realm.Sort;
@@ -51,7 +54,7 @@ public class HxList2Activity extends BaseActivity {
         mCellList = new ArrayList<>();
         findViewById(R.id.act_hx_list_chongzhi).setOnClickListener(view -> {
             wx_name = wx_parent = hx_type = hx_name = hx_value = "";
-            hx_star_lv = 99;
+            hx_star_lv = hx_level = 99;
             showNewData();
         });
 
@@ -82,7 +85,7 @@ public class HxList2Activity extends BaseActivity {
          **/
         mColumnHeaderList.add(new ColumnHeader("种类名称"));
         mColumnHeaderList.add(new ColumnHeader("评价"));
-        mColumnHeaderList.add(new ColumnHeader("品级"));
+        mColumnHeaderList.add(new ColumnHeader("品质"));
         mColumnHeaderList.add(new ColumnHeader("初始属性"));
         mColumnHeaderList.add(new ColumnHeader("突破后属性"));
         mColumnHeaderList.add(new ColumnHeader("阵容"));
@@ -92,16 +95,12 @@ public class HxList2Activity extends BaseActivity {
             mRowHeaderList.add(new RowHeader(hxModel.getWxModel().getName_game()));
             List<Cell> cells = new ArrayList<>();
             cells.add(new Cell(hxModel.getHx_type() + "-" + hxModel.getHx_name()));
-            if (MmkvUtils.isHideStar()) {
-                cells.add(new Cell("-"));
+            if (hxModel.getHx_star_lv() == 2) {
+                cells.add(new Cell("★★★"));
+            } else if (hxModel.getHx_star_lv() == 1) {
+                cells.add(new Cell("☆☆"));
             } else {
-                if (hxModel.getHx_star_lv() == 2) {
-                    cells.add(new Cell("★★★"));
-                } else if (hxModel.getHx_star_lv() == 1) {
-                    cells.add(new Cell("☆☆"));
-                } else {
-                    cells.add(new Cell("☆"));
-                }
+                cells.add(new Cell("☆"));
             }
             cells.add(new Cell(hxModel.getHxLvName()));
 
@@ -128,7 +127,14 @@ public class HxList2Activity extends BaseActivity {
 
             @Override
             public void onColumnHeaderClicked(@NonNull RecyclerView.ViewHolder columnHeaderView, int column) {
-                showPicker(column);
+                if (mColumnHeaderList.size() > 0 || mCellList.size() > 0) {
+                    showPicker(column);
+                }else {
+                    ToastUtils.showLong("初始化筛选条件");
+                    wx_name = wx_parent = hx_type = hx_name = hx_value = "";
+                    hx_star_lv = hx_level = 99;
+                    showNewData();
+                }
 //                super.onColumnHeaderClicked(columnHeaderView, column);
             }
 
@@ -213,10 +219,26 @@ public class HxList2Activity extends BaseActivity {
                 break;
             case 1:
                 mPickerView = pickerBuilder.setTitleText("感谢 william 大佬联合测评").setSelectOptions(1).build();
+
+                hx_lv = new ArrayList<>();
+                hx_lv.add("全部");
+                hx_lv.add("强力推荐");
+                hx_lv.add("凑合");
+                hx_lv.add("辣鸡");
+                if (MmkvUtils.isHideStar()) {
+                    hx_lv.add("大佬威武,大佬碉堡了,大佬666");
+                } else {
+//                    hx_lv.add("瞎几把推荐,你是云玩家吧？");
+                    hx_lv.add("瞎几把推荐,威廉就是个小菜鸡。");
+                }
+
                 mPickerView.setNPicker(hx_lv, null, null);
                 mPickerView.show();
                 break;
             case 2:
+                mPickerView = pickerBuilder.setTitleText("化形品质").build();
+                mPickerView.setNPicker(hx_prices, null, null);
+                mPickerView.show();
                 break;
             case 3:
                 mPickerView = pickerBuilder.setTitleText("初始属性").build();
@@ -243,6 +265,7 @@ public class HxList2Activity extends BaseActivity {
     private String hx_type;
     private String hx_name;
     private String hx_value;
+    private int hx_level = 99;
     private int hx_star_lv = 99;
 
     private int selectIndex;
@@ -280,28 +303,47 @@ public class HxList2Activity extends BaseActivity {
                 }
                 break;
             case 1:
-                if (MmkvUtils.isHideStar()) {
-                    hx_star_lv = 99;
-                } else {
-                    switch (options1) {
-                        case 1:
-                            hx_star_lv = 2;
-                            break;
-                        case 2:
-                            hx_star_lv = 1;
-                            break;
-                        case 3:
-                            hx_star_lv = 0;
-                            break;
-                        case 4:
-                            MmkvUtils.getMmkv().putBoolean("isHideStar", true);
-                            hx_star_lv = 99;
-                            break;
-                        case 0:
-                        default:
-                            hx_star_lv = 99;
-                            break;
-                    }
+                switch (options1) {
+                    case 1:
+                        hx_star_lv = 2;
+                        break;
+                    case 2:
+                        hx_star_lv = 1;
+                        break;
+                    case 3:
+                        hx_star_lv = 0;
+                        break;
+                    case 4:
+                        MmkvUtils.getMmkv().putBoolean("isHideStar", !MmkvUtils.isHideStar());
+                        hx_star_lv = 99;
+                        break;
+                    case 0:
+                    default:
+                        hx_star_lv = 99;
+                        break;
+                }
+                break;
+            case 2:
+                switch (options1) {
+                    case 1:
+                        hx_level = NameModel.HX_Lv_5_神话;
+                        break;
+                    case 2:
+                        hx_level = NameModel.HX_Lv_4_传奇;
+                        break;
+                    case 3:
+                        hx_level = NameModel.HX_Lv_3_史诗;
+                        break;
+                    case 4:
+                        hx_level = NameModel.HX_Lv_2_稀有;
+                        break;
+                    case 5:
+                        hx_level = NameModel.HX_Lv_1_优秀;
+                        break;
+                    case 0:
+                        hx_level = 99;
+                    default:
+                        break;
                 }
                 break;
             case 3:
@@ -356,6 +398,15 @@ public class HxList2Activity extends BaseActivity {
     }
 
     private void showNewData() {
+        if (selectIndex == 1 && MmkvUtils.isHideStar()) {
+            new MaterialDialog.Builder(this)
+                    .customView(R.layout.dialog_img, true)
+                    .title("我不要你觉得，我要我觉得")
+                    .positiveText("好的")
+                    .negativeText("没问题")
+                    .show();
+        }
+
         SpanUtils spanUtils = new SpanUtils();
         RealmQuery<HxModel> hxModels = RealmHelper.getInstance(mContext).where(HxModel.class);
         if (!TextUtils.isEmpty(wx_name) && wx_name.length() > 0) {
@@ -390,6 +441,28 @@ public class HxList2Activity extends BaseActivity {
                     break;
             }
         }
+        if (hx_level != 99) {
+            hxModels.equalTo("hx_level", hx_level);
+            switch (hx_level) {
+                case 1:
+                    spanUtils.append(" 品质：神话(红)");
+                    break;
+                case 2:
+                    spanUtils.append(" 品质：传奇(橙)");
+                    break;
+                case 3:
+                    spanUtils.append(" 品质：史诗(紫)");
+                    break;
+                case 4:
+                    spanUtils.append(" 品质：稀有(蓝)");
+                    break;
+                case 5:
+                    spanUtils.append(" 品质：优秀(绿)");
+                    break;
+                default:
+                    break;
+            }
+        }
         switch (selectIndex) {
             case 3:
                 if (!TextUtils.isEmpty(hx_value) && hx_value.length() > 0) {
@@ -417,23 +490,25 @@ public class HxList2Activity extends BaseActivity {
                 break;
         }
         List<HxModel> modelList = hxModels.findAll();
+        if (mRowHeaderList == null) {
+            mRowHeaderList = new ArrayList<>();
+        }
         mRowHeaderList.clear();
+        if (mCellList == null) {
+            mCellList = new ArrayList<>();
+        }
         mCellList.clear();
         for (int i = 0; i < modelList.size(); i++) {
             HxModel hxModel = modelList.get(i);
             mRowHeaderList.add(new RowHeader(hxModel.getWx_name()));
             List<Cell> cells = new ArrayList<>();
             cells.add(new Cell(hxModel.getHx_type() + "-" + hxModel.getHx_name()));
-            if (MmkvUtils.isHideStar()) {
-                cells.add(new Cell("-"));
+            if (hxModel.getHx_star_lv() == 2) {
+                cells.add(new Cell("★★★"));
+            } else if (hxModel.getHx_star_lv() == 1) {
+                cells.add(new Cell("☆☆"));
             } else {
-                if (hxModel.getHx_star_lv() == 2) {
-                    cells.add(new Cell("★★★"));
-                } else if (hxModel.getHx_star_lv() == 1) {
-                    cells.add(new Cell("☆☆"));
-                } else {
-                    cells.add(new Cell("☆"));
-                }
+                cells.add(new Cell("☆"));
             }
             cells.add(new Cell(hxModel.getHxLvName()));
             cells.add(new Cell(hxModel.getHx_value_default()));
@@ -441,7 +516,7 @@ public class HxList2Activity extends BaseActivity {
             cells.add(new Cell(hxModel.getParent()));
             mCellList.add(cells);
         }
-        tv.setText(new SpanUtils().append("筛选结果：" + mCellList.size() + "条").appendLine(spanUtils.create()).create());
+        tv.setText(new SpanUtils().appendLine("筛选结果：" + mCellList.size() + "条").append(spanUtils.create()).create());
 
         mAdapter.setRowHeaderItems(mRowHeaderList);
         mAdapter.setCellItems(mCellList);
@@ -468,6 +543,7 @@ public class HxList2Activity extends BaseActivity {
      * 武学推荐指数
      **/
     private List<String> hx_lv;
+    private List<String> hx_prices;
 
     /**
      * 初始化筛选器
@@ -481,6 +557,7 @@ public class HxList2Activity extends BaseActivity {
         value2 = new ArrayList<>();
         parent = new ArrayList<>();
         hx_lv = new ArrayList<>();
+        hx_prices = new ArrayList<>();
 
         name_1.add("全部");
         name_1.add(NameModel.Parent_2);
@@ -502,12 +579,13 @@ public class HxList2Activity extends BaseActivity {
         type_1.add(NameModel.HX_TYPE_傀儡);
         type_1.add(NameModel.HX_TYPE_木鸢);
 
-        hx_lv.add("全部");
-        hx_lv.add("强力推荐");
-        hx_lv.add("凑合");
-        hx_lv.add("辣鸡");
-        hx_lv.add("瞎几把推荐,你是云玩家吧？");
-//        hx_lv.add("瞎几把推荐,威廉就是个小菜鸡。");
+
+        hx_prices.add("全部");
+        hx_prices.add("神话(红)");
+        hx_prices.add("传奇(橙)");
+        hx_prices.add("史诗(紫)");
+        hx_prices.add("稀有(蓝)");
+        hx_prices.add("优秀(绿)");
 
         setHxTypeDate(1);
 

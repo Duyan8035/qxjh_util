@@ -16,6 +16,7 @@ public class NameModel {
             "铁掌帮主", "丐帮帮主", "白陀山主", "宫主", "坞主",
             "明王", "狮王", "铁掌帮王", "凶神恶煞", "飞天蝙蝠",
             "金国小王爷",
+            "远山居士",
 
             "左使",
             "右使",
@@ -51,6 +52,7 @@ public class NameModel {
             "童姥",
             "五毒教主",
             "赤练",
+            "公孙夫人",
 
             "三藏",
             "琴圣",
@@ -263,6 +265,7 @@ public class NameModel {
     public static final String Name_xiongshenesha = "凶神恶煞";
     public static final String Name_feitianbianfu = "飞天蝙蝠";
     public static final String Name_jinguoxiaowangye = "金国小王爷";
+    public static final String Name_yuanshanjushi = "远山居士";
 
     /**
      * 游侠
@@ -304,6 +307,7 @@ public class NameModel {
     public static final String Name_tonglao = "童姥";
     public static final String Name_wudujiaozhu = "五毒教主";
     public static final String Name_chilian = "赤练";
+    public static final String Name_gongsunfuren = "公孙夫人";
 
 
     public static final String Name_sanzang = "三藏";

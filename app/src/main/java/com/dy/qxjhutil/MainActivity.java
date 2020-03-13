@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.SpanUtils;
-import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dy.qxjhutil.activity.AboutUsActivity;
@@ -272,17 +271,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                         mAdapter1.setOnItemClickListener((adapter, view12, position) -> {
                             switch (type) {
                                 case 1:
-                                    ToastUtils.showLong("点击了：" + mAdapter1.getItem(position));
+//                                    ToastUtils.showLong("点击了：" + mAdapter1.getItem(position));
                                     selectSjMap(position);
                                     selectMap = position;
                                     mAdapter1.notifyDataSetChanged();
                                     break;
                                 case 2:
-                                    ToastUtils.showLong("点击了：" + mAdapter1.getItem(position));
+//                                    ToastUtils.showLong("点击了：" + mAdapter1.getItem(position));
                                     selectWxMap(mAdapter1.getItem(position));
                                     break;
                                 case 3:
-                                    ToastUtils.showLong("点击了：" + mAdapter1.getItem(position));
+//                                    ToastUtils.showLong("点击了：" + mAdapter1.getItem(position));
                                     break;
                                 default:
                                     break;
@@ -507,7 +506,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 }).setShowPattern(ShowPattern.ALL_TIME)
                         .setDragEnable(true)
                         .setSidePattern(SidePattern.DEFAULT)
-                        .setMatchParent(false, true)
+                        .setMatchParent(false, false)
                         .setLocation(100, 100)
                         .show();
                 break;

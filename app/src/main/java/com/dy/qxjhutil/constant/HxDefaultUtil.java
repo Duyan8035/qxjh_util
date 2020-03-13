@@ -33,7 +33,7 @@ public class HxDefaultUtil {
 
             // TODO: 2020/2/22 武神
             case NameModel.Name_nanyuandawang:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 2, 1,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 2, 0, 0,
                         NameModel.HX_ws_tg_武神_天罡,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_tk_武神_天魁,
@@ -44,7 +44,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_lingjiugongzhu:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 1,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 1, 0, 0,
                         NameModel.HX_ws_tg_武神_天罡,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_tk_武神_天魁,
@@ -66,7 +66,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_taijichanren:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 1, 0,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 0,
                         NameModel.HX_ws_tg_武神_天罡,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_tk_武神_天魁,
@@ -77,7 +77,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_shaolinsanseng:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 1, 0,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 0,
                         NameModel.HX_ws_tg_武神_天罡,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_tk_武神_天魁,
@@ -88,7 +88,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_tiezhangbangzhu:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 2, 1,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 1, 1, 1,
                         NameModel.HX_ws_tg_武神_天罡,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_tk_武神_天魁,
@@ -99,7 +99,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_dalunmingwang:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 1, 2,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 0,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_ty_武神_天勇,
                         NameModel.HX_ws_tx_武神_天闲,
@@ -110,7 +110,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_shiwang:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 1,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 0,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_ty_武神_天勇,
                         NameModel.HX_ws_tx_武神_天闲,
@@ -121,7 +121,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_xiongshenesha:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 1, 1,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 0,
                         NameModel.HX_ws_tx_武神_天闲,
                         NameModel.HX_ws_tw_武神_天威,
                         NameModel.HX_ws_tm_武神_天猛,
@@ -143,7 +143,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_yingwang:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 1, 2,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 2, 0, 0,
                         NameModel.HX_ws_tk_武神_天魁,
                         NameModel.HX_ws_ty_武神_天勇,
                         NameModel.HX_ws_tx_武神_天闲,
@@ -154,7 +154,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_yuguanzhu:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 1, 1, 2,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 2, 1, 1,
                         NameModel.HX_ws_tk_武神_天魁,
                         NameModel.HX_ws_ty_武神_天勇,
                         NameModel.HX_ws_tx_武神_天闲,
@@ -165,7 +165,7 @@ public class HxDefaultUtil {
                 );
                 break;
             case NameModel.Name_zuoshi:
-                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 1, 0,
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 0,
                         NameModel.HX_ws_tg_武神_天罡,
                         NameModel.HX_ws_tj_武神_天机,
                         NameModel.HX_ws_tk_武神_天魁,
@@ -195,6 +195,17 @@ public class HxDefaultUtil {
                         "江湖心法→逍遥心法",
                         "每层灼烧造成4伤害cd2",
                         "灼烧敌人时额外造成全体灼烧1"
+                );
+                break;
+            case NameModel.Name_yuanshanjushi:
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_武神, 0, 0, 2,
+                        NameModel.HX_ws_tg_武神_天罡,
+                        NameModel.HX_ws_tj_武神_天机,
+                        NameModel.HX_ws_tk_武神_天魁,
+                        4, 3, 3,
+                        "刺棍→劈棍",
+                        "触发追击时回2气抽1卡(限4)",
+                        "敌方阵亡时回满怒"
                 );
                 break;
 
@@ -364,6 +375,17 @@ public class HxDefaultUtil {
                         "刺棍→锁喉",
                         "抽拳牌至牌满每个送2怒气cd2",
                         "拳掌牌不会伤到自己"
+                );
+                break;
+            case NameModel.Name_gongsunfuren:
+                getHxValue(mRealm, userName, NameModel.HX_TYPE_粽子, 0, 0, 2,
+                        NameModel.HX_zz_ds_粽子_地煞,
+                        NameModel.HX_zz_dy_粽子_地勇,
+                        NameModel.HX_zz_dk_粽子_地魁,
+                        4, 3, 3,
+                        "铁布衫→魔教内功",
+                        "触发双生加5甲,额外复制1张放牌底",
+                        "复制废牌堆的牌,1牌加1怒cd1"
                 );
                 break;
             case NameModel.Name_yanziwuzhu:

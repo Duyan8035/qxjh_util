@@ -163,7 +163,7 @@ public class MyTableView2Adapter extends AbstractTableAdapter<ColumnHeader, RowH
         MyColumnHeaderViewHolder columnHeaderViewHolder = (MyColumnHeaderViewHolder) holder;
         columnHeaderViewHolder.column_textview.setText(columnHeader.getStr());
         columnHeaderViewHolder.itemView.getLayoutParams().width = getWidth(columnPosition);
-        columnHeaderViewHolder.column_img.setVisibility(columnPosition == 2 ? View.GONE : View.VISIBLE);
+//        columnHeaderViewHolder.column_img.setVisibility(columnPosition == 2 ? View.GONE : View.VISIBLE);
         columnHeaderViewHolder.itemView.requestLayout();
     }
 

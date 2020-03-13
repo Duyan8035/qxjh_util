@@ -234,7 +234,7 @@ public class WxDefaultUtil {
                 break;
             case NameModel.Name_shaolinsanseng:
                 wxModel.setName(NameModel.Name_shaolinsanseng_value).setIcon_mini(R.drawable.icon_wx_mini_shaolinsanseng)
-                        .setIndex("S").setTrend(0).setGood(0).setParent(Parent_2);
+                        .setIndex("S").setTrend(1).setGood(1).setParent(Parent_2);
                 break;
 
             //type2
@@ -417,7 +417,7 @@ public class WxDefaultUtil {
                 break;
             case NameModel.Name_jiansheng:
                 wxModel.setName(NameModel.Name_jiansheng_value).setIcon_mini(R.drawable.icon_wx_mini_jiansheng)
-                        .setIndex("J").setTrend(0).setGood(0).setParent(Parent_3);
+                        .setIndex("J").setTrend(-1).setGood(1).setParent(Parent_3);
                 break;
 
             case NameModel.Name_zuoshi:
@@ -554,11 +554,11 @@ public class WxDefaultUtil {
                 break;
             case NameModel.Name_congbianxiansheng:
                 wxModel.setName(NameModel.Name_congbianxiansheng_value)
-                        .setIcon_mini(R.drawable.icon_wx_mini_congbianxiansheng).setIndex("C").setTrend(0).setGood(0).setParent(Parent_4);
+                        .setIcon_mini(R.drawable.icon_wx_mini_congbianxiansheng).setIndex("C").setTrend(1).setGood(0).setParent(Parent_4);
                 break;
             case NameModel.Name_tonglao:
                 wxModel.setName(NameModel.Name_tonglao_value)
-                        .setIcon_mini(R.drawable.icon_wx_mini_congbianxiansheng).setIndex("T").setTrend(0).setGood(0).setParent(Parent_4);
+                        .setIcon_mini(R.drawable.icon_wx_mini_congbianxiansheng).setIndex("T").setTrend(-1).setGood(0).setParent(Parent_4);
                 break;
 
             //type4
@@ -817,6 +817,16 @@ public class WxDefaultUtil {
                 break;
             case NameModel.Name_qinsheng:
                 wxModel.setName("").setIcon_mini(0).setIndex("Q").setTrend(0).setGood(0).setParent(Parent_5);
+                break;
+
+            /**
+             * 2020年3月13日21:50:48 增加萧远山和公孙夫人
+             **/
+            case NameModel.Name_yuanshanjushi:
+                wxModel.setName("萧远山").setIcon_mini(0).setIndex("Y").setTrend(0).setGood(0).setParent(Parent_2);
+                break;
+            case NameModel.Name_gongsunfuren:
+                wxModel.setName("裘千尺").setIcon_mini(0).setIndex("G").setTrend(0).setGood(0).setParent(Parent_4);
                 break;
             default:
                 break;
